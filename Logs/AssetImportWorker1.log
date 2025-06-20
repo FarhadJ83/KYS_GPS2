@@ -194,3 +194,11 @@ Unloading 6192 unused Assets / (5.0 MB). Loaded Objects now: 6861.
 Memory consumption went from 159.2 MB to 154.2 MB.
 Total: 18.705000 ms (FindLiveObjects: 1.414600 ms CreateObjectMapping: 2.096400 ms MarkObjects: 10.326400 ms  DeleteObjects: 4.865600 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 8974.311308 seconds.
+  path: Assets/Art Assets/wall 1 (variation 2).fbx
+  artifactKey: Guid(c22f7e8196eac1d40be25de6ac446587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art Assets/wall 1 (variation 2).fbx using Guid(c22f7e8196eac1d40be25de6ac446587) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e3740a1edc4e7ddbc1510e0d68ce7ed5') in 2.5400924 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
