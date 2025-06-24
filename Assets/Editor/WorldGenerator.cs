@@ -207,13 +207,15 @@ public class WorldGenerator : EditorWindow
 
                 if (prefabMapDict.TryGetValue(id, out PrefabMapping mapping))
                 {
+
+                    Bounds tempBounds = new Bounds();
+                    bool boundsCalculated = false;
                     // Calculate bounds and pivot offset ONCE per prefab ID, but update maxCellSizes per position
                     if (!pivotToCenterWorldOffsets.ContainsKey(id) || !pivotToCenterWorldOffsets[id].y.Equals(float.NaN)) // Check if offset is already calculated or if previous attempt failed
                     {
                         // Instantiate temporarily to get bounds and pivot offset with correct rotation
                         GameObject tempInstance = null;
-                        Bounds tempBounds = new Bounds();
-                        bool boundsCalculated = false;
+                        
 
                         try
                         {
