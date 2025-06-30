@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum BallType { White, Black, YinYang }
 
@@ -7,19 +7,26 @@ public class MergingController : MonoBehaviour
     public BallType ballType;
     public GameObject mergedBall;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        MergingController otherBall = other.GetComponent<MergingController>();
+        MergingController otherBall = collision.gameObject.GetComponent<MergingController>();
 
-        if (otherBall != null )
+        if (otherBall != null)
         {
-            if ((ballType == BallType.White && otherBall.ballType == BallType.Black)  || (ballType == BallType.Black && otherBall.ballType == BallType.White))
-            {
-                Vector3 yinYangPosition = (transform.position + other.transform.position) / 2f;
+            bool isWhiteBlackCombo =
+                (ballType == BallType.White && otherBall.ballType == BallType.Black) ||
+                (ballType == BallType.Black && otherBall.ballType == BallType.White);
 
+            if (isWhiteBlackCombo)
+            {
+                // Find the midpoint between the two balls
+                Vector3 yinYangPosition = (transform.position + collision.transform.position) / 2f;
+
+                // Instantiate the merged ball
                 Instantiate(mergedBall, yinYangPosition, Quaternion.identity);
 
-                Destroy(other.gameObject);
+                // Destroy both balls
+                Destroy(collision.gameObject);
                 Destroy(gameObject);
             }
         }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3189640505468553333}
   - component: {fileID: 8260563165997884835}
   - component: {fileID: 5945677597831304515}
+  - component: {fileID: 9017944168465044221}
   m_Layer: 0
   m_Name: White Ball
   m_TagString: WhiteBall
@@ -155,3 +156,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   raycastPadding: 0.7
+--- !u!114 &9017944168465044221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026223689704289561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e50637916a0dd4788b3729b4baf083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballType: 0
+  mergedBall: {fileID: 1037978456031230588, guid: 272146ca85f2ec64b999fa52fea9cca8, type: 3}
