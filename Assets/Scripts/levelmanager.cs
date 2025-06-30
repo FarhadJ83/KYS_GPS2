@@ -4,12 +4,55 @@ using System.Collections;
 public class levelmanager : MonoBehaviour
 {
     public LevelScript level;
+    [HideInInspector] public GameObject pausePanel;
+    public void Start()
+    {
+        pausePanel = GameObject.Find("PausePanel");
+        if (pausePanel != null)
+        {
+            pausePanel.SetActive(false);
+        }
+    }
     public void playGame()
     {
         // Load the game scene
         UnityEngine.SceneManagement.SceneManager.LoadScene("LevelsScene");
     }
 
+    public void pause_Panel()
+    {
+        //GameObject pausePanel = GameObject.Find("PausePanel");
+        //if (pausePanel != null)
+        //{
+        //    pausePanel.SetActive(false);
+        //}
+
+        if (Time.timeScale == 1)
+        {
+            pausePanel.SetActive(true);
+            Time.timeScale = 0; // Pause the game
+        }
+        else
+        {
+            pausePanel.SetActive(false);
+            Time.timeScale = 1; // Pause the game
+        }
+    }
+
+    public void MainMenu()
+    {
+        // Load the main menu scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1; // Reset time scale to normal when returning to main menu
+    }
+
+    public void Restart()
+    {
+        // Restart the current level
+        UnityEngine.SceneManagement.Scene currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(currentScene.name);
+        Time.timeScale = 1; // Reset time scale to normal when restarting
+    }
     public void level1()
     {
         // Load Level 1
