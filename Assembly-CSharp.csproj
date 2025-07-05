@@ -65,6 +65,7 @@
     <Compile Include="Assets\LevelScript.cs" />
     <Compile Include="Assets\Scripts\BallColorState.cs" />
     <Compile Include="Assets\Scripts\MergingController.cs" />
+    <Compile Include="Assets\Scripts\Teleporter.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\TouchController.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />

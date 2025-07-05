@@ -6,6 +6,7 @@ public class MergingController : MonoBehaviour
 {
     public BallType ballType;
     public GameObject mergedBall;
+    
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -30,5 +31,6 @@ public class MergingController : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
     }
 }
