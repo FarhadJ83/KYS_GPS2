@@ -66,10 +66,13 @@
     <Compile Include="Assets\Scripts\BallColorState.cs" />
     <Compile Include="Assets\Scripts\MergingController.cs" />
     <Compile Include="Assets\Scripts\Teleporter.cs" />
+    <Compile Include="Assets\Scripts\TrapManager.cs" />
+    <Compile Include="Assets\Scripts\Trap.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\TouchController.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\InverseController.cs" />
+    <Compile Include="Assets\Scripts\PressurePlate.cs" />
     <Compile Include="Assets\Scripts\levelmanager.cs" />
   </ItemGroup>
   <ItemGroup>

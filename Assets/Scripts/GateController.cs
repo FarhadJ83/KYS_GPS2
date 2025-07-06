@@ -26,11 +26,11 @@ public class GateController : MonoBehaviour
         rend.material = isBlackGate ? blackMaterial : whiteMaterial;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("WhiteBall") || other.CompareTag("BlackBall"))
+        if (collision.gameObject.CompareTag("WhiteBall") || collision.gameObject.CompareTag("BlackBall"))
         {
-            BallColorState ballState = other.GetComponent<BallColorState>();
+            BallColorState ballState = collision.gameObject.GetComponent<BallColorState>();
 
             if (ballState != null)
             {
@@ -40,24 +40,29 @@ public class GateController : MonoBehaviour
                 {
                     Debug.Log("❌ Blocked: Colors don't match!");
 
-                    // Option A: Stop the ball
-                    Vector3 rb = Vector3.zero;
+                    // Stop the ball
+                    Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
                     if (rb != null)
                     {
-                        rb = Vector3.zero;
+                        rb.linearVelocity = Vector3.zero;
 
-                        // Optional bounce back
-                        //Vector3 bounceBack = (other.transform.position - transform.position).normalized;
-                        //rb.AddForce(bounceBack * 3f, ForceMode.Impulse);
+                        // Optional bounce
+                        Vector3 bounceDir = (collision.transform.position - transform.position).normalized;
+                        rb.AddForce(bounceDir * 3f, ForceMode.Impulse);
                     }
 
-                    // Option B: Enable physical blocking
-                    Collider gateCollider = GetComponent<Collider>();
-                    gateCollider.enabled = true;
+                    // Optional: Keep collider solid to block the ball
                 }
                 else
                 {
                     Debug.Log("✔ Allowed: Colors match!");
+
+                    // Let the ball through (optional)
+                    BoxCollider gateCollider = GetComponent<BoxCollider>();
+                    if (gateCollider != null)
+                    {
+                        gateCollider.isTrigger = true; // Make passable
+                    }
                 }
             }
         }
