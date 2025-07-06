@@ -5,12 +5,18 @@ public class levelmanager : MonoBehaviour
 {
     public LevelScript level;
     [HideInInspector] public GameObject pausePanel;
+    [HideInInspector] public GameObject settingsPanel;
     public void Start()
     {
         pausePanel = GameObject.Find("PausePanel");
         if (pausePanel != null)
         {
             pausePanel.SetActive(false);
+        }
+        settingsPanel = GameObject.Find("SettingsPanel");
+        if (settingsPanel != null)
+        {
+            settingsPanel.SetActive(false);
         }
     }
     public void playGame()
@@ -36,6 +42,26 @@ public class levelmanager : MonoBehaviour
         {
             pausePanel.SetActive(false);
             Time.timeScale = 1; // Pause the game
+        }
+    }
+
+    public void settings_Panel()
+    {
+        //GameObject settingsPanel = GameObject.Find("SettingsPanel");
+        //if (settingsPanel != null)
+        //{
+        //    settingsPanel.SetActive(false);
+        //}
+        if (settingsPanel != null)
+        {
+            if (settingsPanel.activeSelf)
+            {
+                settingsPanel.SetActive(false);
+            }
+            else
+            {
+                settingsPanel.SetActive(true);
+            }
         }
     }
 
