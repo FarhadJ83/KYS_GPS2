@@ -4,6 +4,7 @@ public class LevelScript : MonoBehaviour
 {
     public bool level1Unlocked = true;
     public bool level2Unlocked = false;
+    public Sprite lockedImg;
 
     LevelScript instance;
     public void Awake()
