@@ -6,8 +6,8 @@ using System.Linq; // Required for LINQ methods like .FirstOrDefault()
 [System.Serializable]
 public class PrefabMapping
 {
-    [Tooltip("The digit used in the grid layout text to represent this prefab.")]
-    public int id;
+    [Tooltip("The character used in the grid layout text to represent this prefab. If more than one character is entered, only the first will be used.")]
+    public string id; // Changed from int to string to allow any character
     [Tooltip("The prefab GameObject to instantiate.")]
     public GameObject prefab;
     [Tooltip("Rotation in Euler angles to apply to the prefab instance (local rotation).")]
@@ -46,7 +46,7 @@ public class WorldGenerator : EditorWindow
         scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
 
         EditorGUILayout.LabelField("1. Prefab Definitions", EditorStyles.boldLabel);
-        EditorGUILayout.HelpBox("Define which number (0-9) corresponds to which prefab, its rotation, and size. Drag your prefabs here. An ID must be unique. Prefabs with no renderers or colliders might not be positioned correctly based on bounds.", MessageType.Info);
+        EditorGUILayout.HelpBox("Define which character (e.g., '1', 'w', '#') corresponds to which prefab, its rotation, and size. Drag your prefabs here. An ID character must be unique. Prefabs with no renderers or colliders might not be positioned correctly based on bounds.", MessageType.Info);
 
         // Draw the list of prefab mappings
         EditorGUILayout.PropertyField(serializedMappingsProperty, true);
@@ -54,7 +54,7 @@ public class WorldGenerator : EditorWindow
         EditorGUILayout.Space(10);
 
         EditorGUILayout.LabelField("2. Grid Layout", EditorStyles.boldLabel);
-        EditorGUILayout.HelpBox("Type your grid layout below. Each digit (0-9) specifies the prefab ID to place at that grid coordinate (column, row). Non-digit characters are ignored. Each character position represents a single grid cell.", MessageType.Info);
+        EditorGUILayout.HelpBox("Type your grid layout below. Each character specifies the prefab ID to place at that grid coordinate (column, row). Unrecognized characters are ignored. Each character position represents a single grid cell.", MessageType.Info);
 
         gridLayoutText = EditorGUILayout.TextArea(gridLayoutText, GUILayout.Height(150), GUILayout.ExpandWidth(true));
 
@@ -107,46 +107,37 @@ public class WorldGenerator : EditorWindow
             return;
         }
 
-        // Map IDs to PrefabMapping objects for quick lookup
-        Dictionary<int, PrefabMapping> prefabMapDict = new Dictionary<int, PrefabMapping>();
+        // Map ID characters to PrefabMapping objects for quick lookup
+        Dictionary<string, PrefabMapping> prefabMapDict = new Dictionary<string, PrefabMapping>();
         foreach (var mapping in prefabMappings)
         {
-            if (mapping.prefab != null)
+            // We only care about mappings that have both a prefab and a valid ID string.
+            if (mapping.prefab != null && !string.IsNullOrEmpty(mapping.id))
             {
-                if (!prefabMapDict.ContainsKey(mapping.id))
+                // Use the first character of the ID string as the key.
+                string key = mapping.id.Substring(0, 1);
+                if (!prefabMapDict.ContainsKey(key))
                 {
-                    prefabMapDict.Add(mapping.id, mapping);
+                    prefabMapDict.Add(key, mapping);
                 }
                 else
                 {
-                    Debug.LogWarning($"World Generator: Duplicate ID '{mapping.id}' found in mappings. Using the first entry encountered.");
+                    Debug.LogWarning($"World Generator: Duplicate ID character '{key}' found in mappings. Using the first entry encountered.");
                 }
             }
             else
             {
-                // This is handled later by checking prefabMapDict, but a heads-up is good
-                Debug.LogWarning($"World Generator: Prefab mapping for ID '{mapping.id}' has no prefab assigned. It will be skipped.");
+                // Optional: Add warnings for incomplete mapping entries.
+                if (mapping.prefab == null && !string.IsNullOrEmpty(mapping.id))
+                    Debug.LogWarning($"World Generator: Prefab mapping for ID '{mapping.id}' has no prefab assigned. It will be skipped.");
             }
         }
 
+
         if (prefabMapDict.Count == 0)
         {
-            // Check if any mappings resulted in a valid entry in the dictionary
-            bool hasValidMapping = false;
-            foreach (var mapping in prefabMappings)
-            {
-                if (mapping.prefab != null && !prefabMapDict.ContainsKey(mapping.id)) // Check original list for valid entries not added due to duplicates
-                {
-                    // This case shouldn't happen if the above logic is correct, but adds robustness
-                    hasValidMapping = true; break;
-                }
-            }
-
-            if (!hasValidMapping)
-            {
-                Debug.LogError("World Generator: None of the defined prefab mappings have a prefab assigned or all had duplicate IDs. Nothing to generate.");
-                return;
-            }
+            Debug.LogError("World Generator: None of the defined prefab mappings are valid (missing prefab or ID). Nothing to generate.");
+            return;
         }
 
 
@@ -186,7 +177,7 @@ public class WorldGenerator : EditorWindow
         float[] maxCellHeights = new float[maxRows]; // Corresponds to Z in world space
 
         // Also pre-calculate the offset from the prefab's pivot to its bounds center after rotation for each prefab ID
-        Dictionary<int, Vector3> pivotToCenterWorldOffsets = new Dictionary<int, Vector3>();
+        Dictionary<string, Vector3> pivotToCenterWorldOffsets = new Dictionary<string, Vector3>();
 
 
         EditorUtility.DisplayProgressBar("World Generator", "Calculating prefab bounds and layout dimensions...", 0.2f);
@@ -200,10 +191,7 @@ public class WorldGenerator : EditorWindow
                 if (x >= maxCols) continue; // Handle lines shorter than maxCols
 
                 char character = line[x];
-                if (!int.TryParse(character.ToString(), out int id))
-                {
-                    continue; // Skip non-numeric characters
-                }
+                string id = character.ToString(); // The key is now a string from the character
 
                 if (prefabMapDict.TryGetValue(id, out PrefabMapping mapping))
                 {
@@ -211,11 +199,11 @@ public class WorldGenerator : EditorWindow
                     Bounds tempBounds = new Bounds();
                     bool boundsCalculated = false;
                     // Calculate bounds and pivot offset ONCE per prefab ID, but update maxCellSizes per position
-                    if (!pivotToCenterWorldOffsets.ContainsKey(id) || !pivotToCenterWorldOffsets[id].y.Equals(float.NaN)) // Check if offset is already calculated or if previous attempt failed
+                    if (!pivotToCenterWorldOffsets.ContainsKey(id))
                     {
                         // Instantiate temporarily to get bounds and pivot offset with correct rotation
                         GameObject tempInstance = null;
-                        
+
 
                         try
                         {
@@ -234,8 +222,8 @@ public class WorldGenerator : EditorWindow
                             else
                             {
                                 Debug.LogWarning($"World Generator: Prefab '{mapping.prefab.name}' (ID: {id}) has no renderers or colliders to determine bounds. Cannot determine size or accurate pivot offset. Will be treated as zero size and placed by pivot. This may cause overlap.");
-                                // Store a zero offset. Using NaN as a flag could be better, but 0 works.
-                                pivotToCenterWorldOffsets[id] = Vector3.zero; // Signal that we tried but got no bounds
+                                // Store a zero offset.
+                                pivotToCenterWorldOffsets[id] = Vector3.zero;
                             }
                         }
                         finally
@@ -247,14 +235,21 @@ public class WorldGenerator : EditorWindow
 
                     // Update max size for THIS specific column (x) and THIS specific row (z) based on the bounds of the object placed HERE.
                     // This is crucial. The space for column X is determined by the widest object *in that column*.
-                    if (boundsCalculated)
+                    // Retrieve the previously calculated bounds (if any) to avoid recalculating
+                    if (pivotToCenterWorldOffsets.ContainsKey(id)) // We know we have a mapping here
                     {
-                        // Note: Bounds are in world space relative to the temporary rotated object's origin.
-                        // size.x and size.z correspond to the rotated object's width and depth.
-                        maxCellWidths[x] = Mathf.Max(maxCellWidths[x], tempBounds.size.x);
-                        maxCellHeights[z] = Mathf.Max(maxCellHeights[z], tempBounds.size.z);
+                        // We need the bounds size again. We have to re-calc it or store it. Let's just re-calc.
+                        // This is slightly inefficient but simpler than storing another dictionary.
+                        GameObject tempInstanceForBounds = (GameObject)PrefabUtility.InstantiatePrefab(mapping.prefab);
+                        tempInstanceForBounds.transform.rotation = Quaternion.Euler(mapping.rotationEuler);
+                        Bounds currentBounds = GetBounds(tempInstanceForBounds);
+                        if (currentBounds.size != Vector3.zero)
+                        {
+                            maxCellWidths[x] = Mathf.Max(maxCellWidths[x], currentBounds.size.x);
+                            maxCellHeights[z] = Mathf.Max(maxCellHeights[z], currentBounds.size.z);
+                        }
+                        DestroyImmediate(tempInstanceForBounds);
                     }
-                    // If bounds couldn't be calculated, maxCellWidths/Heights for this cell remain 0, meaning it contributes no size requirement.
 
                 }
             }
@@ -262,7 +257,6 @@ public class WorldGenerator : EditorWindow
 
         // --- Step 2: Calculate cumulative offsets for cell boundary positions ---
         // These define the cumulative space occupied by cells up to a certain index, including spacing.
-        // Index 0 is the start. Index i+1 is the end of cell i and the start of cell i+1.
         // The total width of column X's allocated space is maxCellWidths[X] + gridSpacing.x
         // The total height of row Z's allocated space is maxCellHeights[Z] + gridSpacing.z
 
@@ -298,15 +292,6 @@ public class WorldGenerator : EditorWindow
         // The world origin for the grid is the parent object's position.
         Vector3 gridWorldOrigin = parentObject.position;
 
-        // Calculate total grid dimensions (from the start of the first cell to the end of the last cell's spacing)
-        float totalGridWidth = cumulativeXOffsets[maxCols];
-        float totalGridDepth = cumulativeZOffsets[maxRows];
-
-        // Calculate the offset to center the grid if desired. For now, placing the top-left corner of the grid at parent origin.
-        // To center the grid at the parent, you'd add -totalGridWidth/2 to X and +totalGridDepth/2 to Z (or -totalGridDepth/2 depending on Z direction)
-        // Vector3 centeringOffset = new Vector3(-totalGridWidth / 2f, 0, totalGridDepth / 2f); // Example centering offset
-
-
         for (int z = 0; z < maxRows; z++)
         {
             string line = lines[z];
@@ -315,18 +300,15 @@ public class WorldGenerator : EditorWindow
                 if (x >= maxCols) continue; // Handle lines shorter than maxCols
 
                 char character = line[x];
-                if (!int.TryParse(character.ToString(), out int id))
-                {
-                    continue; // Skip non-numeric characters
-                }
+                string id = character.ToString(); // The key is the character from the grid
 
                 // Check if a valid mapping exists for this ID
                 if (prefabMapDict.TryGetValue(id, out PrefabMapping mapping) && mapping.prefab != null)
                 {
                     // Calculate the center position of the current cell's *allocated space* (x, z) in parent's local space
                     // This is the midpoint between the start and end cumulative offsets for this cell.
-                    float cellCenterX_local = (cumulativeXOffsets[x] + cumulativeXOffsets[x + 1]) / 2f;
-                    float cellCenterZ_local = (cumulativeZOffsets[z] + cumulativeZOffsets[z + 1]) / 2f; // Z increases as row index increases
+                    float cellCenterX_local = (cumulativeXOffsets[x] + cumulativeXOffsets[x + 1] - gridSpacing.x) / 2f;
+                    float cellCenterZ_local = (cumulativeZOffsets[z] + cumulativeZOffsets[z + 1] - gridSpacing.z) / 2f;
 
                     // The target world position for the *center of the bounds* of the object.
                     // The Z axis in the grid layout usually maps to the negative Z world axis to go "forward" or "down" from a top-down view.
@@ -340,9 +322,6 @@ public class WorldGenerator : EditorWindow
 
                     // Calculate the required world position for the object's *pivot*
                     // Target Pivot World Position = (Target Bounds Center World Position) - (World Offset from Pivot to Bounds Center)
-                    // The pivotToCenterWorldOffset was calculated when the temp instance had its rotation applied.
-                    // When we subtract it here, it correctly offsets the target bounds center back to where the pivot should be in world space
-                    // relative to the parent's rotation.
                     Vector3 targetPivotWorldPosition = targetBoundsCenterWorld - pivotToCenterWorldOffset;
 
 
@@ -354,9 +333,6 @@ public class WorldGenerator : EditorWindow
 
                     // Set local rotation
                     instance.transform.localRotation = Quaternion.Euler(mapping.rotationEuler);
-
-
-                    // instance.name = $"{mapping.prefab.name}_{x}_{z}"; // Optional: Name instances
                 }
             }
         }
@@ -460,10 +436,5 @@ public class WorldGenerator : EditorWindow
 
         Debug.Log($"World Generator: Cleared {children.Length} generated objects under '{parentObject.name}'.");
 
-        // If we temporarily set parentObject, reset it back to null
-        if (parentObject.name == "GeneratedWorld" && children.Length > 0) // Only reset if children were cleared from the default object
-        {
-            // parentObject = null; // Decided against this, keep the reference if it exists
-        }
     }
 }
