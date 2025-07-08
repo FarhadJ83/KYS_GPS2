@@ -13,6 +13,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] public LayerMask wallLayer;
     [SerializeField] private LayerMask gateLayer;
     [SerializeField] public float raycastPadding = 0.01f;
+    public int swipeCounter;
 
     private bool justTeleported = false;
 
@@ -21,6 +22,10 @@ public class CharacterMovement : MonoBehaviour
 
     public bool isMoving = false;
 
+    public void Start()
+    {
+        swipeCounter = 0;
+    }
     private void OnEnable()
     {
         TouchController.onSwipe += OnSwipeMoveBall;
@@ -93,6 +98,7 @@ public class CharacterMovement : MonoBehaviour
     private IEnumerator SmoothMoveToWall(Transform obj, Vector3 targetPos)
     {
         isMoving = true;
+        swipeCounter++;
 
         while (Vector3.Distance(obj.position, targetPos) > 0.01f)
         {

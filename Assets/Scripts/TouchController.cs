@@ -158,7 +158,10 @@ public class TouchController : MonoBehaviour
 
     private void OnDisable()
     {
-        EnhancedTouchSupport.Disable();
+        if (instance == this)
+        {
+            EnhancedTouchSupport.Disable();
+        }
     }
 
     void Update()

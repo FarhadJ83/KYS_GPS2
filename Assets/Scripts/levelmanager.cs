@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class levelmanager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class levelmanager : MonoBehaviour
     public void playGame()
     {
         // Load the game scene
+        Time.timeScale = 1; // Ensure the game is not paused when starting
         UnityEngine.SceneManagement.SceneManager.LoadScene("LevelsScene");
     }
 
@@ -85,19 +87,42 @@ public class levelmanager : MonoBehaviour
         level = GameObject.Find("LevelManager").gameObject.GetComponent<LevelScript>();
         if (level != null && level.level1Unlocked)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
-            level.level2Unlocked = true; // Unlock Level 2 after Level 1 is played
+            UnityEngine.SceneManagement.SceneManager.LoadScene("TutorialLevel1");
         }
     }
 
     public void level2()
     {
         // Load Level 1
-        level = GameObject.Find("LevelManager").gameObject.GetComponent<LevelScript>();
-        if (level != null && level.level2Unlocked)
+        //Button level2Button = GameObject.Find("Level2Button").GetComponent<Button>();
+        //if (level2Button != null && level2Button.interactable == true)
+        //{
+        //    level2Button.onClick.AddListener(() => level2());
+        //}
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("TutorialL2");
             //level.level2Unlocked = true; // Unlock Level 2 after Level 1 is played
+        }
+    }
+
+    public void level3()
+    {
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("TL3");
+        }
+    }
+
+    public void level4()
+    {
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("TL4");
+        }
+    }
+
+    public void level5()
+    {
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("TL5");
         }
     }
 }

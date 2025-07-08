@@ -160,6 +160,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   raycastPadding: 0.5
+  swipeCounter: 0
   isMoving: 0
 --- !u!114 &3157987709154262620
 MonoBehaviour:
@@ -174,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballType: 1
-  mergedBall: {fileID: 0}
+  mergedBall: {fileID: 1037978456031230588, guid: 272146ca85f2ec64b999fa52fea9cca8, type: 3}
 --- !u!114 &7508960417992995724
 MonoBehaviour:
   m_ObjectHideFlags: 0
