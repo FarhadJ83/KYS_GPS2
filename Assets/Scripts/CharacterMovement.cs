@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using static UnityEngine.UI.Image;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
@@ -34,6 +36,27 @@ public class CharacterMovement : MonoBehaviour
     private void OnDisable()
     {
         TouchController.onSwipe -= OnSwipeMoveBall;
+    }
+
+    public void Update()
+    {
+        if (SceneManager.GetActiveScene().name != "TutorialLevel1")
+        {
+            UpdateInverseButton();
+        }
+    }
+
+    private void UpdateInverseButton()
+    {
+        Button InverseButton = GameObject.Find("InverseButton").GetComponent<Button>();
+        if (isMoving && InverseButton != null)
+        {
+            InverseButton.interactable = false;
+        }
+        else if (!isMoving && InverseButton != null)
+        {
+            InverseButton.interactable = true;
+        }
     }
 
     private void OnSwipeMoveBall(object sender, TouchGesture e)
