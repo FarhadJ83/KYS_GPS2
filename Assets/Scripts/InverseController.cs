@@ -4,6 +4,8 @@ public class InverseController : MonoBehaviour
 {
     public GameObject whiteEnvironment;
     public GameObject blackEnvironment;
+    public Color YangColor;
+    public Color YinColor;
 
     private bool isWhiteActive = true;
 
@@ -11,7 +13,11 @@ public class InverseController : MonoBehaviour
     {
         isWhiteActive = !isWhiteActive;
 
+        Camera.main.backgroundColor = isWhiteActive ? YangColor : YinColor;
+
         whiteEnvironment.SetActive(isWhiteActive);
+
         blackEnvironment.SetActive(!isWhiteActive);
+
     }
 }
