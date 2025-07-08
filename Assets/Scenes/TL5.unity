@@ -8501,22 +8501,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 5303016560590619019, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5303016560590619019, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.55345905
-      objectReference: {fileID: 0}
-    - target: {fileID: 5303016560590619019, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.55345905
-      objectReference: {fileID: 0}
-    - target: {fileID: 5303016560590619019, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.55345905
-      objectReference: {fileID: 0}
     - target: {fileID: 6738528166800221407, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.5
@@ -10586,36 +10570,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
-      propertyPath: YinColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: YinColor.b
-      value: 0.18238991
+      value: 0.5529412
       objectReference: {fileID: 0}
     - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: YinColor.g
-      value: 0.048751988
+      value: 0.5529412
       objectReference: {fileID: 0}
     - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: YinColor.r
-      value: 0.1310306
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
-      propertyPath: YangColor.a
-      value: 1
+      value: 0.5529412
       objectReference: {fileID: 0}
     - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: YangColor.b
-      value: 0.5529412
+      value: 0.18431373
       objectReference: {fileID: 0}
     - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: YangColor.g
-      value: 0.5529412
+      value: 0.047058824
       objectReference: {fileID: 0}
     - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: YangColor.r
-      value: 0.5529412
+      value: 0.12941177
       objectReference: {fileID: 0}
     - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: blackEnvironment
