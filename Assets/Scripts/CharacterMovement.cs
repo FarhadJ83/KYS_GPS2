@@ -44,38 +44,39 @@ public class CharacterMovement : MonoBehaviour
         {
             Vector3 origin = ball.position;
 
-            // Wall raycast
-            bool hitWall = Physics.Raycast(origin, moveDir, out RaycastHit wallHit, Mathf.Infinity, wallLayer);
+            // Raycast to get all gates in the path
+            Ray ray = new Ray(origin, moveDir);
+
+            // Get all gate hits, sorted by distance
+            RaycastHit[] gateHits = Physics.RaycastAll(ray, Mathf.Infinity, gateLayer);
+            Array.Sort(gateHits, (a, b) => a.distance.CompareTo(b.distance));
+
+            // Raycast to the wall
+            bool hitWall = Physics.Raycast(ray, out RaycastHit wallHit, Mathf.Infinity, wallLayer);
             float wallDist = hitWall ? wallHit.distance : Mathf.Infinity;
 
-            // Gate raycast
-            bool hitGate = Physics.Raycast(origin, moveDir, out RaycastHit gateHit, Mathf.Infinity, gateLayer);
-            float gateDist = hitGate ? gateHit.distance : Mathf.Infinity;
+            BallColorState ballState = ball.GetComponent<BallColorState>();
 
-            // If gate is closer than wall
-            if (hitGate && gateDist < wallDist)
+            foreach (RaycastHit gateHit in gateHits)
             {
                 GameObject gateObj = gateHit.collider.gameObject;
-                BallColorState ballState = ball.GetComponent<BallColorState>();
 
                 bool isBlackGate = gateObj.CompareTag("BlackGate");
                 bool isMismatch = ballState != null && ballState.isBlack != isBlackGate;
 
-                if (isMismatch)
+                if (isMismatch && gateHit.distance < wallDist)
                 {
-                    // Ball is blocked by mismatched gate
+                    // Mismatched gate is in the way before wall
                     Vector3 stopBeforeGate = gateHit.point - moveDir * raycastPadding;
                     StartCoroutine(SmoothMoveToWall(ball, stopBeforeGate));
                     return;
                 }
-
-                // Otherwise, fall through to wall (or max movement)
             }
 
-            // Wall or matching gate is next
+            // No mismatched gates in the way, go to wall
             Vector3 targetPos = hitWall
                 ? wallHit.point - moveDir * raycastPadding
-                : origin + moveDir * 10f; // fallback if no wall
+                : origin + moveDir * 10f;
 
             StartCoroutine(SmoothMoveToWall(ball, targetPos));
         }
