@@ -47,12 +47,20 @@ public class CharacterMovement : MonoBehaviour
             // Raycast to get all gates in the path
             Ray ray = new Ray(origin, moveDir);
 
+            bool firstCheck = Physics.Raycast(ray, out RaycastHit wallHit, 1, wallLayer);
+
+            if (firstCheck)
+            {
+                Debug.Log($"{gameObject.name} Hit {wallHit.collider.gameObject.name}");
+                return;
+            }
+
             // Get all gate hits, sorted by distance
             RaycastHit[] gateHits = Physics.RaycastAll(ray, Mathf.Infinity, gateLayer);
             Array.Sort(gateHits, (a, b) => a.distance.CompareTo(b.distance));
 
             // Raycast to the wall
-            bool hitWall = Physics.Raycast(ray, out RaycastHit wallHit, Mathf.Infinity, wallLayer);
+            bool hitWall = Physics.Raycast(ray, out wallHit, Mathf.Infinity, wallLayer);
             float wallDist = hitWall ? wallHit.distance : Mathf.Infinity;
 
             BallColorState ballState = ball.GetComponent<BallColorState>();
