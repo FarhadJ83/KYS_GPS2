@@ -125,6 +125,9 @@ public class CharacterMovement : MonoBehaviour
 
         while (Vector3.Distance(obj.position, targetPos) > 0.01f)
         {
+            if (lastMoveDir != Vector3.zero)
+                obj.rotation = Quaternion.LookRotation(lastMoveDir);
+
             obj.position = Vector3.MoveTowards(obj.position, targetPos, moveSpeed * Time.deltaTime);
             yield return null;
         }
