@@ -1,0 +1,44 @@
+using UnityEngine;
+
+public class audiosettings : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Need to change volume of audio source when the slider is changed
+    // Also need vibration to be on when toggle is ticked
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private UnityEngine.UI.Slider volumeSlider;
+    [SerializeField] private UnityEngine.UI.Toggle vibrationToggle;
+    private void Start()
+    {
+        volumeSlider = GameObject.Find("Volume")?.GetComponent<UnityEngine.UI.Slider>();
+        vibrationToggle = GameObject.Find("VibrationToggle")?.GetComponent<UnityEngine.UI.Toggle>();
+        if (audioSource == null)
+        {
+            audioSource = GameObject.Find("AudioManager")?.GetComponent<AudioSource>();
+        }
+        if (volumeSlider != null)
+        {
+            volumeSlider.onValueChanged.AddListener(SetVolume);
+            volumeSlider.value = audioSource.volume;        
+        }
+        if (vibrationToggle != null)
+        {
+            vibrationToggle.onValueChanged.AddListener(SetVibration);
+            vibrationToggle.isOn = PlayerPrefs.GetInt("Vibration", 1) == 1; // Default to on
+        }
+    }
+
+    private void SetVolume(float volume)
+    {
+        if (audioSource != null)
+        {
+            audioSource.volume = volume;
+        }
+    }
+
+    private void SetVibration(bool isOn)
+    {
+        PlayerPrefs.SetInt("Vibration", isOn ? 1 : 0);
+    }
+}
