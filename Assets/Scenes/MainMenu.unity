@@ -328,8 +328,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 87e55b3a16a0fa34993ced1f1b09c189, type: 3}
-  m_Resource: {fileID: 8300000, guid: 87e55b3a16a0fa34993ced1f1b09c189, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7a22ff8ee576cf748a69fd88de890614, type: 3}
+  m_Resource: {fileID: 8300000, guid: 7a22ff8ee576cf748a69fd88de890614, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1270,6 +1270,10 @@ PrefabInstance:
     - target: {fileID: 4667228310563306041, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
       propertyPath: m_Name
       value: SettingsPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667228310563306041, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5014982322489819906, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
