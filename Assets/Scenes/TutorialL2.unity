@@ -12156,13 +12156,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2100277090}
+    - target: {fileID: 1368433575149928939, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 114
+      objectReference: {fileID: 0}
     - target: {fileID: 2092416150966408180, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_text
       value: Level 2
       objectReference: {fileID: 0}
     - target: {fileID: 2174517317998059922, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -431
+      value: -559
       objectReference: {fileID: 0}
     - target: {fileID: 4351621836731153613, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_IsActive
