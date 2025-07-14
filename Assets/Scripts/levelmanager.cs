@@ -56,13 +56,18 @@ public class levelmanager : MonoBehaviour
         //}
         if (settingsPanel != null)
         {
+            Debug.Log("Settings panel found, toggling its active state.");
             if (settingsPanel.activeSelf)
             {
+                Debug.Log("Settings panel is active, closing it now.");
                 settingsPanel.SetActive(false);
+                Time.timeScale = 1; // Resume the game when settings panel is closed
             }
             else
             {
+                Debug.Log("Settings panel is not active, opening it now.");
                 settingsPanel.SetActive(true);
+                Time.timeScale = 0; // Pause the game when settings panel is opened
             }
         }
     }
