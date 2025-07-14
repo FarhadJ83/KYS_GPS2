@@ -39,6 +39,7 @@ public class Teleporter : MonoBehaviour
             {
                 // Spawn new ball at destination
                 GameObject newBall = Instantiate(ballPrefab, destinationTeleporter.position, Quaternion.identity);
+                newBall.transform.forward = moveDir;
 
                 // Set ball type (if it has merging behavior)
                 MergingController mcNew = newBall.GetComponent<MergingController>();
