@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ using static UnityEngine.UI.Image;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
+[RequireComponent(typeof(Animator))]
 public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] private Transform ball;
@@ -24,9 +26,13 @@ public class CharacterMovement : MonoBehaviour
 
     public bool isMoving = false;
 
+    private Animator animator;
+
     public void Start()
     {
         swipeCounter = 0;
+
+        animator = GetComponent<Animator>();
     }
     private void OnEnable()
     {
@@ -44,6 +50,7 @@ public class CharacterMovement : MonoBehaviour
         {
             UpdateInverseButton();
         }
+
     }
 
     private void UpdateInverseButton()
@@ -123,6 +130,8 @@ public class CharacterMovement : MonoBehaviour
         isMoving = true;
         swipeCounter++;
 
+        animator.SetBool("IsMoving", true);
+
         while (Vector3.Distance(obj.position, targetPos) > 0.01f)
         {
             if (lastMoveDir != Vector3.zero)
@@ -133,6 +142,7 @@ public class CharacterMovement : MonoBehaviour
         }
 
         obj.position = targetPos;
+        animator.SetBool("IsMoving", false);
         isMoving = false;
     }
 
