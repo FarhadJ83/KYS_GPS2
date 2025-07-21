@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class WinCondition : MonoBehaviour
@@ -34,31 +35,135 @@ public class WinCondition : MonoBehaviour
             swipecount = whiteBall.swipeCounter;
         }
 
-        
+
 
         if (swipecount < 10)
         {
             Star3.sprite = star;
             Star2.sprite = star;
             Star1.sprite = star;
+
+            if (SceneManager.GetActiveScene().name == "TutorialLevel1")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[0] = 3;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+
+            }
+            else if (SceneManager.GetActiveScene().name == "TutorialL2")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[1] = 3;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL3")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[2] = 3;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL4")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[3] = 3;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL5")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[4] = 3;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
         }
         else if (swipecount < 20)
         {
             Star3.sprite = noStar;
             Star2.sprite = star;
             Star1.sprite = star;
+            if (SceneManager.GetActiveScene().name == "TutorialLevel1")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[0] = 2;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TutorialL2")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[1] = 2;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL3")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[2] = 2;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL4")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[3] = 2;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL5")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[4] = 2;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
         }
         else if (swipecount < 30)
         {
             Star3.sprite = noStar;
             Star2.sprite = noStar;
             Star1.sprite = star;
+
+            if (SceneManager.GetActiveScene().name == "TutorialLevel1")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[0] = 1;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TutorialL2")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[1] = 1;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL3")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[2] = 1;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL4")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[3] = 1;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL5")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[4] = 1;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
         }
         else
         {
             Star3.sprite = noStar;
             Star2.sprite = noStar;
             Star1.sprite = noStar;
+
+            if (SceneManager.GetActiveScene().name == "TutorialLevel1")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[0] = 0;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TutorialL2")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[1] = 0;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL3")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[2] = 0;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL4")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[3] = 0;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
+            else if (SceneManager.GetActiveScene().name == "TL5")
+            {
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[4] = 0;
+                GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+            }
         }
     }
 }

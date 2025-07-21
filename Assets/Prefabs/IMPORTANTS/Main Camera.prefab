@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 579670715032905506}
   - component: {fileID: 5835752590562576496}
   - component: {fileID: 6750594903678944855}
+  - component: {fileID: 5483642950332355918}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -169,3 +170,18 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   volumeSlider: {fileID: 0}
   vibrationToggle: {fileID: 0}
+--- !u!114 &5483642950332355918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225088644382584839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a2e6d12adc83c44b957e7427629711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swipeCountertext: {fileID: 0}
+  blackBall: {fileID: 0}
+  whiteBall: {fileID: 0}

@@ -38,7 +38,10 @@ public class MergingController : MonoBehaviour
                 Vector3 yinYangPosition = (transform.position + collision.transform.position) / 2f;
 
                 // Instantiate the merged ball
-                Instantiate(mergedBall, yinYangPosition, Quaternion.identity);
+                if (mergedBall!=null)
+                {
+                    Instantiate(mergedBall, yinYangPosition, Quaternion.identity);
+                }
                 //StartCoroutine(WinScreen());
                 // Destroy both balls
                 if (winScreen != null)
@@ -57,18 +60,22 @@ public class MergingController : MonoBehaviour
                 if (SceneManager.GetActiveScene().name == "TutorialLevel1")
                 {
                     GameObject.Find("LevelManager").GetComponent<LevelScript>().level2Unlocked = true;
+                    GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
                 }
                 else if (SceneManager.GetActiveScene().name == "TutorialL2")
                 {
                     GameObject.Find("LevelManager").GetComponent<LevelScript>().level3Unlocked = true;
+                    GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
                 }
                 else if (SceneManager.GetActiveScene().name == "TL3")
                 {
                     GameObject.Find("LevelManager").GetComponent<LevelScript>().level4Unlocked = true;
+                    GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
                 }
                 else if (SceneManager.GetActiveScene().name == "TL4")
                 {
                     GameObject.Find("LevelManager").GetComponent<LevelScript>().level5Unlocked = true;
+                    GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
                 }
             }
         }
