@@ -1,17 +1,17 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
-using System.Linq; // Required for LINQ methods like .FirstOrDefault()
+using System.Linq; // Required for LINQ methods like .Max()
 
 [System.Serializable]
 public class PrefabMapping
 {
     [Tooltip("The character used in the grid layout text to represent this prefab. If more than one character is entered, only the first will be used.")]
-    public string id; // Changed from int to string to allow any character
-    [Tooltip("The prefab GameObject to instantiate.")]
-    public GameObject prefab;
-    [Tooltip("Rotation in Euler angles to apply to the prefab instance (local rotation).")]
-    public Vector3 rotationEuler; // Euler angles for rotation
+    public string id;
+    [Tooltip("The list of prefabs to instantiate. World 1 uses the first prefab. World 2 uses the second, or the first if a second isn't assigned.")]
+    public List<GameObject> prefabs = new List<GameObject>(); // Changed to a list
+    [Tooltip("Rotation in Euler angles to apply to the prefab instance (local rotation). This is applied to all prefabs in this mapping.")]
+    public Vector3 rotationEuler;
 }
 
 public class WorldGenerator : EditorWindow
@@ -46,395 +46,228 @@ public class WorldGenerator : EditorWindow
         scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
 
         EditorGUILayout.LabelField("1. Prefab Definitions", EditorStyles.boldLabel);
-        EditorGUILayout.HelpBox("Define which character (e.g., '1', 'w', '#') corresponds to which prefab, its rotation, and size. Drag your prefabs here. An ID character must be unique. Prefabs with no renderers or colliders might not be positioned correctly based on bounds.", MessageType.Info);
-
-        // Draw the list of prefab mappings
+        EditorGUILayout.HelpBox("Define which character (ID) corresponds to which prefabs. World 1 uses the first prefab in the list. World 2 uses the second (or first if no second exists). All prefabs in a mapping share the same rotation.", MessageType.Info);
         EditorGUILayout.PropertyField(serializedMappingsProperty, true);
 
         EditorGUILayout.Space(10);
-
         EditorGUILayout.LabelField("2. Grid Layout", EditorStyles.boldLabel);
-        EditorGUILayout.HelpBox("Type your grid layout below. Each character specifies the prefab ID to place at that grid coordinate (column, row). Unrecognized characters are ignored. Each character position represents a single grid cell.", MessageType.Info);
-
+        EditorGUILayout.HelpBox("Type your grid layout. Each character is a prefab ID. Unrecognized characters are ignored.", MessageType.Info);
         gridLayoutText = EditorGUILayout.TextArea(gridLayoutText, GUILayout.Height(150), GUILayout.ExpandWidth(true));
 
         EditorGUILayout.Space(10);
-
         EditorGUILayout.LabelField("3. Settings", EditorStyles.boldLabel);
-
         parentObject = (Transform)EditorGUILayout.ObjectField("Parent Object (Optional)", parentObject, typeof(Transform), true);
-        EditorGUILayout.HelpBox("Generated objects will be children of this object. If none, a new 'GeneratedWorld' object is created at the scene origin.", MessageType.None);
+        EditorGUILayout.HelpBox("Generated 'World_1' and 'World_2' folders will be children of this object. If none, a new 'GeneratedWorld' object is created.", MessageType.None);
 
-        // Removed the note about Y spacing for now, assuming Y is handled by prefab vertical origin/pivot
         gridSpacing = EditorGUILayout.Vector3Field("Min Object Spacing (X, Z)", new Vector3(gridSpacing.x, 0f, gridSpacing.z));
-        gridSpacing.y = 0f; // Force Y spacing to 0 for this grid model
-        EditorGUILayout.HelpBox("This is the minimum empty space between the *edges* of calculated bounds of adjacent objects in the X and Z dimensions.", MessageType.None);
+        gridSpacing.y = 0f;
+        EditorGUILayout.HelpBox("The minimum empty space between the edges of adjacent objects.", MessageType.None);
 
         EditorGUILayout.Space(20);
         GUI.backgroundColor = Color.green;
-        if (GUILayout.Button("Generate Grid", GUILayout.Height(40)))
+        if (GUILayout.Button("Generate Worlds", GUILayout.Height(40)))
         {
             GenerateGrid();
         }
         GUI.backgroundColor = Color.white;
 
-        if (parentObject != null)
+        if (GUILayout.Button("Clear Generated Objects", GUILayout.Height(25)))
         {
-            GUI.backgroundColor = new Color(1f, 0.6f, 0.6f); // Light red color
-            if (GUILayout.Button("Clear Generated Objects", GUILayout.Height(25)))
+            if (EditorUtility.DisplayDialog("Clear Confirmation",
+                "This will delete all children of the assigned Parent Object (or of 'GeneratedWorld' if none is assigned). Are you sure?", "Yes, Clear", "No"))
             {
-                // Add a confirmation dialog
-                if (EditorUtility.DisplayDialog("Clear Confirmation",
-                    "Are you sure you want to delete all child objects of '" + parentObject.name + "'?", "Yes", "No"))
-                {
-                    ClearGeneratedObjects();
-                }
+                ClearGeneratedObjects();
             }
-            GUI.backgroundColor = Color.white;
         }
 
         EditorGUILayout.EndScrollView();
-
         serializedObject.ApplyModifiedProperties();
     }
-
 
     private void GenerateGrid()
     {
         if (prefabMappings == null || prefabMappings.Count == 0)
         {
-            Debug.LogError("World Generator: No prefab mappings defined. Please add at least one ID and prefab.");
+            Debug.LogError("World Generator: No prefab mappings defined.");
             return;
         }
 
-        // Map ID characters to PrefabMapping objects for quick lookup
-        Dictionary<string, PrefabMapping> prefabMapDict = new Dictionary<string, PrefabMapping>();
+        // --- SETUP ---
+        var prefabMapDict = new Dictionary<string, PrefabMapping>();
         foreach (var mapping in prefabMappings)
         {
-            // We only care about mappings that have both a prefab and a valid ID string.
-            if (mapping.prefab != null && !string.IsNullOrEmpty(mapping.id))
+            if (mapping.prefabs != null && mapping.prefabs.Count > 0 && !string.IsNullOrEmpty(mapping.id))
             {
-                // Use the first character of the ID string as the key.
                 string key = mapping.id.Substring(0, 1);
-                if (!prefabMapDict.ContainsKey(key))
-                {
-                    prefabMapDict.Add(key, mapping);
-                }
-                else
-                {
-                    Debug.LogWarning($"World Generator: Duplicate ID character '{key}' found in mappings. Using the first entry encountered.");
-                }
-            }
-            else
-            {
-                // Optional: Add warnings for incomplete mapping entries.
-                if (mapping.prefab == null && !string.IsNullOrEmpty(mapping.id))
-                    Debug.LogWarning($"World Generator: Prefab mapping for ID '{mapping.id}' has no prefab assigned. It will be skipped.");
+                if (!prefabMapDict.ContainsKey(key)) prefabMapDict.Add(key, mapping);
+                else Debug.LogWarning($"World Generator: Duplicate ID '{key}'. Using first entry found.");
             }
         }
-
-
         if (prefabMapDict.Count == 0)
         {
-            Debug.LogError("World Generator: None of the defined prefab mappings are valid (missing prefab or ID). Nothing to generate.");
+            Debug.LogError("World Generator: No valid mappings (missing ID or prefabs).");
             return;
         }
 
-
-        // Create parent object if needed
         if (parentObject == null)
         {
-            GameObject newParent = new GameObject("GeneratedWorld");
+            GameObject newParent = GameObject.Find("GeneratedWorld") ?? new GameObject("GeneratedWorld");
             parentObject = newParent.transform;
-            Debug.LogWarning("World Generator: No parent object assigned. Created a new GameObject named 'GeneratedWorld'.");
         }
 
-        // Clear previous generated objects *only if they are children of the designated parent*
-        // Add a check to make sure we don't accidentally clear the scene if parentObject was something critical.
-        // Maybe only clear objects *we* generated? This requires tracking... Simpler for now is just clearing children of *our* parent.
         ClearGeneratedObjects();
 
-        // Parse grid layout text
+        Transform world1Parent = new GameObject("World_1").transform;
+        world1Parent.SetParent(parentObject, false);
+        Transform world2Parent = new GameObject("World_2").transform;
+        world2Parent.SetParent(parentObject, false);
+
         string[] lines = gridLayoutText.Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
         int maxRows = lines.Length;
-        int maxCols = 0;
-        foreach (string line in lines)
-        {
-            maxCols = Mathf.Max(maxCols, line.Length);
-        }
-
+        int maxCols = lines.Length > 0 ? lines.Max(l => l.Length) : 0;
         if (maxRows == 0 || maxCols == 0)
         {
-            Debug.LogWarning("World Generator: Grid layout is empty or contains no valid rows/columns. Nothing to generate.");
+            Debug.LogWarning("World Generator: Grid layout is empty.");
             return;
         }
 
+        // --- PRE-CALCULATION & CACHING ---
+        EditorUtility.DisplayProgressBar("World Generator", "Calculating prefab bounds...", 0.1f);
+        var prefabBoundsCache = new Dictionary<GameObject, Bounds>();
+        var pivotToCenterOffsetsCache = new Dictionary<GameObject, Vector3>();
 
-        // --- Step 1: Pre-calculate required cell sizes based on max prefab bounds in each column/row ---
-        // These arrays store the maximum *physical size* (X for width, Z for depth) needed for items
-        // placed in each specific column (maxCellWidths) and each specific row (maxCellHeights).
-        float[] maxCellWidths = new float[maxCols];
-        float[] maxCellHeights = new float[maxRows]; // Corresponds to Z in world space
-
-        // Also pre-calculate the offset from the prefab's pivot to its bounds center after rotation for each prefab ID
-        Dictionary<string, Vector3> pivotToCenterWorldOffsets = new Dictionary<string, Vector3>();
-
-
-        EditorUtility.DisplayProgressBar("World Generator", "Calculating prefab bounds and layout dimensions...", 0.2f);
-
-        // Iterate through the grid layout to find max sizes per column/row and store pivot offsets per ID
-        for (int z = 0; z < maxRows; z++)
+        foreach (var mapping in prefabMapDict.Values)
         {
-            string line = lines[z];
-            for (int x = 0; x < line.Length; x++)
+            foreach (var prefab in mapping.prefabs)
             {
-                if (x >= maxCols) continue; // Handle lines shorter than maxCols
-
-                char character = line[x];
-                string id = character.ToString(); // The key is now a string from the character
-
-                if (prefabMapDict.TryGetValue(id, out PrefabMapping mapping))
+                if (prefab != null && !prefabBoundsCache.ContainsKey(prefab))
                 {
-
-                    Bounds tempBounds = new Bounds();
-                    bool boundsCalculated = false;
-                    // Calculate bounds and pivot offset ONCE per prefab ID, but update maxCellSizes per position
-                    if (!pivotToCenterWorldOffsets.ContainsKey(id))
+                    GameObject tempInstance = null;
+                    try
                     {
-                        // Instantiate temporarily to get bounds and pivot offset with correct rotation
-                        GameObject tempInstance = null;
-
-
-                        try
-                        {
-                            tempInstance = (GameObject)PrefabUtility.InstantiatePrefab(mapping.prefab);
-                            tempInstance.transform.rotation = Quaternion.Euler(mapping.rotationEuler); // Apply rotation to get correct bounds
-
-                            tempBounds = GetBounds(tempInstance);
-
-                            if (tempBounds.size != Vector3.zero)
-                            {
-                                boundsCalculated = true;
-                                // Calculate offset from pivot (tempInstance.transform.position is the pivot's world position)
-                                // to the bounds center in world space. This offset is constant regardless of final world position.
-                                pivotToCenterWorldOffsets[id] = tempBounds.center - tempInstance.transform.position;
-                            }
-                            else
-                            {
-                                Debug.LogWarning($"World Generator: Prefab '{mapping.prefab.name}' (ID: {id}) has no renderers or colliders to determine bounds. Cannot determine size or accurate pivot offset. Will be treated as zero size and placed by pivot. This may cause overlap.");
-                                // Store a zero offset.
-                                pivotToCenterWorldOffsets[id] = Vector3.zero;
-                            }
-                        }
-                        finally
-                        {
-                            if (tempInstance != null) DestroyImmediate(tempInstance); // Clean up temporary instance
-                        }
-
+                        tempInstance = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+                        tempInstance.transform.rotation = Quaternion.Euler(mapping.rotationEuler);
+                        Bounds bounds = GetBounds(tempInstance);
+                        prefabBoundsCache[prefab] = bounds;
+                        pivotToCenterOffsetsCache[prefab] = (bounds.size != Vector3.zero) ? bounds.center - tempInstance.transform.position : Vector3.zero;
                     }
-
-                    // Update max size for THIS specific column (x) and THIS specific row (z) based on the bounds of the object placed HERE.
-                    // This is crucial. The space for column X is determined by the widest object *in that column*.
-                    // Retrieve the previously calculated bounds (if any) to avoid recalculating
-                    if (pivotToCenterWorldOffsets.ContainsKey(id)) // We know we have a mapping here
-                    {
-                        // We need the bounds size again. We have to re-calc it or store it. Let's just re-calc.
-                        // This is slightly inefficient but simpler than storing another dictionary.
-                        GameObject tempInstanceForBounds = (GameObject)PrefabUtility.InstantiatePrefab(mapping.prefab);
-                        tempInstanceForBounds.transform.rotation = Quaternion.Euler(mapping.rotationEuler);
-                        Bounds currentBounds = GetBounds(tempInstanceForBounds);
-                        if (currentBounds.size != Vector3.zero)
-                        {
-                            maxCellWidths[x] = Mathf.Max(maxCellWidths[x], currentBounds.size.x);
-                            maxCellHeights[z] = Mathf.Max(maxCellHeights[z], currentBounds.size.z);
-                        }
-                        DestroyImmediate(tempInstanceForBounds);
-                    }
-
+                    finally { if (tempInstance != null) DestroyImmediate(tempInstance); }
                 }
             }
         }
 
-        // --- Step 2: Calculate cumulative offsets for cell boundary positions ---
-        // These define the cumulative space occupied by cells up to a certain index, including spacing.
-        // The total width of column X's allocated space is maxCellWidths[X] + gridSpacing.x
-        // The total height of row Z's allocated space is maxCellHeights[Z] + gridSpacing.z
-
-        float[] cumulativeXOffsets = new float[maxCols + 1]; // +1 for the end point after the last column
-        float[] cumulativeZOffsets = new float[maxRows + 1]; // +1 for the end point after the last row
-
-        cumulativeXOffsets[0] = 0;
-        for (int x = 0; x < maxCols; x++)
-        {
-            // The end of cell X is the start of cell X + the size needed for cell X (max object width + spacing)
-            cumulativeXOffsets[x + 1] = cumulativeXOffsets[x] + maxCellWidths[x] + gridSpacing.x;
-        }
-
-        cumulativeZOffsets[0] = 0;
-        // Z in layout text corresponds to rows, and often represents depth in world space.
-        // We'll make Z positive go "down" in the layout text/rows, corresponding to negative Z in world space.
-        for (int z = 0; z < maxRows; z++)
-        {
-            // The end of cell Z is the start of cell Z + the size needed for cell Z (max object depth + spacing)
-            cumulativeZOffsets[z + 1] = cumulativeZOffsets[z] + maxCellHeights[z] + gridSpacing.z;
-        }
-
-        // Note: The cumulative offsets now represent the positions of the boundaries *between* cells.
-        // cumulativeXOffsets[x] is the world X position of the left edge of column x's allocated space (relative to grid origin).
-        // cumulativeXOffsets[x+1] is the world X position of the right edge of column x's allocated space.
-        // cumulativeZOffsets[z] is the world Z position of the top edge of row z's allocated space (relative to grid origin).
-        // cumulativeZOffsets[z+1] is the world Z position of the bottom edge of row z's allocated space.
-
-
-        // --- Step 3: Instantiate and position prefabs ---
-        EditorUtility.DisplayProgressBar("World Generator", "Generating grid...", 0.7f);
-
-        // The world origin for the grid is the parent object's position.
-        Vector3 gridWorldOrigin = parentObject.position;
+        // --- LAYOUT DIMENSION CALCULATION ---
+        EditorUtility.DisplayProgressBar("World Generator", "Calculating layout dimensions...", 0.3f);
+        float[] maxCellWidths = new float[maxCols];
+        float[] maxCellHeights = new float[maxRows];
 
         for (int z = 0; z < maxRows; z++)
         {
             string line = lines[z];
             for (int x = 0; x < line.Length; x++)
             {
-                if (x >= maxCols) continue; // Handle lines shorter than maxCols
-
-                char character = line[x];
-                string id = character.ToString(); // The key is the character from the grid
-
-                // Check if a valid mapping exists for this ID
-                if (prefabMapDict.TryGetValue(id, out PrefabMapping mapping) && mapping.prefab != null)
+                if (prefabMapDict.TryGetValue(line[x].ToString(), out PrefabMapping mapping))
                 {
-                    // Calculate the center position of the current cell's *allocated space* (x, z) in parent's local space
-                    // This is the midpoint between the start and end cumulative offsets for this cell.
-                    float cellCenterX_local = (cumulativeXOffsets[x] + cumulativeXOffsets[x + 1] - gridSpacing.x) / 2f;
-                    float cellCenterZ_local = (cumulativeZOffsets[z] + cumulativeZOffsets[z + 1] - gridSpacing.z) / 2f;
+                    foreach (var prefab in mapping.prefabs)
+                    {
+                        if (prefab != null && prefabBoundsCache.TryGetValue(prefab, out Bounds bounds))
+                        {
+                            maxCellWidths[x] = Mathf.Max(maxCellWidths[x], bounds.size.x);
+                            maxCellHeights[z] = Mathf.Max(maxCellHeights[z], bounds.size.z);
+                        }
+                    }
+                }
+            }
+        }
 
-                    // The target world position for the *center of the bounds* of the object.
-                    // The Z axis in the grid layout usually maps to the negative Z world axis to go "forward" or "down" from a top-down view.
-                    // Adjust the Z coordinate to reflect this and apply parent transform.
-                    Vector3 targetBoundsCenterWorld = parentObject.TransformPoint(new Vector3(cellCenterX_local, 0, -cellCenterZ_local));
-                    // Assuming Y=0 is the base plane for placement for all objects.
+        // --- CUMULATIVE OFFSET CALCULATION ---
+        float[] cumulativeXOffsets = new float[maxCols + 1];
+        float[] cumulativeZOffsets = new float[maxRows + 1];
+        for (int x = 0; x < maxCols; x++) cumulativeXOffsets[x + 1] = cumulativeXOffsets[x] + maxCellWidths[x] + gridSpacing.x;
+        for (int z = 0; z < maxRows; z++) cumulativeZOffsets[z + 1] = cumulativeZOffsets[z] + maxCellHeights[z] + gridSpacing.z;
 
-                    // Retrieve the pre-calculated offset from pivot to bounds center for this prefab ID
-                    Vector3 pivotToCenterWorldOffset = pivotToCenterWorldOffsets.ContainsKey(id) ? pivotToCenterWorldOffsets[id] : Vector3.zero;
+        // --- INSTANTIATION ---
+        EditorUtility.DisplayProgressBar("World Generator", "Generating worlds...", 0.6f);
+        for (int z = 0; z < maxRows; z++)
+        {
+            string line = lines[z];
+            for (int x = 0; x < line.Length; x++)
+            {
+                if (prefabMapDict.TryGetValue(line[x].ToString(), out PrefabMapping mapping) && mapping.prefabs.Count > 0 && mapping.prefabs[0] != null)
+                {
+                    float cellCenterX = (cumulativeXOffsets[x] + cumulativeXOffsets[x + 1] - gridSpacing.x) / 2f;
+                    float cellCenterZ = (cumulativeZOffsets[z] + cumulativeZOffsets[z + 1] - gridSpacing.z) / 2f;
+                    Vector3 targetBoundsCenterWorld = parentObject.TransformPoint(new Vector3(cellCenterX, 0, -cellCenterZ));
 
+                    // Instantiate for World 1
+                    GameObject prefab1 = mapping.prefabs[0];
+                    InstantiateObjectInCell(prefab1, mapping.rotationEuler, world1Parent, targetBoundsCenterWorld, pivotToCenterOffsetsCache);
 
-                    // Calculate the required world position for the object's *pivot*
-                    // Target Pivot World Position = (Target Bounds Center World Position) - (World Offset from Pivot to Bounds Center)
-                    Vector3 targetPivotWorldPosition = targetBoundsCenterWorld - pivotToCenterWorldOffset;
-
-
-                    // Instantiate the prefab as a child of the parent object
-                    GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(mapping.prefab, parentObject);
-
-                    // Set the object's world position first
-                    instance.transform.position = targetPivotWorldPosition;
-
-                    // Set local rotation
-                    instance.transform.localRotation = Quaternion.Euler(mapping.rotationEuler);
+                    // Instantiate for World 2 (fallback to prefab 1 if needed)
+                    GameObject prefab2 = (mapping.prefabs.Count > 1 && mapping.prefabs[1] != null) ? mapping.prefabs[1] : prefab1;
+                    InstantiateObjectInCell(prefab2, mapping.rotationEuler, world2Parent, targetBoundsCenterWorld, pivotToCenterOffsetsCache);
                 }
             }
         }
 
         EditorUtility.ClearProgressBar();
-        Debug.Log($"World Generator: Grid generation complete! Generated {parentObject.childCount} objects.");
+        Debug.Log($"World Generator: Complete! Created 'World_1' and 'World_2' under '{parentObject.name}'.");
     }
 
-    // Helper to get the total bounds of a GameObject including all its children's renderers/colliders
-    // Returns Bounds with zero size if no renderers or colliders are found.
+    private void InstantiateObjectInCell(GameObject prefab, Vector3 eulerRotation, Transform parent, Vector3 targetBoundsCenterWorld, Dictionary<GameObject, Vector3> pivotOffsetsCache)
+    {
+        if (prefab == null || !pivotOffsetsCache.TryGetValue(prefab, out Vector3 pivotToCenterOffset)) return;
+
+        Vector3 targetPivotWorldPosition = targetBoundsCenterWorld - pivotToCenterOffset;
+        GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab, parent);
+        instance.transform.position = targetPivotWorldPosition;
+        instance.transform.localRotation = Quaternion.Euler(eulerRotation);
+    }
+
     private Bounds GetBounds(GameObject obj)
     {
-        // Start with bounds at the object's position, size 0
         Bounds bounds = new Bounds(obj.transform.position, Vector3.zero);
-        bool gotBounds = false;
+        bool hasBounds = false;
 
-        // Get bounds from all renderers first
-        Renderer[] renderers = obj.GetComponentsInChildren<Renderer>();
-        if (renderers.Length > 0)
+        foreach (Renderer r in obj.GetComponentsInChildren<Renderer>())
         {
-            foreach (Renderer r in renderers)
-            {
-                if (r.enabled) // Only consider enabled renderers
-                {
-                    if (!gotBounds)
-                    {
-                        bounds = r.bounds; // Start with the first renderer's bounds
-                        gotBounds = true;
-                    }
-                    else
-                    {
-                        bounds.Encapsulate(r.bounds); // Encapsulate subsequent renderer bounds
-                    }
-                }
-            }
+            if (!hasBounds) { bounds = r.bounds; hasBounds = true; }
+            else { bounds.Encapsulate(r.bounds); }
         }
 
-        // If no renderers provided bounds, try getting bounds from enabled colliders
-        if (!gotBounds)
+        if (!hasBounds)
         {
-            Collider[] colliders = obj.GetComponentsInChildren<Collider>();
-            if (colliders.Length > 0)
+            foreach (Collider c in obj.GetComponentsInChildren<Collider>())
             {
-                foreach (Collider c in colliders)
-                {
-                    if (c.enabled) // Only consider enabled colliders
-                    {
-                        if (!gotBounds)
-                        {
-                            bounds = c.bounds; // Start with the first collider's bounds
-                            gotBounds = true;
-                        }
-                        else
-                        {
-                            bounds.Encapsulate(c.bounds); // Encapsulate subsequent collider bounds
-                        }
-                    }
-                }
+                if (!hasBounds) { bounds = c.bounds; hasBounds = true; }
+                else { bounds.Encapsulate(c.bounds); }
             }
         }
-
-        // Return the calculated bounds. If gotBounds is false, size will be Vector3.zero.
         return bounds;
     }
 
-
     private void ClearGeneratedObjects()
     {
-        if (parentObject == null)
+        Transform parentToClear = parentObject;
+        if (parentToClear == null)
         {
-            // If parent was null and we created "GeneratedWorld", clear its children.
-            // If parent was assigned but is now null (e.g., deleted), this check prevents error.
             GameObject defaultParent = GameObject.Find("GeneratedWorld");
-            if (defaultParent != null)
-            {
-                parentObject = defaultParent.transform; // Temporarily set parentObject to clear
-                Debug.LogWarning("World Generator: Parent object was null, attempting to clear children of 'GeneratedWorld'.");
-            }
-            else
-            {
-                Debug.LogWarning("World Generator: No designated parent object and no 'GeneratedWorld' object found. Nothing to clear.");
-                return;
-            }
+            if (defaultParent != null) parentToClear = defaultParent.transform;
+            else return;
         }
 
-        // Store children to array before destroying, as DestroyImmediate happens immediately in Editor
-        GameObject[] children = new GameObject[parentObject.childCount];
-        for (int i = 0; i < parentObject.childCount; i++)
+        GameObject[] children = new GameObject[parentToClear.childCount];
+        for (int i = 0; i < parentToClear.childCount; i++)
         {
-            children[i] = parentObject.GetChild(i).gameObject;
+            children[i] = parentToClear.GetChild(i).gameObject;
         }
 
-        // Destroy all children
         foreach (GameObject child in children)
         {
-            if (child != null) // Check if object wasn't somehow destroyed already
-            {
-                DestroyImmediate(child);
-            }
+            if (child != null) DestroyImmediate(child);
         }
 
-        Debug.Log($"World Generator: Cleared {children.Length} generated objects under '{parentObject.name}'.");
-
+        if (children.Length > 0)
+            Debug.Log($"World Generator: Cleared {children.Length} child objects from '{parentToClear.name}'.");
     }
 }

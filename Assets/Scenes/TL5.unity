@@ -1323,7 +1323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &252663617
 Transform:
   m_ObjectHideFlags: 0
@@ -9496,7 +9496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1632483554}
   m_Layer: 0
-  m_Name: Yang world
+  m_Name: Yang World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10568,30 +10568,6 @@ PrefabInstance:
     - target: {fileID: 1534471758089961380, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
-      propertyPath: YinColor.b
-      value: 0.5529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
-      propertyPath: YinColor.g
-      value: 0.5529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
-      propertyPath: YinColor.r
-      value: 0.5529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
-      propertyPath: YangColor.b
-      value: 0.18431373
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
-      propertyPath: YangColor.g
-      value: 0.047058824
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
-      propertyPath: YangColor.r
-      value: 0.12941177
       objectReference: {fileID: 0}
     - target: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: blackEnvironment

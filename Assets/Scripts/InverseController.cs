@@ -2,13 +2,20 @@ using UnityEngine;
 
 public class InverseController : MonoBehaviour
 {
-    public GameObject whiteEnvironment;
-    public GameObject blackEnvironment;
+    [HideInInspector] GameObject whiteEnvironment;
+    [HideInInspector] GameObject blackEnvironment;
     public Color YangColor;
     public Color YinColor;
 
     private bool isWhiteActive = true;
 
+    public void Awake()
+    {
+        whiteEnvironment = GameObject.Find("Yang World");
+        blackEnvironment = GameObject.Find("Yin World");
+        blackEnvironment.SetActive(false);
+        Camera.main.backgroundColor = YangColor; 
+    }
     public void InvertEnvironment()
     {
         isWhiteActive = !isWhiteActive;
@@ -21,3 +28,4 @@ public class InverseController : MonoBehaviour
 
     }
 }
+//8D8D8D
