@@ -117,9 +117,9 @@ public class WorldGenerator : EditorWindow
 
         ClearGeneratedObjects();
 
-        Transform world1Parent = new GameObject("World_1").transform;
+        Transform world1Parent = new GameObject("Yang World").transform;
         world1Parent.SetParent(parentObject, false);
-        Transform world2Parent = new GameObject("World_2").transform;
+        Transform world2Parent = new GameObject("Yin World").transform;
         world2Parent.SetParent(parentObject, false);
 
         string[] lines = gridLayoutText.Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
