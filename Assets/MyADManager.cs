@@ -9,11 +9,11 @@ public class MyADManager : MonoBehaviour, IUnityAdsInitializationListener, IUnit
 
     public string GAME_ID = "5905965";
 
-#if UNITY_ANDROID
+// #if UNITY_ANDROID
     public string REWARDERD_ID = "Rewarded_Android";
     public string INTERSTITIAL_ID = "Interstitial_Android";
     public string BANNER_ID = "Banner_Android";
-#endif
+// #endif
 
     [SerializeField] Button initButton;
     [SerializeField] Button toggleButton;
