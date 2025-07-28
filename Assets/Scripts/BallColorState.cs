@@ -24,6 +24,6 @@ public class BallColorState : MonoBehaviour
 
     void UpdateBallMaterial()
     {
-        rend.material = isBlack ? blackMaterial : whiteMaterial;
+        //rend.material = isBlack ? blackMaterial : whiteMaterial;
     }
 }
