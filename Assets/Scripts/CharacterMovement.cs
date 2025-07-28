@@ -16,6 +16,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] public LayerMask wallLayer;
     [SerializeField] private LayerMask gateLayer;
+    [SerializeField] private LayerMask rapidLayer;
     [SerializeField] public float raycastPadding = 0.01f;
     public int swipeCounter;
 
@@ -97,6 +98,26 @@ public class CharacterMovement : MonoBehaviour
             // Raycast to the wall
             bool hitWall = Physics.Raycast(ray, out wallHit, Mathf.Infinity, wallLayer);
             float wallDist = hitWall ? wallHit.distance : Mathf.Infinity;
+
+            // Check for rapids in the path
+            RaycastHit[] rapidHits = Physics.RaycastAll(ray, Mathf.Infinity, rapidLayer);
+            Array.Sort(rapidHits, (a, b) => a.distance.CompareTo(b.distance));
+
+            foreach (RaycastHit rapidHit in rapidHits)
+            {
+                WaterRapidsDirection rapid = rapidHit.collider.GetComponent<WaterRapidsDirection>();
+                if (rapid != null)
+                {
+                    // If player tries to go against the flow direction
+                    if (Vector3.Dot(moveDir, rapid.direction) < 0)
+                    {
+                        // Stop before the rapid
+                        Vector3 stopBeforeRapid = rapidHit.point - moveDir * raycastPadding;
+                        StartCoroutine(SmoothMoveToWall(ball, stopBeforeRapid));
+                        return;
+                    }
+                }
+            }
 
             BallColorState ballState = ball.GetComponent<BallColorState>();
 
