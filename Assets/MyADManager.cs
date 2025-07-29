@@ -37,9 +37,8 @@ public class MyADManager : MonoBehaviour, IUnityAdsInitializationListener, IUnit
     bool succesfully_initialized = false;
     int count = 0;
     bool trying = false;
-
+    // Need to invoke Start whenever the scene is loaded or restarted
     IEnumerator Start()
-    
     {
         succesfully_initialized = false;
         count = 0;
@@ -64,10 +63,11 @@ public class MyADManager : MonoBehaviour, IUnityAdsInitializationListener, IUnit
         else
         {
             showInterstitialButton.onClick.AddListener(ShowInterstitialAd);
-            showRewardedButton.onClick.AddListener(ShowRewardedAd);
-            showRewardedButton.gameObject.SetActive(false);
+            //showRewardedButton.onClick.AddListener(ShowRewardedAd);
         }
     }
+
+    // When game is restarted
 
     // 1. Initialize Advertisement
 

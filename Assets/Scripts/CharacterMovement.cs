@@ -149,7 +149,9 @@ public class CharacterMovement : MonoBehaviour
     private IEnumerator SmoothMoveToWall(Transform obj, Vector3 targetPos)
     {
         isMoving = true;
-        swipeCounter++;
+        // If the position isn't the same, increment the swipe counter
+        if (Vector3.Distance(obj.position, targetPos) > 0.01f)
+            swipeCounter++;
 
         animator.SetBool("IsMoving", true);
 

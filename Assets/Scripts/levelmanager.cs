@@ -84,6 +84,11 @@ public class levelmanager : MonoBehaviour
         // Restart the current level
         UnityEngine.SceneManagement.Scene currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
         UnityEngine.SceneManagement.SceneManager.LoadScene(currentScene.name);
+        swiipeCounter swiipeCounter = Camera.main.GetComponent<swiipeCounter>();
+        if (swiipeCounter != null)
+        {
+            swiipeCounter.adAvailable = new bool[] { true, true, true }; // Reset ad availability
+        }
         Time.timeScale = 1; // Reset time scale to normal when restarting
     }
     public void level1()
