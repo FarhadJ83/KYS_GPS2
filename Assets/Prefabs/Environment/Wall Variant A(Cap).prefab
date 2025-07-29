@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2f4a7ac261ab4ba4e8e82423116c4eac, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ea98aade9f12ef49905ba4771fe8a09, type: 2}
     - target: {fileID: 919132149155446097, guid: 2f4a7ac261ab4ba4e8e82423116c4eac, type: 3}
       propertyPath: m_Name
       value: Wall Variant A(Cap)
