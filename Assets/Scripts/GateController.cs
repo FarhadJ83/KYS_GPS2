@@ -6,13 +6,18 @@ public class GateController : MonoBehaviour
     public Material blackMaterial;
 
     public bool isBlackGate = false; // Starts as white by default
+    public CharacterMovement blackBall;
+    public CharacterMovement whiteBall;
 
     private Renderer rend;
+    public bool isMismatch = false;
 
     void Start()
     {
         rend = GetComponent<Renderer>();
         UpdateGateMaterial();
+        blackBall = GameObject.Find("Black Ball").GetComponent<CharacterMovement>();
+        whiteBall = GameObject.Find("White Ball").GetComponent<CharacterMovement>();
     }
 
     public void InvertGate()
@@ -34,7 +39,7 @@ public class GateController : MonoBehaviour
 
             if (ballState != null)
             {
-                bool isMismatch = ballState.isBlack != isBlackGate;
+                isMismatch = ballState.isBlack != isBlackGate;
 
                 if (isMismatch)
                 {

@@ -12,7 +12,7 @@ public class swiipeCounter : MonoBehaviour
     IEnumerator enumerator;
     [SerializeField] Button showRewardButton;
     [HideInInspector] public int swipecount;
-    bool [] adAvailable = {true, true, true};
+    public bool [] adAvailable = {true, true, true};
 
     private void Start()
     {
@@ -37,7 +37,7 @@ public class swiipeCounter : MonoBehaviour
         
         swipeCountertext.GetComponent<TextMeshProUGUI>().text = "Swipe Count: " + swipecount.ToString();
 
-        if(swipecount == 2 && adAvailable[0])
+        if (swipecount == 2 && adAvailable[0])
         {
             StartCoroutine(activateShowRewardedButton());
             adAvailable[0] = false;
