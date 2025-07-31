@@ -23,7 +23,7 @@ public class InverseController : MonoBehaviour
         Camera.main.backgroundColor = YangColor; 
     }
 
-    public void Start()
+    public void Update()
     {
         if(whiteGates != null)
             foreach(GameObject gate in whiteGates)
