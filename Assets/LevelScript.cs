@@ -10,24 +10,14 @@ public class LevelScript : MonoBehaviour
     private LevelScript instance;
 
     [SerializeField] levelmanager levelManager;
-    public bool level1Unlocked = true;
-    public bool level2Unlocked = false;
-    public bool level3Unlocked = false;
-    public bool level4Unlocked = false;
-    public bool level5Unlocked = false;
-    [SerializeField] Button Level2Button;
-    [SerializeField] Button Level3Button;
-    [SerializeField] Button Level4Button;
-    [SerializeField] Button Level5Button;
-    public Sprite level3Img;
-    public Sprite level2Img;
-    public Sprite level4Img;
-    public Sprite level5Img;
-    int levelnumber = 1;
     public int[] levelStars = new int[5];
     public Sprite NoStar;
     public Sprite Star;
     string[] levelNames = new string[5] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button"};
+    public bool[] levelsUnlocked = new bool[5] { true, false, false, false, false };
+    public string[] levelScenes = new string[5] { "TutorialLevel1", "TutorialL2", "TL3", "TL4", "TL5" };
+    public Button[] LevelButtons;
+    public Sprite[] levelImage;
 
 
     private void Awake()
@@ -50,10 +40,11 @@ public class LevelScript : MonoBehaviour
         levelManager = Camera.main.GetComponent<levelmanager>();
         if (SceneManager.GetActiveScene().name == "LevelsScene")
         {
-            Level2Unlock();
-            Level3Unlock();
-            Level4Unlock();
-            Level5Unlock();
+            for (int i = 0; i < LevelButtons.Length; i++)
+            {
+                LevelButtons[i] = GameObject.Find(levelNames[i]).GetComponent<Button>();
+            }
+            LevelUnlock();
             setStars();
         }
 
@@ -63,101 +54,45 @@ public class LevelScript : MonoBehaviour
         }
     }
 
-    public void Level2Unlock()
+    public void LevelUnlock()
     {
-        Level2Button = GameObject.Find("Level2Button").GetComponent<Button>();
-        if (Level2Button != null)
+        for (int i = 0; i < levelsUnlocked.Length; i++)
         {
-            if (level2Unlocked)
+            if (LevelButtons[i] != null)
             {
-                Level2Button.image.sprite = level2Img;
-                Level2Button.interactable = true;
-                //Level2Button.onClick.AddListener(() => levelManager.level2());
+                if (levelsUnlocked[i])
+                {
+                    if (LevelButtons[i] != null)
+                    {
+                        LevelButtons[i].image.sprite = levelImage[i];
+                        LevelButtons[i].interactable = true;
+                    }
+                }
             }
         }
     }
 
-    public void Level3Unlock()
-    {
-        Level3Button = GameObject.Find("Level3Button").GetComponent<Button>();
-        if (Level3Button != null)
-        {
-            if (level3Unlocked)
-            {
-                Level3Button.image.sprite = level3Img;
-                Level3Button.interactable = true;
-                //Level3Button.onClick.AddListener(() => levelManager.level3());
-            }
-        }
-    }
+    //Save the level progress and Stars
 
-    public void Level4Unlock()
-    {
-        Level4Button = GameObject.Find("Level4Button").GetComponent<Button>();
-        if (Level4Button != null)
-        {
-            if (level4Unlocked)
-            {
-                Level4Button.image.sprite = level4Img;
-                Level4Button.interactable = true;
-                //Level4Button.onClick.AddListener(() => levelManager.level4());
-            }
-        }
-    }
-
-    public void Level5Unlock()
-    {
-        Level5Button = GameObject.Find("Level5Button").GetComponent<Button>();
-        if (Level5Button != null)
-        {
-            if (level5Unlocked)
-            {
-                Level5Button.image.sprite = level5Img;
-                Level5Button.interactable = true;
-                //Level5Button.onClick.AddListener(() => levelManager.level5());
-            }
-        }
-    }
-
-    //Save the level progress
     public void SaveLevelProgress()
     {
-        PlayerPrefs.SetInt("Level1Unlocked", level1Unlocked ? 1 : 0);
-        PlayerPrefs.SetInt("Level2Unlocked", level2Unlocked ? 1 : 0);
-        PlayerPrefs.SetInt("Level3Unlocked", level3Unlocked ? 1 : 0);
-        PlayerPrefs.SetInt("Level4Unlocked", level4Unlocked ? 1 : 0);
-        PlayerPrefs.SetInt("Level5Unlocked", level5Unlocked ? 1 : 0);
-
-        //Save the level stars
-
         for (int i = 0; i < levelStars.Length; i++)
         {
             PlayerPrefs.SetInt("Level" + (i + 1) + "Stars", levelStars[i]);
+            PlayerPrefs.SetInt("Level" + (i + 1) + "Unlocked", levelsUnlocked[i] ? 1 : 0);
         }
-
         PlayerPrefs.Save();
-
     }
+
+    //Load the level progress and Stars
 
     public void LoadLevelProgress()
     {
-        // Load the saved value for each level.
-        // The second argument (0) is the default value if the key is not found.
-        // We check if the value is 1 to convert it back to a boolean.
-        level1Unlocked = PlayerPrefs.GetInt("Level1Unlocked", 1) == 1; // Default to unlocked
-        level2Unlocked = PlayerPrefs.GetInt("Level2Unlocked", 0) == 1;
-        level3Unlocked = PlayerPrefs.GetInt("Level3Unlocked", 0) == 1;
-        level4Unlocked = PlayerPrefs.GetInt("Level4Unlocked", 0) == 1;
-        level5Unlocked = PlayerPrefs.GetInt("Level5Unlocked", 0) == 1;
-
-        // Load the level stars
-
         for (int i = 0; i < levelStars.Length; i++)
         {
-            levelStars[i] = PlayerPrefs.GetInt("Level" + (i + 1) + "Stars", 0); // Default to 0 stars
+            levelStars[i] = PlayerPrefs.GetInt("Level" + (i + 1) + "Stars", 0);
+            levelsUnlocked[i] = PlayerPrefs.GetInt("Level" + (i + 1) + "Unlocked", 0) == 1;
         }
-
-        Debug.Log("Level progress loaded!");
     }
 
     public void setStars()

@@ -7,6 +7,8 @@ public class levelmanager : MonoBehaviour
     public LevelScript level;
     [HideInInspector] public GameObject pausePanel;
     [HideInInspector] public GameObject settingsPanel;
+    public GameObject winScreen;
+    [SerializeField] GameObject mergedBall;
     public void Start()
     {
         pausePanel = GameObject.Find("PausePanel");
@@ -18,6 +20,20 @@ public class levelmanager : MonoBehaviour
         if (settingsPanel != null)
         {
             settingsPanel.SetActive(false);
+        }
+        winScreen = GameObject.Find("WinScreen");
+        if (winScreen != null)
+        {
+            winScreen.SetActive(false);
+        }
+    }
+
+    public void Update()
+    {
+        mergedBall = GameObject.Find("Yin Yang Ball(Clone)");
+        if (mergedBall != null)
+        {
+            StartCoroutine(WinScreen());
         }
     }
     public void playGame()
@@ -72,6 +88,15 @@ public class levelmanager : MonoBehaviour
         }
     }
 
+    private IEnumerator WinScreen()
+    {
+        if (winScreen != null)
+        {
+            yield return new WaitForSeconds(4f); // Show the win screen for 2 seconds
+            winScreen.SetActive(true);
+        }
+    }
+
     public void MainMenu()
     {
         // Load the main menu scene
@@ -94,8 +119,6 @@ public class levelmanager : MonoBehaviour
     public void level1()
     {
         // Load Level 1
-        level = GameObject.Find("LevelManager").gameObject.GetComponent<LevelScript>();
-        if (level != null && level.level1Unlocked)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("TutorialLevel1");
         }

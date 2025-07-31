@@ -36,22 +36,24 @@ public class swiipeCounter : MonoBehaviour
         }
         
         swipeCountertext.GetComponent<TextMeshProUGUI>().text = "Swipe Count: " + swipecount.ToString();
-
-        //if (swipecount == 2 && adAvailable[0])
-        //{
-        //    StartCoroutine(activateShowRewardedButton());
-        //    adAvailable[0] = false;
-        //}
-        //if (swipecount == 5 && adAvailable[1])
-        //{
-        //    StartCoroutine(activateShowRewardedButton());
-        //    adAvailable[1] = false;
-        //}
-        //if (swipecount == 10 && adAvailable[2])
-        //{
-        //    StartCoroutine(activateShowRewardedButton());
-        //    adAvailable[2] = false;
-        //}
+        if (showRewardButton != null)
+        {
+            if (swipecount == 2 && adAvailable[0])
+            {
+                StartCoroutine(activateShowRewardedButton());
+                adAvailable[0] = false;
+            }
+            if (swipecount == 5 && adAvailable[1])
+            {
+                StartCoroutine(activateShowRewardedButton());
+                adAvailable[1] = false;
+            }
+            if (swipecount == 10 && adAvailable[2])
+            {
+                StartCoroutine(activateShowRewardedButton());
+                adAvailable[2] = false;
+            }
+        }
 
 
     }

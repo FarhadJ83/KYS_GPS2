@@ -43,7 +43,7 @@ public class MyADManager : MonoBehaviour, IUnityAdsInitializationListener, IUnit
         succesfully_initialized = false;
         count = 0;
 
-        toggleButton.onClick.AddListener(ToggleBanner);
+        //toggleButton.onClick.AddListener(ToggleBanner);
 
         while (count < 5  && !succesfully_initialized)
         {
@@ -62,7 +62,7 @@ public class MyADManager : MonoBehaviour, IUnityAdsInitializationListener, IUnit
         }
         else
         {
-            showInterstitialButton.onClick.AddListener(ShowInterstitialAd);
+            //showInterstitialButton.onClick.AddListener(ShowInterstitialAd);
             //showRewardedButton.onClick.AddListener(ShowRewardedAd);
         }
     }

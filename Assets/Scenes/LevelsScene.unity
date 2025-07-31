@@ -2261,6 +2261,25 @@ MonoBehaviour:
   levelStars: 0000000000000000000000000000000000000000
   NoStar: {fileID: 21300000, guid: 61ec72ddb3902e0468c3257f0ca0dafb, type: 3}
   Star: {fileID: 21300000, guid: 205740ee3d0da5346ad4dea171c77724, type: 3}
+  levelsUnlocked: 0100000000
+  levelScenes:
+  - TutorialLevel1
+  - TutorialL2
+  - TL3
+  - TL4
+  - TL5
+  LevelButtons:
+  - {fileID: 422134118}
+  - {fileID: 12648133}
+  - {fileID: 1588126457}
+  - {fileID: 1447219156}
+  - {fileID: 454111740}
+  levelImage:
+  - {fileID: 21300000, guid: 516f78ff96c0a9941b40cd2166d2fec8, type: 3}
+  - {fileID: 21300000, guid: 057f47baa225522479b104db000d9a0c, type: 3}
+  - {fileID: 21300000, guid: 16db290ce1180fc42bc84fff419665a6, type: 3}
+  - {fileID: 21300000, guid: 1e6e83aea0c54bd4a9723542ad54fd70, type: 3}
+  - {fileID: 21300000, guid: 9ae7c4ed98b4a7246b5c0b92266e4fb1, type: 3}
 --- !u!4 &1003101105
 Transform:
   m_ObjectHideFlags: 0
@@ -3630,6 +3649,8 @@ MonoBehaviour:
   level: {fileID: 0}
   pausePanel: {fileID: 0}
   settingsPanel: {fileID: 0}
+  winScreen: {fileID: 0}
+  mergedBall: {fileID: 0}
 --- !u!1 &1588126454
 GameObject:
   m_ObjectHideFlags: 0
