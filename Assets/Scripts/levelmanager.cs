@@ -9,6 +9,7 @@ public class levelmanager : MonoBehaviour
     [HideInInspector] public GameObject settingsPanel;
     public GameObject winScreen;
     [SerializeField] GameObject mergedBall;
+    int c = 0; 
 
     [SerializeField] private GameObject startingTransition;
     [SerializeField] private GameObject endTransition;
@@ -37,7 +38,7 @@ public class levelmanager : MonoBehaviour
     public void Update()
     {
         mergedBall = GameObject.Find("Yin Yang Ball(Clone)");
-        if (mergedBall != null)
+        if (mergedBall != null && c == 0)
         {
             StartCoroutine(WinScreen());
         }
@@ -98,6 +99,7 @@ public class levelmanager : MonoBehaviour
     {
         if (winScreen != null)
         {
+            c++;
             yield return new WaitForSeconds(2f);
             startingTransition.SetActive(true);
             yield return new WaitForSeconds(2f);
