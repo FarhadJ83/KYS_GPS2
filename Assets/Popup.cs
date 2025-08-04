@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -68,4 +69,5 @@ public class Popup : MonoBehaviour
             popupSequence[currentIndex].SetActive(true);
         }
     }
+
 }
