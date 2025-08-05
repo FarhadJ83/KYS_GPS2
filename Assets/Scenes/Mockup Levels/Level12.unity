@@ -7552,6 +7552,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603276884228232425, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
+      propertyPath: blackBallSpawnPoint
+      value: 
+      objectReference: {fileID: 1850448954}
+    - target: {fileID: 8603276884228232425, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
+      propertyPath: whiteBallSpawnPoint
+      value: 
+      objectReference: {fileID: 2047868412}
     - target: {fileID: 8612685154627381162, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: m_Name
       value: EnvironmentManager
@@ -7633,6 +7641,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3042560333385206064, guid: 4ddbf81c58e3f204d8df6fdda954e9f1, type: 3}
   m_PrefabInstance: {fileID: 1831955435}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1850448954 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7568219876975901413, guid: 0c72b8f224da8474789f173af2c44a02, type: 3}
+  m_PrefabInstance: {fileID: 260325524}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1863750987
 PrefabInstance:
@@ -8222,6 +8235,11 @@ Transform:
   - {fileID: 1070374030}
   m_Father: {fileID: 849756274}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2047868412 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3924119597022148163, guid: a294229f66faa754485bce6c32ac44a2, type: 3}
+  m_PrefabInstance: {fileID: 1142084730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2067887279
 PrefabInstance:
   m_ObjectHideFlags: 0
