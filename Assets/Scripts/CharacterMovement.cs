@@ -54,6 +54,11 @@ public class CharacterMovement : MonoBehaviour
 
     }
 
+    public void assignSwipe(int sc)
+    {
+        swipeCounter = sc;
+    }
+
     private void UpdateInverseButton()
     {
         Button InverseButton = GameObject.Find("InverseButton").GetComponent<Button>();

@@ -16,8 +16,8 @@ public class GateController : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         UpdateGateMaterial();
-        blackBall = GameObject.Find("Black Ball").GetComponent<CharacterMovement>();
-        whiteBall = GameObject.Find("White Ball").GetComponent<CharacterMovement>();
+        blackBall = GameObject.FindGameObjectWithTag("BlackBall").GetComponent<CharacterMovement>();
+        whiteBall = GameObject.FindGameObjectWithTag("WhiteBall").GetComponent<CharacterMovement>();
     }
 
     public void InvertGate()

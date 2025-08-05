@@ -20,8 +20,8 @@ public class WinCondition : MonoBehaviour
     //[SerializeField] Text swipeCounterText;
     void Awake()
     {
-        blackBall = GameObject.Find("Black Ball").GetComponent<CharacterMovement>();
-        whiteBall = GameObject.Find("White Ball").GetComponent<CharacterMovement>();
+        blackBall = GameObject.FindGameObjectWithTag("BlackBall").GetComponent<CharacterMovement>();
+        whiteBall = GameObject.FindGameObjectWithTag("WhiteBall").GetComponent<CharacterMovement>();
         //swipeCounterText = GameObject.Find("SwipeCounter").GetComponent<Text>();
         Star3 = GameObject.Find("3Star").GetComponent<Image>();
         Star2 = GameObject.Find("2Star").GetComponent<Image>();

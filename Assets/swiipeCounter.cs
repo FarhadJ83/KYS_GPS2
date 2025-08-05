@@ -17,8 +17,8 @@ public class swiipeCounter : MonoBehaviour
     private void Start()
     {
         //swipeCountertext = GameObject.Find("SwipeCounter").GetComponent<Text>();
-        blackBall = GameObject.Find("Black Ball").GetComponent<CharacterMovement>();
-        whiteBall = GameObject.Find("White Ball").GetComponent<CharacterMovement>();
+        blackBall = GameObject.FindGameObjectWithTag("BlackBall").GetComponent<CharacterMovement>();
+        whiteBall = GameObject.FindGameObjectWithTag("WhiteBall").GetComponent<CharacterMovement>();
     }
 
     private void Update()
