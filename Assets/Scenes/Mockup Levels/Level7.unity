@@ -4722,7 +4722,7 @@ PrefabInstance:
     - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: blackGate
       value: 
-      objectReference: {fileID: 202215340}
+      objectReference: {fileID: 1367670060}
     - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: whiteGate
       value: 
@@ -8398,7 +8398,7 @@ PrefabInstance:
     - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: blackGate
       value: 
-      objectReference: {fileID: 212693049}
+      objectReference: {fileID: 1895516986}
     - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: whiteGate
       value: 

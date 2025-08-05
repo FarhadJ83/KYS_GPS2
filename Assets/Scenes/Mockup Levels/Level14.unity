@@ -713,16 +713,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 125712334630207929, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: blackGate
       value: 
-      objectReference: {fileID: 5627980079605391797, guid: ca482b896b6d90a41a5c51987bdbc5f5, type: 3}
+      objectReference: {fileID: 2104474080}
     - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: whiteGate
       value: 
-      objectReference: {fileID: 7373384096130254511, guid: a45527ca3f699064dbfda549a48e2e87, type: 3}
+      objectReference: {fileID: 1117741093}
     - target: {fileID: 1208299468966145676, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: m_Name
       value: Pressure Plate
@@ -1639,6 +1639,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c72b8f224da8474789f173af2c44a02, type: 3}
+--- !u!4 &260325525 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7568219876975901413, guid: 0c72b8f224da8474789f173af2c44a02, type: 3}
+  m_PrefabInstance: {fileID: 260325524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &273019231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2439,6 +2444,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca482b896b6d90a41a5c51987bdbc5f5, type: 3}
+--- !u!1 &446433126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5627980079605391797, guid: ca482b896b6d90a41a5c51987bdbc5f5, type: 3}
+  m_PrefabInstance: {fileID: 446433125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &466821840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2628,6 +2638,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 96678341}
     m_Modifications:
+    - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
+      propertyPath: blackGate
+      value: 
+      objectReference: {fileID: 446433126}
+    - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
+      propertyPath: whiteGate
+      value: 
+      objectReference: {fileID: 1011162939}
     - target: {fileID: 1208299468966145676, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: m_Name
       value: Pressure Plate Black
@@ -3715,6 +3733,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1013250093}
     m_Modifications:
+    - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
+      propertyPath: blackGate
+      value: 
+      objectReference: {fileID: 1117741093}
+    - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
+      propertyPath: whiteGate
+      value: 
+      objectReference: {fileID: 446433126}
     - target: {fileID: 1208299468966145676, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: m_Name
       value: Pressure Plate
@@ -4487,6 +4513,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a45527ca3f699064dbfda549a48e2e87, type: 3}
+--- !u!1 &1011162939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7373384096130254511, guid: a45527ca3f699064dbfda549a48e2e87, type: 3}
+  m_PrefabInstance: {fileID: 1011162938}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1013250092
 GameObject:
   m_ObjectHideFlags: 0
@@ -4650,6 +4681,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1013250093}
     m_Modifications:
+    - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
+      propertyPath: blackGate
+      value: 
+      objectReference: {fileID: 1117741093}
+    - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
+      propertyPath: whiteGate
+      value: 
+      objectReference: {fileID: 2104474080}
     - target: {fileID: 1208299468966145676, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: m_Name
       value: Pressure Plate Black
@@ -4951,6 +4990,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca482b896b6d90a41a5c51987bdbc5f5, type: 3}
+--- !u!1 &1117741093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5627980079605391797, guid: ca482b896b6d90a41a5c51987bdbc5f5, type: 3}
+  m_PrefabInstance: {fileID: 1117741092}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1125036279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5194,6 +5238,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a294229f66faa754485bce6c32ac44a2, type: 3}
+--- !u!4 &1142084731 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3924119597022148163, guid: a294229f66faa754485bce6c32ac44a2, type: 3}
+  m_PrefabInstance: {fileID: 1142084730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1144331784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7345,6 +7394,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603276884228232425, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
+      propertyPath: blackBallSpawnPoint
+      value: 
+      objectReference: {fileID: 260325525}
+    - target: {fileID: 8603276884228232425, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
+      propertyPath: whiteBallSpawnPoint
+      value: 
+      objectReference: {fileID: 1142084731}
     - target: {fileID: 8612685154627381162, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: m_Name
       value: EnvironmentManager
@@ -8670,6 +8727,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a45527ca3f699064dbfda549a48e2e87, type: 3}
+--- !u!1 &2104474080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7373384096130254511, guid: a45527ca3f699064dbfda549a48e2e87, type: 3}
+  m_PrefabInstance: {fileID: 2104474079}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2111350809
 PrefabInstance:
   m_ObjectHideFlags: 0
