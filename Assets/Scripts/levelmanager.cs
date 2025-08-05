@@ -9,8 +9,14 @@ public class levelmanager : MonoBehaviour
     [HideInInspector] public GameObject settingsPanel;
     public GameObject winScreen;
     [SerializeField] GameObject mergedBall;
+    int c = 0; 
+
+    [SerializeField] private GameObject startingTransition;
+    [SerializeField] private GameObject endTransition;
+
     public void Start()
     {
+
         pausePanel = GameObject.Find("PausePanel");
         if (pausePanel != null)
         {
@@ -26,12 +32,13 @@ public class levelmanager : MonoBehaviour
         {
             winScreen.SetActive(false);
         }
+
     }
 
     public void Update()
     {
         mergedBall = GameObject.Find("Yin Yang Ball(Clone)");
-        if (mergedBall != null)
+        if (mergedBall != null && c == 0)
         {
             StartCoroutine(WinScreen());
         }
@@ -92,9 +99,30 @@ public class levelmanager : MonoBehaviour
     {
         if (winScreen != null)
         {
-            yield return new WaitForSeconds(4f); // Show the win screen for 2 seconds
+            c++;
+            yield return new WaitForSeconds(2f);
+            startingTransition.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            startingTransition.SetActive(false);
+            endTransition.SetActive(true);
+            
+            //yield return new WaitForSeconds(4f); // Show the win screen for 2 seconds
+
             winScreen.SetActive(true);
         }
+    }
+
+    private IEnumerator LoadLevelWithTransition(string levelName)
+    {
+        if (startingTransition != null)
+        {
+            startingTransition.SetActive(true);
+        }
+
+        // Wait for the transition animation (adjust duration as needed)
+        yield return new WaitForSeconds(2f);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);
     }
 
     public void MainMenu()
@@ -120,7 +148,7 @@ public class levelmanager : MonoBehaviour
     {
         // Load Level 1
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("TutorialLevel1");
+            StartCoroutine(LoadLevelWithTransition("TutorialLevel1"));
         }
     }
 
@@ -133,7 +161,7 @@ public class levelmanager : MonoBehaviour
         //    level2Button.onClick.AddListener(() => level2());
         //}
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("TutorialL2");
+            StartCoroutine(LoadLevelWithTransition("TutorialL2"));
             //level.level2Unlocked = true; // Unlock Level 2 after Level 1 is played
         }
     }
@@ -141,21 +169,21 @@ public class levelmanager : MonoBehaviour
     public void level3()
     {
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("TL3");
+            StartCoroutine(LoadLevelWithTransition("TL3"));
         }
     }
 
     public void level4()
     {
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("TL4");
+            StartCoroutine(LoadLevelWithTransition("TL4"));
         }
     }
 
     public void level5()
     {
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("TL5");
+            StartCoroutine(LoadLevelWithTransition("TL5"));
         }
     }
 }

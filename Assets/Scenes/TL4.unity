@@ -5432,6 +5432,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+--- !u!1 &809710708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1787056665458937395, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+  m_PrefabInstance: {fileID: 809710707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &809710709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2716858131021148005, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+  m_PrefabInstance: {fileID: 809710707}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &819614268 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7373384096130254511, guid: a45527ca3f699064dbfda549a48e2e87, type: 3}
@@ -8046,6 +8056,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 5835752590562576496, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
+      propertyPath: endTransition
+      value: 
+      objectReference: {fileID: 809710708}
+    - target: {fileID: 5835752590562576496, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
+      propertyPath: startingTransition
+      value: 
+      objectReference: {fileID: 809710709}
     - target: {fileID: 6738528166800221407, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -8535,6 +8553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 6987440071587490393, guid: 684e2c1839b0fcd4db3fb0f95bcd6af3, type: 3}
+      propertyPath: endTransition
+      value: 
+      objectReference: {fileID: 809710708}
     - target: {fileID: 7042533760868833361, guid: 684e2c1839b0fcd4db3fb0f95bcd6af3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
