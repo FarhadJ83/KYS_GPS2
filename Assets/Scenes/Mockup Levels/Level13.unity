@@ -2367,11 +2367,11 @@ PrefabInstance:
     - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: blackGate
       value: 
-      objectReference: {fileID: 7373384096130254511, guid: a45527ca3f699064dbfda549a48e2e87, type: 3}
+      objectReference: {fileID: 1202656230}
     - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: whiteGate
       value: 
-      objectReference: {fileID: 5627980079605391797, guid: ca482b896b6d90a41a5c51987bdbc5f5, type: 3}
+      objectReference: {fileID: 1211082819}
     - target: {fileID: 1208299468966145676, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: m_Name
       value: Pressure Plate Black
@@ -2966,11 +2966,11 @@ PrefabInstance:
     - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: blackGate
       value: 
-      objectReference: {fileID: 7373384096130254511, guid: a45527ca3f699064dbfda549a48e2e87, type: 3}
+      objectReference: {fileID: 1211082819}
     - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: whiteGate
       value: 
-      objectReference: {fileID: 5627980079605391797, guid: ca482b896b6d90a41a5c51987bdbc5f5, type: 3}
+      objectReference: {fileID: 1202656230}
     - target: {fileID: 1208299468966145676, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: m_Name
       value: Pressure Plate
@@ -3205,6 +3205,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
   m_PrefabInstance: {fileID: 964138207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &971926914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3924119597022148163, guid: a294229f66faa754485bce6c32ac44a2, type: 3}
+  m_PrefabInstance: {fileID: 1142084730}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &980109753
 PrefabInstance:
@@ -4255,6 +4260,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a294229f66faa754485bce6c32ac44a2, type: 3}
+--- !u!1 &1202656230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5627980079605391797, guid: ca482b896b6d90a41a5c51987bdbc5f5, type: 3}
+  m_PrefabInstance: {fileID: 1805747785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1206815353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4316,6 +4326,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3042560333385206064, guid: 4ddbf81c58e3f204d8df6fdda954e9f1, type: 3}
   m_PrefabInstance: {fileID: 1206815353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1211082819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7373384096130254511, guid: a45527ca3f699064dbfda549a48e2e87, type: 3}
+  m_PrefabInstance: {fileID: 1303311345}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1221496229
 PrefabInstance:
@@ -6105,6 +6120,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3042560333385206064, guid: 4ddbf81c58e3f204d8df6fdda954e9f1, type: 3}
   m_PrefabInstance: {fileID: 1700199881}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1720730793 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7568219876975901413, guid: 0c72b8f224da8474789f173af2c44a02, type: 3}
+  m_PrefabInstance: {fileID: 260325524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1763549516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6524,6 +6544,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603276884228232425, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
+      propertyPath: blackBallSpawnPoint
+      value: 
+      objectReference: {fileID: 1720730793}
+    - target: {fileID: 8603276884228232425, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
+      propertyPath: whiteBallSpawnPoint
+      value: 
+      objectReference: {fileID: 971926914}
     - target: {fileID: 8612685154627381162, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: m_Name
       value: EnvironmentManager
