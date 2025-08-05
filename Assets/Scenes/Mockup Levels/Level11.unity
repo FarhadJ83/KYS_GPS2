@@ -4382,6 +4382,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a294229f66faa754485bce6c32ac44a2, type: 3}
+--- !u!4 &1329388170 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3924119597022148163, guid: a294229f66faa754485bce6c32ac44a2, type: 3}
+  m_PrefabInstance: {fileID: 1320293252}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1331331115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4443,6 +4448,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
   m_PrefabInstance: {fileID: 1331331115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1337019079 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7568219876975901413, guid: 0c72b8f224da8474789f173af2c44a02, type: 3}
+  m_PrefabInstance: {fileID: 1825453770}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1337446634
 PrefabInstance:
@@ -6841,11 +6851,11 @@ PrefabInstance:
     - target: {fileID: 8603276884228232425, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: blackBallSpawnPoint
       value: 
-      objectReference: {fileID: 7568219876975901413, guid: 0c72b8f224da8474789f173af2c44a02, type: 3}
+      objectReference: {fileID: 1337019079}
     - target: {fileID: 8603276884228232425, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: whiteBallSpawnPoint
       value: 
-      objectReference: {fileID: 3924119597022148163, guid: a294229f66faa754485bce6c32ac44a2, type: 3}
+      objectReference: {fileID: 1329388170}
     - target: {fileID: 8612685154627381162, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
       propertyPath: m_Name
       value: EnvironmentManager
