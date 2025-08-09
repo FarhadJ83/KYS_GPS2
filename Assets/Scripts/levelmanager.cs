@@ -27,7 +27,8 @@ public class levelmanager : MonoBehaviour
     [SerializeField] Button pause;
     Button inverse;
     Action[] levels;
-    string[] strings = { "TutorialLevel1", "Level2_Completed","TutorialL2", "TL3", "TL4", "TL5" };
+    string[] strings = { "TutorialLevel1", "Level2_Completed", "TutorialL2", "TL3", "Level5_Completed", "Level6_Completed", "Level7", "Level8",
+            "Level9", "Level10", "Level11", "Level12", "Level13", "Level14", "TL4", "TL5" };
     public void Start()
     {
         levels = new Action[] { Level2, Tlevel2, Tlevel3, Tlevel4, Tlevel5 };
@@ -51,6 +52,7 @@ public class levelmanager : MonoBehaviour
                     if (strings[i] == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
                     {
                         nextLevel.onClick.AddListener(() => levels[i]());
+                        break;
                     }
                 }
             }
@@ -209,23 +211,23 @@ public class levelmanager : MonoBehaviour
         Time.timeScale = 1; // Reset time scale to normal when restarting
     }
 
-    //public void next_Level()
-    //{
-    //    for(int i = 0; i < level.levelScenes.Length; i++)
-    //    {
-    //        if (SceneManager.GetActiveScene().name == level.levelScenes[i])
-    //        {
-    //            if (i + 1 < level.levelScenes.Length)
-    //            {
-    //                StartCoroutine(LoadLevelWithTransition(level.levelScenes[i + 1]));
-    //            }
-    //            else
-    //            {
-    //                Debug.Log("No next level available.");
-    //            }
-    //        }
-    //    }
-    //}
+    public void next_Level()
+    {
+        for (int i = 0; i < level.levelScenes.Length; i++)
+        {
+            if (SceneManager.GetActiveScene().name == level.levelScenes[i])
+            {
+                if (i + 1 < level.levelScenes.Length)
+                {
+                    StartCoroutine(LoadLevelWithTransition(level.levelScenes[i + 1]));
+                }
+                else
+                {
+                    Debug.Log("No next level available.");
+                }
+            }
+        }
+    }
     public void Tlevel1()
     {
         // Load Level 1
@@ -235,7 +237,7 @@ public class levelmanager : MonoBehaviour
     }
 
     public void Level2()
-    {
+    {   Debug.Log("Level 2 button clicked");
         {
             StartCoroutine(LoadLevelWithTransition("Level2_Completed"));
         }
@@ -252,6 +254,76 @@ public class levelmanager : MonoBehaviour
         {
             StartCoroutine(LoadLevelWithTransition("TutorialL2"));
             //level.level2Unlocked = true; // Unlock Level 2 after Level 1 is played
+        }
+    }
+
+    public void Level5()
+    {
+        {
+            StartCoroutine(LoadLevelWithTransition("Level5_Completed"));
+        }
+    }
+
+    public void Level6()
+    {
+        {
+            StartCoroutine(LoadLevelWithTransition("Level6_Completed"));
+        }
+    }
+
+    public void Level7()
+    {
+        {
+            StartCoroutine(LoadLevelWithTransition("Level7"));
+        }
+    }
+
+    public void Level8()
+    {
+        {
+            StartCoroutine(LoadLevelWithTransition("Level8"));
+        }
+    }
+
+    public void Level9()
+    {
+        {
+            StartCoroutine(LoadLevelWithTransition("Level9"));
+        }
+    }
+
+    public void Level10()
+    {
+        {
+            StartCoroutine(LoadLevelWithTransition("Level10"));
+        }
+    }
+
+    public void Level11()
+    {
+        {
+            StartCoroutine(LoadLevelWithTransition("Level11"));
+        }
+    }
+
+    public void Level12()
+    {
+        {
+            StartCoroutine(LoadLevelWithTransition("Level12"));
+        }
+    }
+
+    public void Level13()
+    {
+        {
+            StartCoroutine(LoadLevelWithTransition("Level13"));
+        }
+    }
+
+    public void Level14()
+    {
+        {
+            StartCoroutine(LoadLevelWithTransition("Level14"));
         }
     }
 
