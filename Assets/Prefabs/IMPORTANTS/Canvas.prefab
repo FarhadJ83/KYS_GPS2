@@ -119,19 +119,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6559281144219448855}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: levelmanager, Assembly-CSharp
-        m_MethodName: pause_Panel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1787056665458937395
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,19 +844,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3227430669388285164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: levelmanager, Assembly-CSharp
-        m_MethodName: pause_Panel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2990300355855351158
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,7 +858,7 @@ GameObject:
   - component: {fileID: 5400422423812133272}
   - component: {fileID: 6247876652405794908}
   m_Layer: 5
-  m_Name: Restart
+  m_Name: RestartP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1764,7 +1740,7 @@ GameObject:
   - component: {fileID: 3739940974733264498}
   - component: {fileID: 9118280641587517773}
   m_Layer: 5
-  m_Name: Home
+  m_Name: HomeP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1871,19 +1847,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3739940974733264498}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: levelmanager, Assembly-CSharp
-        m_MethodName: playGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &8215377454049113888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2343,16 +2307,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4826766855390753310, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826766855390753310, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932525814144567296, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5932525814144567296, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: playGame
       objectReference: {fileID: 0}
     - target: {fileID: 8043079601416679580, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043079601416679580, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485556377896583715, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: m_Name
+      value: RestartW
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510899362235142283, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: m_Name
+      value: HomeW
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

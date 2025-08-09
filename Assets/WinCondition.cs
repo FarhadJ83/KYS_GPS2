@@ -13,10 +13,10 @@ public class WinCondition : MonoBehaviour
     Image Star1;
     public Sprite star;
     public Sprite noStar;
-    int[] winCondition1 = {10, 10, 10, 10, 10};
-    int[] winCondition2 = { 20, 20, 20, 20, 20 };
-    int[] winCondition3 = { 30, 30, 30, 30, 30 };
-    string[] strings = { "TutorialLevel1", "TutorialL2", "TL3", "TL4", "TL5" };
+    int[] winCondition1 = {10, 10, 10, 10, 10, 10};
+    int[] winCondition2 = { 20, 20, 20, 20, 20, 20};
+    int[] winCondition3 = { 30, 30, 30, 30, 30 , 30 };
+    string[] strings = { "TutorialLevel1", "Level2_Completed","TutorialL2", "TL3", "TL4", "TL5" };
     //[SerializeField] Text swipeCounterText;
     void Awake()
     {

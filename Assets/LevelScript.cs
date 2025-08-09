@@ -10,12 +10,12 @@ public class LevelScript : MonoBehaviour
     private LevelScript instance;
 
     [SerializeField] levelmanager levelManager;
-    public int[] levelStars = new int[5];
+    public int[] levelStars = new int[6];
     public Sprite NoStar;
     public Sprite Star;
-    string[] levelNames = new string[5] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button"};
-    public bool[] levelsUnlocked = new bool[5] { true, false, false, false, false };
-    public string[] levelScenes = new string[5] { "TutorialLevel1", "TutorialL2", "TL3", "TL4", "TL5" };
+    string[] levelNames = new string[6] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6"};
+    public bool[] levelsUnlocked = new bool[6] { true, false, false, false, false, false};
+    public string[] levelScenes = new string[6] { "TutorialLevel1", "Level2_Completed", "TutorialL2", "TL3", "TL4", "TL5" };
     public Button[] LevelButtons;
     public Sprite[] levelImage;
 

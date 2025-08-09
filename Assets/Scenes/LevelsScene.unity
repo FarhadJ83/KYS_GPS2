@@ -1309,7 +1309,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1577712240}
         m_TargetAssemblyTypeName: levelmanager, Assembly-CSharp
-        m_MethodName: level1
+        m_MethodName: Tlevel1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3740,6 +3740,7 @@ MonoBehaviour:
   mergedBall: {fileID: 0}
   startingTransition: {fileID: 1622593836}
   endTransition: {fileID: 368204532}
+  pause: {fileID: 0}
 --- !u!1 &1588126454
 GameObject:
   m_ObjectHideFlags: 0

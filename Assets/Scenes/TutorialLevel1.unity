@@ -1136,19 +1136,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 289486819}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1128064740}
-        m_TargetAssemblyTypeName: levelmanager, Assembly-CSharp
-        m_MethodName: pause_Panel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &289486819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,19 +1257,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 291156028}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1128064740}
-        m_TargetAssemblyTypeName: levelmanager, Assembly-CSharp
-        m_MethodName: settings_Panel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &291156028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2663,7 +2639,7 @@ GameObject:
   - component: {fileID: 680238797}
   - component: {fileID: 680238796}
   m_Layer: 5
-  m_Name: Home
+  m_Name: HomeP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2732,19 +2708,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 680238797}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1128064740}
-        m_TargetAssemblyTypeName: levelmanager, Assembly-CSharp
-        m_MethodName: playGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &680238797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5833,19 +5797,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1260636614}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1128064740}
-        m_TargetAssemblyTypeName: levelmanager, Assembly-CSharp
-        m_MethodName: pause_Panel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1260636614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8055,7 +8007,7 @@ GameObject:
   - component: {fileID: 1868809127}
   - component: {fileID: 1868809126}
   m_Layer: 5
-  m_Name: Restart
+  m_Name: RestartP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8124,19 +8076,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1868809127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1128064740}
-        m_TargetAssemblyTypeName: levelmanager, Assembly-CSharp
-        m_MethodName: Restart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1868809127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10621,17 +10561,37 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4826766855390753310, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826766855390753310, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1128064740}
+    - target: {fileID: 5932525814144567296, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5932525814144567296, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1128064740}
     - target: {fileID: 8043079601416679580, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043079601416679580, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1128064740}
+    - target: {fileID: 8485556377896583715, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: m_Name
+      value: RestartW
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510899362235142283, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: m_Name
+      value: HomeW
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

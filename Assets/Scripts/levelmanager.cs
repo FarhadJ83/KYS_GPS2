@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
+using NUnit.Framework.Internal;
+using UnityEngine.SceneManagement;
 
 public class levelmanager : MonoBehaviour
 {
@@ -14,8 +17,69 @@ public class levelmanager : MonoBehaviour
     [SerializeField] private GameObject startingTransition;
     [SerializeField] private GameObject endTransition;
 
+    Button Resume;
+    Button restartW;
+    Button restartP;
+    Button HomeW;
+    Button HomeP;
+    Button nextLevel;
+    Button settings;
+    [SerializeField] Button pause;
+    Button inverse;
+    Action[] levels;
+    string[] strings = { "TutorialLevel1", "Level2_Completed","TutorialL2", "TL3", "TL4", "TL5" };
     public void Start()
     {
+        levels = new Action[] { Level2, Tlevel2, Tlevel3, Tlevel4, Tlevel5 };
+        if (SceneManager.GetActiveScene().name != "LevelsScene")
+        {
+            Resume = GameObject.Find("Resume").GetComponent<Button>();
+            if (Resume != null)
+            {
+                Resume.onClick.AddListener(pause_Panel);
+            }
+            pause = GameObject.Find("Pause").GetComponent<Button>();
+            if (pause != null)
+            {
+                pause.onClick.AddListener(pause_Panel);
+            }
+            nextLevel = GameObject.Find("NextLevel").GetComponent<Button>();
+            if (nextLevel != null)
+            {
+                for (int i = 0; i < levels.Length - 1; i++)
+                {
+                    if (strings[i] == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
+                    {
+                        nextLevel.onClick.AddListener(() => levels[i]());
+                    }
+                }
+            }
+            settings = GameObject.Find("Settings").GetComponent<Button>();
+            //if (settings != null)
+            //{
+            //    settings.onClick.AddListener(settings_Panel);
+            //}
+            HomeP = GameObject.Find("HomeP").GetComponent<Button>();
+            if (HomeP != null)
+            {
+                HomeP.onClick.AddListener(playGame);
+            }
+            HomeW = GameObject.Find("HomeW").GetComponent<Button>();
+            if (HomeW != null)
+            {
+                HomeW.onClick.AddListener(MainMenu);
+            }
+            restartW = GameObject.Find("RestartW").GetComponent<Button>();
+            if (restartW != null)
+            {
+                restartW.onClick.AddListener(Restart);
+            }
+            restartP = GameObject.Find("RestartP").GetComponent<Button>();
+            if (restartP != null)
+            {
+                restartP.onClick.AddListener(Restart);
+            }
+        }
 
         pausePanel = GameObject.Find("PausePanel");
         if (pausePanel != null)
@@ -58,7 +122,7 @@ public class levelmanager : MonoBehaviour
         //    pausePanel.SetActive(false);
         //}
 
-        if (Time.timeScale == 1)
+        if (pausePanel.activeSelf == false) 
         {
             pausePanel.SetActive(true);
             Time.timeScale = 0; // Pause the game
@@ -144,7 +208,25 @@ public class levelmanager : MonoBehaviour
         }
         Time.timeScale = 1; // Reset time scale to normal when restarting
     }
-    public void level1()
+
+    //public void next_Level()
+    //{
+    //    for(int i = 0; i < level.levelScenes.Length; i++)
+    //    {
+    //        if (SceneManager.GetActiveScene().name == level.levelScenes[i])
+    //        {
+    //            if (i + 1 < level.levelScenes.Length)
+    //            {
+    //                StartCoroutine(LoadLevelWithTransition(level.levelScenes[i + 1]));
+    //            }
+    //            else
+    //            {
+    //                Debug.Log("No next level available.");
+    //            }
+    //        }
+    //    }
+    //}
+    public void Tlevel1()
     {
         // Load Level 1
         {
@@ -152,7 +234,14 @@ public class levelmanager : MonoBehaviour
         }
     }
 
-    public void level2()
+    public void Level2()
+    {
+        {
+            StartCoroutine(LoadLevelWithTransition("Level2_Completed"));
+        }
+    }
+
+    public void Tlevel2()
     {
         // Load Level 1
         //Button level2Button = GameObject.Find("Level2Button").GetComponent<Button>();
@@ -166,21 +255,21 @@ public class levelmanager : MonoBehaviour
         }
     }
 
-    public void level3()
+    public void Tlevel3()
     {
         {
             StartCoroutine(LoadLevelWithTransition("TL3"));
         }
     }
 
-    public void level4()
+    public void Tlevel4()
     {
         {
             StartCoroutine(LoadLevelWithTransition("TL4"));
         }
     }
 
-    public void level5()
+    public void Tlevel5()
     {
         {
             StartCoroutine(LoadLevelWithTransition("TL5"));

@@ -42,7 +42,7 @@ public class MergingController : MonoBehaviour
                 gameObject.SetActive(false);
                 //Destroy(gameObject);
 
-                for (int i = 0; i < GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes.Length; i++)
+                for (int i = 0; i < GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes.Length - 1; i++)
                 {
                     if (SceneManager.GetActiveScene().name == GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes[i])
                     {
