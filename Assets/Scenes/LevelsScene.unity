@@ -416,7 +416,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1577712240}
         m_TargetAssemblyTypeName: levelmanager, Assembly-CSharp
-        m_MethodName: level2
+        m_MethodName: Level2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4892,6 +4892,23 @@ MonoBehaviour:
   levelStars: 
   NoStar: {fileID: 21300000, guid: 61ec72ddb3902e0468c3257f0ca0dafb, type: 3}
   Star: {fileID: 21300000, guid: 205740ee3d0da5346ad4dea171c77724, type: 3}
+  levelNames:
+  - 1
+  - Level2Button
+  - Level3Button
+  - Level4Button
+  - Level5Button
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
   levelsUnlocked: 00000000000000000000000000000000
   levelScenes:
   - 

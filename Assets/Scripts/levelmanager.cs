@@ -31,8 +31,8 @@ public class levelmanager : MonoBehaviour
             "Level9", "Level10", "Level11", "Level12", "Level13", "Level14", "TL4", "TL5" };
     public void Start()
     {
-        levels = new Action[] { Level2, Tlevel2, Tlevel3, Tlevel4, Tlevel5 };
-        if (SceneManager.GetActiveScene().name != "LevelsScene")
+        levels = new Action[] { Level2, Tlevel2, Tlevel3, Level5, Level6, Level7, Level8, Level9, Level10, Level11, Level12, Level13, Level14, Tlevel4, Tlevel5 };
+        if (SceneManager.GetActiveScene().name != "LevelsScene" && SceneManager.GetActiveScene().name != "MainMenu")
         {
             Resume = GameObject.Find("Resume").GetComponent<Button>();
             if (Resume != null)
@@ -69,7 +69,7 @@ public class levelmanager : MonoBehaviour
             HomeW = GameObject.Find("HomeW").GetComponent<Button>();
             if (HomeW != null)
             {
-                HomeW.onClick.AddListener(MainMenu);
+                HomeW.onClick.AddListener(playGame);
             }
             restartW = GameObject.Find("RestartW").GetComponent<Button>();
             if (restartW != null)

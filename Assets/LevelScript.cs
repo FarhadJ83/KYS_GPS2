@@ -7,13 +7,13 @@ using UnityEngine.InputSystem;
 
 public class LevelScript : MonoBehaviour
 {
-    private LevelScript instance;
+    private static LevelScript instance;
 
     [SerializeField] levelmanager levelManager;
     public int[] levelStars = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     public Sprite NoStar;
     public Sprite Star;
-    string[] levelNames = new string[] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6", "7", "8", "9", "10", "11", "12"
+    public string[] levelNames = new string[] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6", "7", "8", "9", "10", "11", "12"
     , "13", "14", "15", "16"};
     public bool[] levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false, false, false, false, false
     , false, false};
@@ -28,6 +28,7 @@ public class LevelScript : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += (scene, mode) => OnSceneLoaded();
             LoadLevelProgress();
         }
         else
@@ -47,21 +48,31 @@ public class LevelScript : MonoBehaviour
     , "13", "14", "15", "16"};
         levelStars = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-
+        //for (int i = 0; i < LevelButtons.Length; i++)
+        //{
+        //    LevelButtons[i] = GameObject.Find(levelNames[i]).GetComponent<Button>();
+        //    if (i > 7)
+        //        LevelButtons[i].gameObject.SetActive(false);
+        //}
     }
 
+    private void OnSceneLoaded()
+    {
+        if (SceneManager.GetActiveScene().name == "LevelsScene")
+            for (int i = 0; i < LevelButtons.Length; i++)
+            {
+                LevelButtons[i] = GameObject.Find(levelNames[i]).GetComponent<Button>();
+                if (i > 7)
+            
+                        LevelButtons[i].gameObject.SetActive(false);
+            }
+    }
 
     public void Update()
     {
         levelManager = Camera.main.GetComponent<levelmanager>();
         if (SceneManager.GetActiveScene().name == "LevelsScene")
         {
-            for (int i = 0; i < LevelButtons.Length; i++)
-            {
-                LevelButtons[i] = GameObject.Find(levelNames[i]).GetComponent<Button>();
-                //if(i < 7)
-                //    LevelButtons[i].gameObject.SetActive(false);
-            }
             LevelUnlock();
             setStars();
         }
