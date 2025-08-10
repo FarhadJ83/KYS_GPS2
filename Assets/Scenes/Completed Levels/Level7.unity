@@ -2979,6 +2979,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 5835752590562576496, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
+      propertyPath: endTransition
+      value: 
+      objectReference: {fileID: 463768339}
+    - target: {fileID: 5835752590562576496, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
+      propertyPath: startingTransition
+      value: 
+      objectReference: {fileID: 463768340}
     - target: {fileID: 6738528166800221407, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -4840,6 +4848,14 @@ PrefabInstance:
       objectReference: {fileID: 1367670060}
     - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: whiteGate
+      value: 
+      objectReference: {fileID: 1367670060}
+    - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
+      propertyPath: activeGate
+      value: 
+      objectReference: {fileID: 202215340}
+    - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
+      propertyPath: switchedGate
       value: 
       objectReference: {fileID: 1367670060}
     - target: {fileID: 1208299468966145676, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
@@ -8410,6 +8426,14 @@ PrefabInstance:
       propertyPath: whiteGate
       value: 
       objectReference: {fileID: 1895516986}
+    - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
+      propertyPath: activeGate
+      value: 
+      objectReference: {fileID: 212693049}
+    - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
+      propertyPath: switchedGate
+      value: 
+      objectReference: {fileID: 1895516986}
     - target: {fileID: 1208299468966145676, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: m_Name
       value: Pressure Plate
@@ -9515,6 +9539,14 @@ PrefabInstance:
       propertyPath: whiteGate
       value: 
       objectReference: {fileID: 202215340}
+    - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
+      propertyPath: activeGate
+      value: 
+      objectReference: {fileID: 202215340}
+    - target: {fileID: 612978481669572916, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
+      propertyPath: switchedGate
+      value: 
+      objectReference: {fileID: 1367670060}
     - target: {fileID: 1208299468966145676, guid: aebb22873a441284ba37a7dcd86e58c2, type: 3}
       propertyPath: m_Name
       value: Pressure Plate
@@ -10243,6 +10275,14 @@ PrefabInstance:
       propertyPath: whiteGate
       value: 
       objectReference: {fileID: 212693049}
+    - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
+      propertyPath: activeGate
+      value: 
+      objectReference: {fileID: 212693049}
+    - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
+      propertyPath: switchedGate
+      value: 
+      objectReference: {fileID: 1895516986}
     - target: {fileID: 1208299468966145676, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: m_Name
       value: Pressure Plate Black
