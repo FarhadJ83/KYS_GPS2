@@ -21,10 +21,8 @@ public class CharacterMovement : MonoBehaviour
     public int swipeCounter;
 
     private bool justTeleported = false;
-
     public Vector3 lastMoveDir { get; set; }
     public bool JustTeleported => justTeleported;
-
     public bool isMoving = false;
 
     private Animator animator;
@@ -32,9 +30,9 @@ public class CharacterMovement : MonoBehaviour
     public void Start()
     {
         swipeCounter = 0;
-
         animator = GetComponent<Animator>();
     }
+
     private void OnEnable()
     {
         TouchController.onSwipe += OnSwipeMoveBall;
@@ -51,7 +49,6 @@ public class CharacterMovement : MonoBehaviour
         {
             UpdateInverseButton();
         }
-
     }
 
     public void assignSwipe(int sc)
@@ -77,84 +74,75 @@ public class CharacterMovement : MonoBehaviour
         if (isMoving) return;
 
         Vector2 swipeDir = (e.ScreenPosition - e.StartScreenPosition).normalized;
-        Vector3 moveDir = (Mathf.Abs(swipeDir.x) > Mathf.Abs(swipeDir.y)) ? (swipeDir.x > 0 ? Vector3.right : Vector3.left) : (swipeDir.y > 0 ? Vector3.forward : Vector3.back);
+        Vector3 moveDir = (Mathf.Abs(swipeDir.x) > Mathf.Abs(swipeDir.y))
+            ? (swipeDir.x > 0 ? Vector3.right : Vector3.left)
+            : (swipeDir.y > 0 ? Vector3.forward : Vector3.back);
 
         lastMoveDir = moveDir;
 
         if (ball != null)
         {
             Vector3 origin = ball.position;
-
-            // Raycast to get all gates in the path
-            Ray ray = new Ray(origin, moveDir);
-
-            bool firstCheck = Physics.Raycast(ray, out RaycastHit wallHit, 1, wallLayer);
-
-            if (firstCheck)
-            {
-                Debug.Log($"{gameObject.name} Hit {wallHit.collider.gameObject.name}");
-                return;
-            }
-
-            // Get all gate hits, sorted by distance
-            RaycastHit[] gateHits = Physics.RaycastAll(ray, Mathf.Infinity, gateLayer);
-            Array.Sort(gateHits, (a, b) => a.distance.CompareTo(b.distance));
-
-            // Raycast to the wall
-            bool hitWall = Physics.Raycast(ray, out wallHit, Mathf.Infinity, wallLayer);
-            float wallDist = hitWall ? wallHit.distance : Mathf.Infinity;
-
-            // Check for rapids in the path
-            RaycastHit[] rapidHits = Physics.RaycastAll(ray, Mathf.Infinity, rapidLayer);
-            Array.Sort(rapidHits, (a, b) => a.distance.CompareTo(b.distance));
-
-            foreach (RaycastHit rapidHit in rapidHits)
-            {
-                WaterRapidsDirection rapid = rapidHit.collider.GetComponent<WaterRapidsDirection>();
-                if (rapid != null)
-                {
-                    // If player tries to go against the flow direction
-                    if (Vector3.Dot(moveDir, rapid.direction) < 0)
-                    {
-                        // Stop before the rapid
-                        Vector3 stopBeforeRapid = rapidHit.point - moveDir * raycastPadding;
-                        StartCoroutine(SmoothMoveToWall(ball, stopBeforeRapid));
-                        return;
-                    }
-                }
-            }
-
-            BallColorState ballState = ball.GetComponent<BallColorState>();
-
-            foreach (RaycastHit gateHit in gateHits)
-            {
-                GameObject gateObj = gateHit.collider.gameObject;
-
-                bool isBlackGate = gateObj.CompareTag("BlackGate");
-                bool isMismatch = ballState != null && ballState.isBlack != isBlackGate;
-
-                if (isMismatch && gateHit.distance < wallDist)
-                {
-                    // Mismatched gate is in the way before wall
-                    Vector3 stopBeforeGate = gateHit.point - moveDir * raycastPadding;
-                    StartCoroutine(SmoothMoveToWall(ball, stopBeforeGate));
-                    return;
-                }
-            }
-
-            // No mismatched gates in the way, go to wall
-            Vector3 targetPos = hitWall
-                ? wallHit.point - moveDir * raycastPadding
-                : origin + moveDir * 10f;
-
+            Vector3 targetPos = GetTargetPosition(origin, moveDir);
             StartCoroutine(SmoothMoveToWall(ball, targetPos));
         }
+    }
+
+    /// <summary>
+    /// Calculates the final target position for a move, considering walls, gates, and rapids.
+    /// </summary>
+    public Vector3 GetTargetPosition(Vector3 origin, Vector3 moveDir)
+    {
+        // Immediate wall check (1 unit ahead)
+        if (Physics.Raycast(origin, moveDir, out RaycastHit wallCheck, 1, wallLayer))
+        {
+            return origin; // Blocked immediately
+        }
+
+        // Gates
+        Ray ray = new Ray(origin, moveDir);
+        RaycastHit[] gateHits = Physics.RaycastAll(ray, Mathf.Infinity, gateLayer);
+        Array.Sort(gateHits, (a, b) => a.distance.CompareTo(b.distance));
+
+        // Wall
+        bool hitWall = Physics.Raycast(ray, out RaycastHit wallHit, Mathf.Infinity, wallLayer);
+        float wallDist = hitWall ? wallHit.distance : Mathf.Infinity;
+
+        // Rapids
+        RaycastHit[] rapidHits = Physics.RaycastAll(ray, Mathf.Infinity, rapidLayer);
+        Array.Sort(rapidHits, (a, b) => a.distance.CompareTo(b.distance));
+        foreach (RaycastHit rapidHit in rapidHits)
+        {
+            WaterRapidsDirection rapid = rapidHit.collider.GetComponent<WaterRapidsDirection>();
+            if (rapid != null && Vector3.Dot(moveDir, rapid.direction) < 0)
+            {
+                return rapidHit.point - moveDir * raycastPadding;
+            }
+        }
+
+        // Gate color check
+        BallColorState ballState = ball.GetComponent<BallColorState>();
+        foreach (RaycastHit gateHit in gateHits)
+        {
+            bool isBlackGate = gateHit.collider.CompareTag("BlackGate");
+            bool isMismatch = ballState != null && ballState.isBlack != isBlackGate;
+
+            if (isMismatch && gateHit.distance < wallDist)
+            {
+                return gateHit.point - moveDir * raycastPadding;
+            }
+        }
+
+        // Default: wall or far away
+        return hitWall
+            ? wallHit.point - moveDir * raycastPadding
+            : origin + moveDir * 10f;
     }
 
     private IEnumerator SmoothMoveToWall(Transform obj, Vector3 targetPos)
     {
         isMoving = true;
-        // If the position isn't the same, increment the swipe counter
+
         if (Vector3.Distance(obj.position, targetPos) > 0.01f)
             swipeCounter++;
 
