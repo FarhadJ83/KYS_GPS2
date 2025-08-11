@@ -45,7 +45,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void Update()
     {
-        if (SceneManager.GetActiveScene().name != "TutorialLevel1" && SceneManager.GetActiveScene().name != "Level2_Completed")
+        if (SceneManager.GetActiveScene().name != "VertLvl1(Level_1)" && SceneManager.GetActiveScene().name != "Level2_Completed")
         {
             UpdateInverseButton();
         }

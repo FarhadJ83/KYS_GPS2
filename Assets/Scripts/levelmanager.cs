@@ -27,11 +27,11 @@ public class levelmanager : MonoBehaviour
     [SerializeField] Button pause;
     Button inverse;
     Action[] levels;
-    string[] strings = { "TutorialLevel1", "Level2_Completed", "TutorialL2", "TL3", "Level5_Completed", "Level6_Completed", "Level7", "Level8",
-            "Level9", "Level10", "Level11", "Level12", "Level13", "Level14", "TL4", "TL5" };
+    string[] strings = { "VertLvl1(Level_1)", "VertLvl2_(Level_3)", "VertLvl3_(Level_6)", "VertLvl4_(Level_7)", "VertLvl5_(Level10)", "VertLvl6(Level_11)",
+        "VertLvl7(Level_14)", "VertLvl8(Level_15)", "VertLvl9_(Level19)", "VertLvl10_(Level21)"};
     public void Start()
     {
-        levels = new Action[] { Level2, Tlevel2, Tlevel3, Level5, Level6, Level7, Level8, Level9, Level10, Level11, Level12, Level13, Level14, Tlevel4, Tlevel5 };
+        levels = new Action[] { VLevel2, VLevel3, VLevel4, VLevel5, VLevel6, VLevel7, VLevel8, VLevel9, VLevel10 };
         if (SceneManager.GetActiveScene().name != "LevelsScene" && SceneManager.GetActiveScene().name != "MainMenu")
         {
             Resume = GameObject.Find("Resume").GetComponent<Button>();
@@ -228,123 +228,46 @@ public class levelmanager : MonoBehaviour
             }
         }
     }
-    public void Tlevel1()
+
+    public void VLevel1()
     {
-        // Load Level 1
-        {
-            StartCoroutine(LoadLevelWithTransition("TutorialLevel1"));
-        }
+        StartCoroutine(LoadLevelWithTransition("VertLvl1(Level_1)"));
+    }
+    public void VLevel2()
+    {
+        StartCoroutine(LoadLevelWithTransition("VertLvl2_(Level_3)"));
+    }
+    public void VLevel3()
+    {
+        StartCoroutine(LoadLevelWithTransition("VertLvl3_(Level_6)"));
+    }
+    public void VLevel4()
+    {
+        StartCoroutine(LoadLevelWithTransition("VertLvl4_(Level_7)"));
+    }
+    public void VLevel5()
+    {
+        StartCoroutine(LoadLevelWithTransition("VertLvl5_(Level10)"));
+    }
+    public void VLevel6()
+    {
+        StartCoroutine(LoadLevelWithTransition("VertLvl6(Level_11)"));
+    }
+    public void VLevel7()
+    {
+        StartCoroutine(LoadLevelWithTransition("VertLvl7(Level_14)"));
+    }
+    public void VLevel8()
+    {
+        StartCoroutine(LoadLevelWithTransition("VertLvl8(Level_15)"));
+    }
+    public void VLevel9()
+    {
+        StartCoroutine(LoadLevelWithTransition("VertLvl9_(Level19)"));
+    }
+    public void VLevel10()
+    {
+        StartCoroutine(LoadLevelWithTransition("VertLvl10_(Level21)"));
     }
 
-    public void Level2()
-    {   Debug.Log("Level 2 button clicked");
-        {
-            StartCoroutine(LoadLevelWithTransition("Level2_Completed"));
-        }
-    }
-
-    public void Tlevel2()
-    {
-        // Load Level 1
-        //Button level2Button = GameObject.Find("Level2Button").GetComponent<Button>();
-        //if (level2Button != null && level2Button.interactable == true)
-        //{
-        //    level2Button.onClick.AddListener(() => level2());
-        //}
-        {
-            StartCoroutine(LoadLevelWithTransition("TutorialL2"));
-            //level.level2Unlocked = true; // Unlock Level 2 after Level 1 is played
-        }
-    }
-
-    public void Level5()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("Level5_Completed"));
-        }
-    }
-
-    public void Level6()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("Level6_Completed"));
-        }
-    }
-
-    public void Level7()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("Level7"));
-        }
-    }
-
-    public void Level8()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("Level8"));
-        }
-    }
-
-    public void Level9()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("Level9"));
-        }
-    }
-
-    public void Level10()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("Level10"));
-        }
-    }
-
-    public void Level11()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("Level11"));
-        }
-    }
-
-    public void Level12()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("Level12"));
-        }
-    }
-
-    public void Level13()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("Level13"));
-        }
-    }
-
-    public void Level14()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("Level14"));
-        }
-    }
-
-    public void Tlevel3()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("TL3"));
-        }
-    }
-
-    public void Tlevel4()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("TL4"));
-        }
-    }
-
-    public void Tlevel5()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("TL5"));
-        }
-    }
 }

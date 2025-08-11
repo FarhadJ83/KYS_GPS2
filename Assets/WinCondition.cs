@@ -13,11 +13,11 @@ public class WinCondition : MonoBehaviour
     Image Star1;
     public Sprite star;
     public Sprite noStar;
-    int[] winCondition1 = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
-    int[] winCondition2 = { 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20 };
-    int[] winCondition3 = {30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 };
-    string[] strings = { "TutorialLevel1", "Level2_Completed", "TutorialL2", "Level4_Completed", 
-        "Level5_Completed", "Level6_Completed", "Level7", "Level8", "TL3", "Level10", "Level11", "Level12", "Level13", "Level14","TL4", "TL5" };
+    int[] winCondition1 = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+    int[] winCondition2 = {20, 20, 20, 20, 20, 20, 20, 20, 20, 20 };
+    int[] winCondition3 = {30, 30, 30, 30, 30, 30, 30, 30, 30, 30 };
+    string[] strings = { "VertLvl1(Level_1)", "VertLvl2_(Level_3)", "VertLvl3_(Level_6)", "VertLvl4_(Level_7)", "VertLvl5_(Level10)", "VertLvl6(Level_11)",
+        "VertLvl7(Level_14)", "VertLvl8(Level_15)", "VertLvl9_(Level19)", "VertLvl10_(Level21)"};
     //[SerializeField] Text swipeCounterText;
     void Awake()
     {

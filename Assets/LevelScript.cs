@@ -20,7 +20,7 @@ public class LevelScript : MonoBehaviour
     public string[] levelScenes;
     public Button[] LevelButtons;
     public Sprite[] levelImage;
-
+    bool nextPage = false;
 
     private void Awake()
     {   
@@ -40,13 +40,11 @@ public class LevelScript : MonoBehaviour
 
     private void Start()
     {
-        levelScenes = new string[] { "TutorialLevel1", "Level2_Completed", "TutorialL2", "TL3", "Level5_Completed", "Level6_Completed", "Level7", "Level8", 
-            "Level9", "Level10", "Level11", "Level12", "Level13", "Level14", "TL4", "TL5" };
-        levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false, false, false, false, false
-    , false, false};
-        levelNames = new string[] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6", "7", "8", "9", "10", "11", "12"
-    , "13", "14", "15", "16"};
-        levelStars = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        levelScenes = new string[] { "VertLvl1(Level_1)", "VertLvl2_(Level_3)", "VertLvl3_(Level_6)", "VertLvl4_(Level_7)", "VertLvl5_(Level10)", "VertLvl6(Level_11)",
+        "VertLvl7(Level_14)", "VertLvl8(Level_15)", "VertLvl9_(Level19)", "VertLvl10_(Level21)"};
+        levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false};
+        levelNames = new string[] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6", "7", "8", "9", "10"};
+        levelStars = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
         //for (int i = 0; i < LevelButtons.Length; i++)
         //{
@@ -62,10 +60,25 @@ public class LevelScript : MonoBehaviour
             for (int i = 0; i < LevelButtons.Length; i++)
             {
                 LevelButtons[i] = GameObject.Find(levelNames[i]).GetComponent<Button>();
-                if (i > 7)
-            
+                if (i > 7 && !nextPage)
                         LevelButtons[i].gameObject.SetActive(false);
+                else if(i < 2 && nextPage)
+                    LevelButtons[i].gameObject.SetActive(false);
             }
+    }
+
+    public void nxtPage()
+    {
+        if (nextPage)
+        {
+            nextPage = false;
+            OnSceneLoaded();
+        }
+        else if (!nextPage)
+        {
+            nextPage = true;
+            OnSceneLoaded();
+        }
     }
 
     public void Update()
