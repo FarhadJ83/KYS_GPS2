@@ -10,17 +10,16 @@ public class LevelScript : MonoBehaviour
     private static LevelScript instance;
 
     [SerializeField] levelmanager levelManager;
-    public int[] levelStars = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    public int[] levelStars = new int[10];
     public Sprite NoStar;
     public Sprite Star;
-    public string[] levelNames = new string[] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6", "7", "8", "9", "10", "11", "12"
-    , "13", "14", "15", "16"};
-    public bool[] levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false, false, false, false, false
-    , false, false};
+    public string[] levelNames = new string[] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6", "7", "8", "9", "10"};
+    public bool[] levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false};
     public string[] levelScenes;
     public Button[] LevelButtons;
     public Sprite[] levelImage;
     bool nextPage = false;
+    int max, min;
 
     private void Awake()
     {   
@@ -29,7 +28,6 @@ public class LevelScript : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += (scene, mode) => OnSceneLoaded();
-            LoadLevelProgress();
         }
         else
         {
@@ -40,11 +38,12 @@ public class LevelScript : MonoBehaviour
 
     private void Start()
     {
-        levelScenes = new string[] { "VertLvl1(Level_1)", "VertLvl2_(Level_3)", "VertLvl3_(Level_6)", "VertLvl4_(Level_7)", "VertLvl5_(Level10)", "VertLvl6(Level_11)",
+        levelScenes = new string[] { "VertLvl1(Level_1)" +
+            "", "VertLvl2_(Level_3)", "VertLvl3_(Level_6)", "VertLvl4_(Level_7)", "VertLvl5_(Level10)", "VertLvl6(Level_11)",
         "VertLvl7(Level_14)", "VertLvl8(Level_15)", "VertLvl9_(Level19)", "VertLvl10_(Level21)"};
-        levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false};
+        //levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false};
         levelNames = new string[] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6", "7", "8", "9", "10"};
-        levelStars = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        //+levelStars = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
         //for (int i = 0; i < LevelButtons.Length; i++)
         //{
@@ -57,20 +56,31 @@ public class LevelScript : MonoBehaviour
     private void OnSceneLoaded()
     {
         if (SceneManager.GetActiveScene().name == "LevelsScene")
+        {
+            LoadLevelProgress();
+            LevelUnlock();
+            setStars();
+        }
+
+        if (SceneManager.GetActiveScene().name == "LevelsScene")
             for (int i = 0; i < LevelButtons.Length; i++)
             {
                 LevelButtons[i] = GameObject.Find(levelNames[i]).GetComponent<Button>();
                 if (i > 7 && !nextPage)
-                        LevelButtons[i].gameObject.SetActive(false);
-                else if(i < 2 && nextPage)
+                {
                     LevelButtons[i].gameObject.SetActive(false);
+                }
+                else if (i < 2 && nextPage)
+                {
+                    LevelButtons[i].gameObject.SetActive(false);
+                }
             }
     }
 
     public void nxtPage()
     {
         if (nextPage)
-        {
+        { 
             nextPage = false;
             OnSceneLoaded();
         }
@@ -84,11 +94,6 @@ public class LevelScript : MonoBehaviour
     public void Update()
     {
         levelManager = Camera.main.GetComponent<levelmanager>();
-        if (SceneManager.GetActiveScene().name == "LevelsScene")
-        {
-            LevelUnlock();
-            setStars();
-        }
 
         if (Keyboard.current != null && Keyboard.current.deleteKey.wasPressedThisFrame)
         {
@@ -139,34 +144,38 @@ public class LevelScript : MonoBehaviour
 
     public void setStars()
     {
-        //for (int i = 0; i < levelStars.Length; i++)
-        //{   
-        //    if (levelStars[i] == 3)
-        //    {
-        //        Debug.Log("Setting stars for level 1");
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("1Star").GetComponent<Image>().sprite = Star;
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("2Star").GetComponent<Image>().sprite = Star;
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("3Star").GetComponent<Image>().sprite = Star;
-        //    }
-        //    else if (levelStars[i] == 2)
-        //    {
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("1Star").GetComponent<Image>().sprite = Star;
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("2Star").GetComponent<Image>().sprite = Star;
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("3Star").GetComponent<Image>().sprite = NoStar;
-        //    }
-        //    else if (levelStars[i] == 1)
-        //    {
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("1Star").GetComponent<Image>().sprite = Star;
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("2Star").GetComponent<Image>().sprite = NoStar;
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("3Star").GetComponent<Image>().sprite = NoStar;
-        //    }
-        //    else
-        //    {
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("1Star").GetComponent<Image>().sprite = NoStar;
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("2Star").GetComponent<Image>().sprite = NoStar;
-        //        GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("3Star").GetComponent<Image>().sprite = NoStar;
-        //    }
-        //}
+        for (int i = 0; i < levelStars.Length; i++)
+        {
+            GameObject Star1 = GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("1Star").gameObject;
+            GameObject Star2 = GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("2Star").gameObject;
+            GameObject Star3 = GameObject.Find(levelNames[i]).transform.Find("LevelStars").transform.Find("3Star").gameObject;
+
+            if (levelStars[i] == 3)
+            {
+                Debug.Log("Setting stars for level 1");
+                Star1.GetComponent<Image>().sprite = Star;
+                Star2.GetComponent<Image>().sprite = Star;
+                Star3.GetComponent<Image>().sprite = Star;
+            }
+            else if (levelStars[i] == 2)
+            {
+                Star1.GetComponent<Image>().sprite = Star;
+                Star2.GetComponent<Image>().sprite = Star;
+                Star3.GetComponent<Image>().sprite = NoStar;
+            }
+            else if (levelStars[i] == 1)
+            {
+                Star1.GetComponent<Image>().sprite = Star;
+                Star2.GetComponent<Image>().sprite = NoStar;
+                Star3.GetComponent<Image>().sprite = NoStar;
+            }
+            else if (levelStars[i] == 0)
+            {
+                Star1.GetComponent<Image>().sprite = NoStar;
+                Star2.GetComponent<Image>().sprite = NoStar;
+                Star3.GetComponent<Image>().sprite = NoStar;
+            }   
+        }
     }
 
     public void ResetProgress()

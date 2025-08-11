@@ -40,8 +40,9 @@ public class WinCondition : MonoBehaviour
             swipecount = whiteBall.swipeCounter;
         }
 
+        GameObject levelManager = GameObject.Find("LevelManager");
 
-        for(int i = 0; i < strings.Length; i++)
+        for (int i = 0; i < strings.Length; i++)
         {
             if (swipecount < winCondition1[i])
             {
@@ -52,7 +53,8 @@ public class WinCondition : MonoBehaviour
 
                 if (SceneManager.GetActiveScene().name == strings[i])
                 {
-                    GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 3;
+                    Debug.Log(i);
+                    GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 3;  
                     GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
                 }
             }
@@ -64,8 +66,10 @@ public class WinCondition : MonoBehaviour
                 if (SceneManager.GetActiveScene().name == strings[i])
                 {
                     if (GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] < 3)
+                    {
                         GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 2;
-                    GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                        GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                    }
                 }
             }
             else if (swipecount < winCondition3[i])
@@ -76,8 +80,10 @@ public class WinCondition : MonoBehaviour
                 if (SceneManager.GetActiveScene().name == strings[i])
                 {
                     if (GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] < 2)
+                    {
                         GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 1;
-                    GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                        GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                    }
                 }
             }
             else
@@ -88,8 +94,11 @@ public class WinCondition : MonoBehaviour
                 if (SceneManager.GetActiveScene().name == strings[i])
                 {
                     if (GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] < 1)
+                    {
                         GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 0;
-                    GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                        GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                        break;  
+                    }
                 }
             }
         }
