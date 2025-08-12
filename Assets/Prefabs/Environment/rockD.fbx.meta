@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 276a0d807bf505c4083bc99922eb6c0c
+guid: f6a931ddd9643d542b1f687e88ec5e9d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rock3
+    second: {fileID: 2800000, guid: b8fdb7eefe748934baf6846aa927cdcb, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
