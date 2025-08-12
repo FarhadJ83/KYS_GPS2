@@ -12203,6 +12203,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Level 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2187500338386888254, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d1a1b009f4ced434f9a8603cb709c81b, type: 3}
     - target: {fileID: 2376659217947120053, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -12215,6 +12219,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4443915489519335135, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bfab973b108becc43ae8cc50ff79d144, type: 3}
     - target: {fileID: 6082122544855980748, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -12299,6 +12307,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8469479688104675452, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7347d024956035541bb624a2034c0e77, type: 3}
     - target: {fileID: 8722019558914349134, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
