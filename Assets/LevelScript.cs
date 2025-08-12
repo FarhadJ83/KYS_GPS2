@@ -14,7 +14,7 @@ public class LevelScript : MonoBehaviour
     public Sprite NoStar;
     public Sprite Star;
     public string[] levelNames = new string[] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6", "7", "8", "9", "10"};
-    public bool[] levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false};
+    public bool[] levelsUnlocked = new bool[] { true, true, false, false, false, false, false, false, false, false};
     public string[] levelScenes;
     public Button[] LevelButtons;
     public Sprite[] levelImage;
@@ -57,9 +57,9 @@ public class LevelScript : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "LevelsScene")
         {
-            LoadLevelProgress();
+            //LoadLevelProgress();
             LevelUnlock();
-            setStars();
+            //setStars();
         }
 
         if (SceneManager.GetActiveScene().name == "LevelsScene")
