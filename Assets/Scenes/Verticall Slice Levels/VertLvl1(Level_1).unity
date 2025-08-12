@@ -568,8 +568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -16, y: 12}
-  m_SizeDelta: {x: 1120, y: 630}
+  m_AnchoredPosition: {x: -16, y: -7.945984}
+  m_SizeDelta: {x: 1120, y: 700.9192}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &210371896
 MonoBehaviour:
@@ -3677,8 +3677,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -16, y: 12}
-  m_SizeDelta: {x: 1120, y: 630}
+  m_AnchoredPosition: {x: -16, y: 2.0271}
+  m_SizeDelta: {x: 1120, y: 756.6406}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &981926716 stripped
 GameObject:
@@ -8421,11 +8421,11 @@ PrefabInstance:
     - target: {fileID: 5835752590562576496, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: endTransition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2076817644}
     - target: {fileID: 5835752590562576496, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: startingTransition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2076817645}
     - target: {fileID: 6738528166800221407, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
