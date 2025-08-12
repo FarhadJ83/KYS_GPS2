@@ -57,7 +57,7 @@ public class LevelScript : MonoBehaviour
             for (int i = 0; i < LevelButtons.Length; i++)
             {
                 LevelButtons[i] = GameObject.Find(levelNames[i]).GetComponent<Button>();
-                if (i > 7 && !nextPage)
+                if (i > 8 && !nextPage)
                 {
                     LevelButtons[i].gameObject.SetActive(false);
                 }
