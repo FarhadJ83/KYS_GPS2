@@ -41,18 +41,21 @@ public class MergingController : MonoBehaviour
 
                 // Set SwipeCounter Component to inactive
                 Camera.main.GetComponent<swiipeCounter>().enabled = false;
-                collision.gameObject.SetActive(false);
-                gameObject.SetActive(false);
-                //Destroy(gameObject);
-
                 for (int i = 0; i < GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes.Length - 1; i++)
                 {
                     if (SceneManager.GetActiveScene().name == GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes[i])
                     {
-                        GameObject.Find("LevelManager").GetComponent<LevelScript>().levelsUnlocked[i+1] = true;
+                        Debug.Log("Level Completed: " + GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes[i]);
+                        GameObject.Find("LevelManager").GetComponent<LevelScript>().levelsUnlocked[i + 1] = true;
                         GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
-                    }   
+                        break;
+                    }
                 }
+                collision.gameObject.SetActive(false);
+                gameObject.SetActive(false);
+                //Destroy(gameObject);
+
+                
                 
             }
         }
