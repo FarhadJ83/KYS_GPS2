@@ -7126,10 +7126,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1572796017}
     m_Modifications:
-    - target: {fileID: 8857156018991400905, guid: 6bed236f54c92f349ba1279d6a8c7e4b, type: 3}
-      propertyPath: m_Name
-      value: Teleporter Black
-      objectReference: {fileID: 0}
     - target: {fileID: 8009619940542248267, guid: 6bed236f54c92f349ba1279d6a8c7e4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.5
@@ -7169,6 +7165,10 @@ PrefabInstance:
     - target: {fileID: 8009619940542248267, guid: 6bed236f54c92f349ba1279d6a8c7e4b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857156018991400905, guid: 6bed236f54c92f349ba1279d6a8c7e4b, type: 3}
+      propertyPath: m_Name
+      value: Teleporter Black
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9202,6 +9202,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1981826180190880194, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f18c51841909b74a962f45e6f5f97e0, type: 3}
     - target: {fileID: 9214531718353346319, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_Name
       value: Canvas

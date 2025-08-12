@@ -499,6 +499,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6223031471112717254, guid: 66e51ea80f11314418bc77e3a0c63e4c, type: 3}
+      propertyPath: m_Name
+      value: RedBlackGate
+      objectReference: {fileID: 0}
     - target: {fileID: 6430796548105357523, guid: 66e51ea80f11314418bc77e3a0c63e4c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5000007
@@ -538,10 +542,6 @@ PrefabInstance:
     - target: {fileID: 6430796548105357523, guid: 66e51ea80f11314418bc77e3a0c63e4c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6223031471112717254, guid: 66e51ea80f11314418bc77e3a0c63e4c, type: 3}
-      propertyPath: m_Name
-      value: RedBlackGate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4415,6 +4415,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1981826180190880194, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53b7eebc354ed9c43859e6743bc40d8b, type: 3}
     - target: {fileID: 9214531718353346319, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_Name
       value: Canvas
