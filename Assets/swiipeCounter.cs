@@ -13,16 +13,19 @@ public class swiipeCounter : MonoBehaviour
     [SerializeField] Button showRewardButton;
     [HideInInspector] public int swipecount;
     public bool [] adAvailable = {true, true, true};
+    bool[] Merged;
 
     private void Start()
     {
         //swipeCountertext = GameObject.Find("SwipeCounter").GetComponent<Text>();
-        blackBall = GameObject.FindGameObjectWithTag("BlackBall").GetComponent<CharacterMovement>();
-        whiteBall = GameObject.FindGameObjectWithTag("WhiteBall").GetComponent<CharacterMovement>();
+        
     }
 
     private void Update()
     {
+        blackBall = GameObject.FindGameObjectWithTag("BlackBall").GetComponent<CharacterMovement>();
+        whiteBall = GameObject.FindGameObjectWithTag("WhiteBall").GetComponent<CharacterMovement>();
+
         swipeCountertext = GameObject.Find("SwipeCounter");
         if (blackBall.swipeCounter >= whiteBall.swipeCounter)
         {
@@ -61,8 +64,8 @@ public class swiipeCounter : MonoBehaviour
     IEnumerator activateShowRewardedButton()
     {
 
-        showRewardButton.gameObject.SetActive(true);
+        //showRewardButton.gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
-        showRewardButton.gameObject.SetActive(false);
+        //showRewardButton.gameObject.SetActive(false);
     }
 }

@@ -10,7 +10,7 @@ public class MergingController : MonoBehaviour
     public BallType ballType;
     public GameObject mergedBall;
     GameObject winScreen; 
-
+    public bool isMerged = false;
 
 
     private void Start()
@@ -36,8 +36,11 @@ public class MergingController : MonoBehaviour
                 if (mergedBall!=null)
                 {
                     Instantiate(mergedBall, yinYangPosition, Quaternion.identity);
+                    isMerged = true;
                 }
 
+                // Set SwipeCounter Component to inactive
+                Camera.main.GetComponent<swiipeCounter>().enabled = false;
                 collision.gameObject.SetActive(false);
                 gameObject.SetActive(false);
                 //Destroy(gameObject);
