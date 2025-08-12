@@ -13,9 +13,9 @@ public class WinCondition : MonoBehaviour
     Image Star1;
     public Sprite star;
     public Sprite noStar;
-    int[] winCondition1 = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
-    int[] winCondition2 = {20, 20, 20, 20, 20, 20, 20, 20, 20, 20 };
-    int[] winCondition3 = {30, 30, 30, 30, 30, 30, 30, 30, 30, 30 };
+    int[] winCondition1 = {3, 4, 7, 7, 8, 10, 10, 7, 8, 9 };
+    int[] winCondition2 = {5, 5, 9, 9, 10, 12, 12, 9, 10, 13 };
+    int[] winCondition3 = {8, 7, 10, 12, 13, 15, 15, 11, 12, 16 };
     string[] strings = { "VertLvl1(Level_1)", "VertLvl2_(Level_3)", "VertLvl3_(Level_6)", "VertLvl4_(Level_7)", "VertLvl5_(Level10)", "VertLvl6(Level_11)",
         "VertLvl7(Level_14)", "VertLvl8(Level_15)", "VertLvl9_(Level19)", "VertLvl10_(Level21)"};
     //[SerializeField] Text swipeCounterText;
