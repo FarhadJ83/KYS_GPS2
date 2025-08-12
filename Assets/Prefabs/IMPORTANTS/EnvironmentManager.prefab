@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   YangColor: {r: 0.5529412, g: 0.5529412, b: 0.5529412, a: 1}
   YinColor: {r: 0.12941177, g: 0.047058824, b: 0.18431373, a: 1}
+  whiteSound: {fileID: 8300000, guid: 6471e8720f131da41a45f2e96405518c, type: 3}
+  blackSound: {fileID: 8300000, guid: fd1b7cde90ebd234d9543513bd56cdc6, type: 3}
 --- !u!114 &8603276884228232425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,3 +65,4 @@ MonoBehaviour:
   blackBallPrefab: {fileID: 1638220446391989025, guid: 0532b22aa831f6f47bc05c3060e789ed, type: 3}
   whiteBallSpawnPoint: {fileID: 0}
   blackBallSpawnPoint: {fileID: 0}
+  sc: 0

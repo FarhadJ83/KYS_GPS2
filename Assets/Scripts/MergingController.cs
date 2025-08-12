@@ -11,7 +11,7 @@ public class MergingController : MonoBehaviour
     public GameObject mergedBall;
     GameObject winScreen; 
     public bool isMerged = false;
-
+    [SerializeField] AudioClip mergeSound;
 
     private void Start()
     {
@@ -38,7 +38,7 @@ public class MergingController : MonoBehaviour
                     Instantiate(mergedBall, yinYangPosition, Quaternion.identity);
                     isMerged = true;
                 }
-
+                GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(mergeSound);
                 collision.gameObject.SetActive(false);
                 gameObject.SetActive(false);
                 //Destroy(gameObject);

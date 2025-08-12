@@ -9,6 +9,8 @@ public class InverseController : MonoBehaviour
     public Color YinColor;
     GameObject[] whiteGates;
     GameObject[] blackGates;
+    [SerializeField] AudioClip whiteSound;
+    [SerializeField] AudioClip blackSound;
 
     private bool isWhiteActive = true;
 
@@ -53,6 +55,15 @@ public class InverseController : MonoBehaviour
         whiteEnvironment.SetActive(isWhiteActive);
 
         blackEnvironment.SetActive(!isWhiteActive);
+
+        if(isWhiteActive)
+        {
+            GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(whiteSound);
+        }
+        else
+        {
+            GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(blackSound);
+        }
 
     }
 }

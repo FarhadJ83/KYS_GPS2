@@ -14310,6 +14310,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1715735907}
     m_Modifications:
+    - target: {fileID: 19621786824762491, guid: 8542b39d934e5bc40bf070511fc5e476, type: 3}
+      propertyPath: m_Name
+      value: building 2 (dark)
+      objectReference: {fileID: 0}
     - target: {fileID: 796685534796463809, guid: 8542b39d934e5bc40bf070511fc5e476, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.1
@@ -14349,10 +14353,6 @@ PrefabInstance:
     - target: {fileID: 796685534796463809, guid: 8542b39d934e5bc40bf070511fc5e476, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 19621786824762491, guid: 8542b39d934e5bc40bf070511fc5e476, type: 3}
-      propertyPath: m_Name
-      value: building 2 (dark)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17929,6 +17929,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4418631530916366002, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3cead67e76290ef438bf9f565295f25a, type: 3}
     - target: {fileID: 4443915489519335135, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -17964,6 +17968,10 @@ PrefabInstance:
     - target: {fileID: 6247876652405794908, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440359577019702060, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7559711726564860754, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_Pivot.x
@@ -18037,6 +18045,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: levelmanager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 8954826634348789805, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9118280641587517773, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -18049,10 +18061,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 564922495578331509, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
-      insertIndex: 6
+      insertIndex: 7
       addedObject: {fileID: 1704992185}
     - targetCorrespondingSourceObject: {fileID: 564922495578331509, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
-      insertIndex: 7
+      insertIndex: 8
       addedObject: {fileID: 138664557}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}

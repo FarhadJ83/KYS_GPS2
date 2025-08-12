@@ -17,7 +17,8 @@ public class Tap : MonoBehaviour
 
     private void HandleTap(object sender, TouchGesture e)
     {
-        // On tap, load the Menu Scene
+        // On tap, load the Menu Scene if the tap is not on a button
+
         SceneManager.LoadScene("LevelsScene");
     }
 

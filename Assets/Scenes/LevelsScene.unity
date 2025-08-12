@@ -7743,6 +7743,8 @@ MonoBehaviour:
   mergedBall: {fileID: 0}
   startingTransition: {fileID: 1622593836}
   endTransition: {fileID: 368204532}
+  buttonClick: {fileID: 8300000, guid: ce2f5b48278643a448f893063c872153, type: 3}
+  WinSound: {fileID: 8300000, guid: 8cd6558f3a96aec4fa02f4e0028de5ea, type: 3}
   pause: {fileID: 0}
 --- !u!1 &1580393318
 GameObject:
