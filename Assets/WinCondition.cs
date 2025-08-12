@@ -54,7 +54,7 @@ public class WinCondition : MonoBehaviour
                 if (SceneManager.GetActiveScene().name == strings[i])
                 {
                     Debug.Log(i);
-                    GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 3;  
+                    GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 3;
                     GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
                 }
             }
