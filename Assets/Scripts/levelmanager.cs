@@ -18,6 +18,7 @@ public class levelmanager : MonoBehaviour
     [SerializeField] private GameObject endTransition;
     [SerializeField] AudioClip buttonClick;
     [SerializeField] AudioClip WinSound;
+    [SerializeField] AudioClip StartSound;
 
     Button Resume;
     Button restartW;
@@ -200,6 +201,7 @@ public class levelmanager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(StartSound);
     }
 
     public void MainMenu()

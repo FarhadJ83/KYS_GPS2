@@ -38,7 +38,7 @@ public class swiipeCounter : MonoBehaviour
             blackBall.swipeCounter = whiteBall.swipeCounter;
         }
         
-        swipeCountertext.GetComponent<TextMeshProUGUI>().text = "Swipe Count: " + swipecount.ToString();
+        swipeCountertext.GetComponent<TextMeshProUGUI>().text = swipecount.ToString();
         if (showRewardButton != null)
         {
             if (swipecount == 2 && adAvailable[0])
