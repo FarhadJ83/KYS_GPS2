@@ -111,20 +111,12 @@ public class CharacterMovement : MonoBehaviour
         // Rapids
         RaycastHit[] rapidHits = Physics.RaycastAll(ray, Mathf.Infinity, rapidLayer);
         Array.Sort(rapidHits, (a, b) => a.distance.CompareTo(b.distance));
-
         foreach (RaycastHit rapidHit in rapidHits)
         {
             WaterRapidsDirection rapid = rapidHit.collider.GetComponent<WaterRapidsDirection>();
-            if (rapid != null)
+            if (rapid != null && Vector3.Dot(moveDir, rapid.direction) < 0)
             {
-                // If player tries to go against the flow direction
-                if (Vector3.Dot(moveDir, rapid.direction) < 0)
-                {
-                    // Stop before the rapid
-                    Vector3 stopBeforeRapid = rapidHit.point - moveDir * raycastPadding;
-                    StartCoroutine(SmoothMoveToWall(ball, stopBeforeRapid));
-                    //return;
-                }
+                return rapidHit.point - moveDir * raycastPadding;
             }
         }
 
