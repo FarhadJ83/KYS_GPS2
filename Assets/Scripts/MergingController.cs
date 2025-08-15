@@ -38,10 +38,12 @@ public class MergingController : MonoBehaviour
                     Instantiate(mergedBall, yinYangPosition, Quaternion.identity);
                     isMerged = true;
                 }
-                GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(mergeSound);
+                
                 collision.gameObject.SetActive(false);
                 gameObject.SetActive(false);
                 //Destroy(gameObject);
+
+                GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(mergeSound);
 
                 // Set SwipeCounter Component to inactive
                 Camera.main.GetComponent<swiipeCounter>().enabled = false;
