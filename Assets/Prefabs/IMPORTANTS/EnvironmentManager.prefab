@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf66d79836b46014899fcac7d1d6911a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YangColor: {r: 0.5529412, g: 0.5529412, b: 0.5529412, a: 1}
+  YangColor: {r: 0.6431373, g: 0.83137256, b: 0.92941177, a: 1}
   YinColor: {r: 0.12941177, g: 0.047058824, b: 0.18431373, a: 1}
   whiteSound: {fileID: 8300000, guid: 6471e8720f131da41a45f2e96405518c, type: 3}
   blackSound: {fileID: 8300000, guid: fd1b7cde90ebd234d9543513bd56cdc6, type: 3}
