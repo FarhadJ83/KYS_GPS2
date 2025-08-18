@@ -109,14 +109,21 @@ public class CharacterMovement : MonoBehaviour
         float wallDist = hitWall ? wallHit.distance : Mathf.Infinity;
 
         // Rapids
-        RaycastHit[] rapidHits = Physics.RaycastAll(ray, Mathf.Infinity, rapidLayer);
+        int rapidLayerMask = 1 << LayerMask.NameToLayer("Rapid");
+        RaycastHit[] rapidHits = Physics.RaycastAll(ray, Mathf.Infinity, rapidLayerMask);
+
         Array.Sort(rapidHits, (a, b) => a.distance.CompareTo(b.distance));
+
         foreach (RaycastHit rapidHit in rapidHits)
         {
             WaterRapidsDirection rapid = rapidHit.collider.GetComponent<WaterRapidsDirection>();
-            if (rapid != null && Vector3.Dot(moveDir, rapid.direction) < 0)
+            if (rapid != null)
             {
-                return rapidHit.point - moveDir * raycastPadding;
+                float dot = Vector3.Dot(moveDir, rapid.direction);
+                Debug.Log($"[Rapids Raycast] Hit {rapidHit.collider.name} | Dot={dot}");
+
+                if (dot < 0)
+                    return rapidHit.point - moveDir * raycastPadding;
             }
         }
 
