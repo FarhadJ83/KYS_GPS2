@@ -4419,6 +4419,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 232301709223346445, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_Name
+      value: rockD
+      objectReference: {fileID: 0}
     - target: {fileID: 608722076492700599, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -4470,10 +4474,6 @@ PrefabInstance:
     - target: {fileID: 608722076492700599, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 232301709223346445, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
-      propertyPath: m_Name
-      value: rockD
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5766,10 +5766,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6650897916828535038, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6650897916828535038, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
-      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6650897916828535038, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}

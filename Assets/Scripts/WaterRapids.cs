@@ -49,11 +49,28 @@ public class WaterRapids : MonoBehaviour
         if (direction != Vector3.zero)
             ball.transform.rotation = Quaternion.LookRotation(direction);
 
-        while (Vector3.Distance(ball.transform.position, end) > 0.5f) 
-        {
-            ball.transform.position = Vector3.MoveTowards(ball.transform.position, end, conveyorSpeed * Time.deltaTime);
+        Rigidbody rb = ball.GetComponent<Rigidbody>();
+        float elapsed = 0f;
+        float timeout = 5f;
 
-            yield return null;
+        while (elapsed < timeout)
+        {
+            if (ball == null) yield break;
+
+            Vector3 nextPos = Vector3.MoveTowards(
+                ball.transform.position, end,
+                conveyorSpeed * (rb ? Time.fixedDeltaTime : Time.deltaTime));
+
+            if (rb != null)
+                rb.MovePosition(nextPos);
+            else
+                ball.transform.position = nextPos;
+
+            if ((nextPos - end).sqrMagnitude < 0.05f)
+                break; // close enough, exit loop
+
+            elapsed += rb ? Time.fixedDeltaTime : Time.deltaTime;
+            yield return rb ? new WaitForFixedUpdate() : null;
         }
 
         if (nextRapids != null)
