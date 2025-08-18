@@ -847,6 +847,9 @@ MonoBehaviour:
   popupSequence:
   - {fileID: 210371894}
   - {fileID: 261498982}
+  balls:
+  - {fileID: 1059643089}
+  - {fileID: 679991389}
 --- !u!4 &260288442
 Transform:
   m_ObjectHideFlags: 0
@@ -8135,6 +8138,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6812082543742819306, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8384071200036528332, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -8143,6 +8150,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 9dc9a4248e524f345b2f0656fd246f16, type: 3}
+    - target: {fileID: 8575470355833472032, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8954826634348789805, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
