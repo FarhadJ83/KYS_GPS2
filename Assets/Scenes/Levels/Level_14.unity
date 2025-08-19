@@ -4056,6 +4056,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1272089256251902257, guid: c50988387cc9d484b9f627450d36a849, type: 3}
+      propertyPath: blackMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 47678adeec1a32947b0861f19fb63d58, type: 2}
+    - target: {fileID: 1272089256251902257, guid: c50988387cc9d484b9f627450d36a849, type: 3}
+      propertyPath: whiteMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c0d3ee6c6162324aa8014f1ec60da31, type: 2}
     - target: {fileID: 3959849647637680476, guid: c50988387cc9d484b9f627450d36a849, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.5
@@ -4779,7 +4787,7 @@ PrefabInstance:
     - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: switchedGate
       value: 
-      objectReference: {fileID: 1011162939}
+      objectReference: {fileID: 446433126}
     - target: {fileID: 1208299468966145676, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: m_Name
       value: Pressure Plate Black
@@ -8029,6 +8037,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4933840937986822416, guid: 66e51ea80f11314418bc77e3a0c63e4c, type: 3}
+      propertyPath: blackMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 47678adeec1a32947b0861f19fb63d58, type: 2}
+    - target: {fileID: 4933840937986822416, guid: 66e51ea80f11314418bc77e3a0c63e4c, type: 3}
+      propertyPath: whiteMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c0d3ee6c6162324aa8014f1ec60da31, type: 2}
     - target: {fileID: 6223031471112717254, guid: 66e51ea80f11314418bc77e3a0c63e4c, type: 3}
       propertyPath: m_Name
       value: RedBlackGate
@@ -8417,7 +8433,7 @@ PrefabInstance:
     - target: {fileID: 612978481669572916, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: switchedGate
       value: 
-      objectReference: {fileID: 1117741093}
+      objectReference: {fileID: 2104474080}
     - target: {fileID: 1208299468966145676, guid: 37ef6c7de31032f439fbf202c048c6b2, type: 3}
       propertyPath: m_Name
       value: Pressure Plate Black
@@ -8929,6 +8945,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedWhiteGate
       objectReference: {fileID: 0}
+    - target: {fileID: 7391772839217125547, guid: 2a031ff276a5b614e8df32deceaa9423, type: 3}
+      propertyPath: blackMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 47678adeec1a32947b0861f19fb63d58, type: 2}
+    - target: {fileID: 7391772839217125547, guid: 2a031ff276a5b614e8df32deceaa9423, type: 3}
+      propertyPath: whiteMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c0d3ee6c6162324aa8014f1ec60da31, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15310,6 +15334,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 5879963639235195485, guid: d565498cc552fe741b8d6db8c725eb1e, type: 3}
+      propertyPath: blackMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 47678adeec1a32947b0861f19fb63d58, type: 2}
+    - target: {fileID: 5879963639235195485, guid: d565498cc552fe741b8d6db8c725eb1e, type: 3}
+      propertyPath: whiteMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c0d3ee6c6162324aa8014f1ec60da31, type: 2}
     - target: {fileID: 6908991858541020273, guid: d565498cc552fe741b8d6db8c725eb1e, type: 3}
       propertyPath: m_Name
       value: GreenBlackGate
