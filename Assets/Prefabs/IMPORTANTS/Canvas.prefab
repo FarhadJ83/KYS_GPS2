@@ -2016,9 +2016,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8612685154627381162, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
         m_TargetAssemblyTypeName: InverseController, Assembly-CSharp
-        m_MethodName: InvertEnvironment
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
