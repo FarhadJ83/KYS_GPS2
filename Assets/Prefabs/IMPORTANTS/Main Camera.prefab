@@ -155,6 +155,15 @@ MonoBehaviour:
   level: {fileID: 0}
   pausePanel: {fileID: 0}
   settingsPanel: {fileID: 0}
+  winScreen: {fileID: 0}
+  mergedBall: {fileID: 0}
+  startingTransition: {fileID: 0}
+  endTransition: {fileID: 0}
+  buttonClick: {fileID: 8300000, guid: ce2f5b48278643a448f893063c872153, type: 3}
+  WinSound: {fileID: 8300000, guid: 8cd6558f3a96aec4fa02f4e0028de5ea, type: 3}
+  StartSound: {fileID: 8300000, guid: 85230864a69fd3141b7ade174b31229b, type: 3}
+  settings: {fileID: 0}
+  pause: {fileID: 0}
 --- !u!114 &6750594903678944855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,3 +194,6 @@ MonoBehaviour:
   swipeCountertext: {fileID: 0}
   blackBall: {fileID: 0}
   whiteBall: {fileID: 0}
+  showRewardButton: {fileID: 0}
+  swipecount: 0
+  adAvailable: 010101

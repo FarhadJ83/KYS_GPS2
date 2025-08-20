@@ -9,6 +9,7 @@ public class Popup : MonoBehaviour
     [Tooltip("Assign the sequence of popup GameObjects here in the order they should appear.")]
     [SerializeField]
     private List<GameObject> popupSequence;
+    [SerializeField] GameObject[] balls; 
 
     private int currentIndex = -1;
 
@@ -40,6 +41,7 @@ public class Popup : MonoBehaviour
         if (popupSequence != null && popupSequence.Count > 0)
         {
             currentIndex = 0;
+            Time.timeScale = 0; // Pause the game when showing popups
             popupSequence[currentIndex].SetActive(true);
         }
     }
@@ -67,6 +69,10 @@ public class Popup : MonoBehaviour
         {
             // Show the new current popup
             popupSequence[currentIndex].SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1; // Resume the game when all popups are done
         }
     }
 

@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-
 public class WaterRapids : MonoBehaviour
 {
     [Tooltip("Where the ball starts being moved.")]
@@ -19,59 +18,78 @@ public class WaterRapids : MonoBehaviour
     {
         if (other.CompareTag("WhiteBall") || other.CompareTag("BlackBall"))
         {
-            // Start conveyor movement
-            StartCoroutine(MoveAlongConveyor(other.gameObject));
+            Debug.Log($"[Rapids] Triggered by {other.name}");
+            StartCoroutine(MoveAlongConveyor(other.gameObject, false));
         }
     }
 
-    private IEnumerator MoveAlongConveyor(GameObject ball)
+    private IEnumerator MoveAlongConveyor(GameObject ball, bool forceStartAtPoint)
     {
         // Disable character control
         CharacterMovement cm = ball.GetComponent<CharacterMovement>();
         if (cm != null)
-        {
             cm.enabled = false;
-        }
+
+        Debug.Log(cm.enabled);
 
         yield return new WaitForSeconds(0.2f);
 
+        if (forceStartAtPoint)
+        {
+            // Snap ball to startPoint before moving
+            ball.transform.position = startPoint.position;
+        }
+
         Vector3 start = startPoint.position;
         Vector3 end = endPoint.position;
-
-        // Optional: Rotate ball to face movement direction
         Vector3 direction = (end - start).normalized;
+
+        Debug.Log($"[Rapids] Moving {ball.name} from {start} to {end} | Dir: {direction} | Dist: {Vector3.Distance(start, end)}");
+
         if (direction != Vector3.zero)
-        {
             ball.transform.rotation = Quaternion.LookRotation(direction);
-        }
 
-        while (Vector3.Distance(ball.transform.position, end) > 0.05f)
+        Rigidbody rb = ball.GetComponent<Rigidbody>();
+        float elapsed = 0f;
+        float timeout = 5f;
+
+        while (elapsed < timeout)
         {
-            ball.transform.position = Vector3.MoveTowards(ball.transform.position, end, conveyorSpeed * Time.deltaTime);
-            yield return null;
+            if (ball == null) yield break;
+
+            Vector3 nextPos = Vector3.MoveTowards(
+                ball.transform.position, end,
+                conveyorSpeed * (rb ? Time.fixedDeltaTime : Time.deltaTime));
+
+            if (rb != null)
+                rb.MovePosition(nextPos);
+            else
+                ball.transform.position = nextPos;
+
+            if ((nextPos - end).sqrMagnitude < 0.05f)
+                break; // close enough, exit loop
+
+            elapsed += rb ? Time.fixedDeltaTime : Time.deltaTime;
+            yield return rb ? new WaitForFixedUpdate() : null;
         }
 
-        // Snap to exact end position
-        ball.transform.position = end;
+        if (nextRapids != null)
+            nextRapids.TriggerFromPrevious(ball);
+        else if (cm != null)
+            cm.enabled = true;
+        else
+            ball.transform.position = end;
+        
+        Debug.Log("Journey completed");
 
         yield return new WaitForSeconds(0.1f);
 
-        if (nextRapids != null)
-        {
-            // Pass to next connected rapid
-            nextRapids.TriggerFromPrevious(ball);
-        }
-        else
-        {
-            // Re-enable control if no next rapid
-            if (cm != null)
-                cm.enabled = true;
-        }
     }
 
-    // Call this when coming from a previous rapid (to avoid re-triggering on collision)
     public void TriggerFromPrevious(GameObject ball)
     {
-        StartCoroutine(MoveAlongConveyor(ball));
+        Debug.Log($"[Rapids] Triggered from previous rapid for {ball.name}");
+        StartCoroutine(MoveAlongConveyor(ball, true)); // force start snap
     }
+
 }

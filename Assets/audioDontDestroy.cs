@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class audioDontDestroy : MonoBehaviour
 {
-    audioDontDestroy instance;
+    static audioDontDestroy instance;
     private void Awake()
     {
         if(instance == null)

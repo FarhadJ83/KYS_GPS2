@@ -1,21 +1,96 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
+using NUnit.Framework.Internal;
+using UnityEngine.SceneManagement;
 
 public class levelmanager : MonoBehaviour
 {
     public LevelScript level;
     [HideInInspector] public GameObject pausePanel;
-    [HideInInspector] public GameObject settingsPanel;
+    public GameObject settingsPanel;
     public GameObject winScreen;
     [SerializeField] GameObject mergedBall;
     int c = 0; 
 
     [SerializeField] private GameObject startingTransition;
     [SerializeField] private GameObject endTransition;
+    [SerializeField] AudioClip buttonClick;
+    [SerializeField] AudioClip WinSound;
+    [SerializeField] AudioClip StartSound;
 
+    Button Resume;
+    Button restartW;
+    Button restartP;
+    Button HomeW;
+    Button HomeP;
+    Button nextLevel;
+    [SerializeField] Button settings;
+    [SerializeField] Button pause;
+    Button inverse;
+    Button back;
+    Action[] levels;
+    string[] strings = { "VertLvl1(Level_1)", "VertLvl2_(Level_3)", "VertLvl3_(Level_6)", "VertLvl4_(Level_7)", "VertLvl5_(Level10)", "VertLvl6(Level_11)",
+        "VertLvl7(Level_14)", "VertLvl8(Level_15)", "VertLvl9_(Level19)", "VertLvl10_(Level21)"};
     public void Start()
     {
+        levels = new Action[] { VLevel2, VLevel3, VLevel4, VLevel5, VLevel6, VLevel7, VLevel8, VLevel9, VLevel10 };
+        if (SceneManager.GetActiveScene().name != "LevelsScene" && SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            Resume = GameObject.Find("Resume").GetComponent<Button>();
+            if (Resume != null)
+            {
+                Resume.onClick.AddListener(pause_Panel);
+            }
+            pause = GameObject.Find("Pause").GetComponent<Button>();
+            if (pause != null)
+            {
+                pause.onClick.AddListener(pause_Panel);
+            }
+            nextLevel = GameObject.Find("NextLevel").GetComponent<Button>();
+            if (nextLevel != null)
+            {
+                for (int i = 0; i < levels.Length - 1; i++)
+                {
+                    if (strings[i] == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
+                    {
+                        nextLevel.onClick.AddListener(() => levels[i]());
+                        break;
+                    }
+                }
+            }
+            settings = GameObject.Find("Settings").GetComponent<Button>();
+            if (settings != null)
+            {
+                settings.onClick.AddListener(settings_Panel);
+            }
+            HomeP = GameObject.Find("HomeP").GetComponent<Button>();
+            if (HomeP != null)
+            {
+                HomeP.onClick.AddListener(playGame);
+            }
+            HomeW = GameObject.Find("HomeW").GetComponent<Button>();
+            if (HomeW != null)
+            {
+                HomeW.onClick.AddListener(playGame);
+            }
+            restartW = GameObject.Find("RestartW").GetComponent<Button>();
+            if (restartW != null)
+            {
+                restartW.onClick.AddListener(Restart);
+            }
+            restartP = GameObject.Find("RestartP").GetComponent<Button>();
+            if (restartP != null)
+            {
+                restartP.onClick.AddListener(Restart);
+            }
+            back = GameObject.Find("Back").GetComponent<Button>();
+            if (back != null)
+            {
+                back.onClick.AddListener(settings_Panel);
+            }
+        }
 
         pausePanel = GameObject.Find("PausePanel");
         if (pausePanel != null)
@@ -47,6 +122,7 @@ public class levelmanager : MonoBehaviour
     {
         // Load the game scene
         Time.timeScale = 1; // Ensure the game is not paused when starting
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
         UnityEngine.SceneManagement.SceneManager.LoadScene("LevelsScene");
     }
 
@@ -57,8 +133,8 @@ public class levelmanager : MonoBehaviour
         //{
         //    pausePanel.SetActive(false);
         //}
-
-        if (Time.timeScale == 1)
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        if (pausePanel.activeSelf == false) 
         {
             pausePanel.SetActive(true);
             Time.timeScale = 0; // Pause the game
@@ -77,6 +153,7 @@ public class levelmanager : MonoBehaviour
         //{
         //    settingsPanel.SetActive(false);
         //}
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
         if (settingsPanel != null)
         {
             Debug.Log("Settings panel found, toggling its active state.");
@@ -84,13 +161,13 @@ public class levelmanager : MonoBehaviour
             {
                 Debug.Log("Settings panel is active, closing it now.");
                 settingsPanel.SetActive(false);
-                Time.timeScale = 1; // Resume the game when settings panel is closed
+                //Time.timeScale = 1; // Resume the game when settings panel is closed
             }
             else
             {
                 Debug.Log("Settings panel is not active, opening it now.");
                 settingsPanel.SetActive(true);
-                Time.timeScale = 0; // Pause the game when settings panel is opened
+                //Time.timeScale = 0; // Pause the game when settings panel is opened
             }
         }
     }
@@ -109,6 +186,7 @@ public class levelmanager : MonoBehaviour
             //yield return new WaitForSeconds(4f); // Show the win screen for 2 seconds
 
             winScreen.SetActive(true);
+            GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(WinSound);
         }
     }
 
@@ -123,6 +201,7 @@ public class levelmanager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(StartSound);
     }
 
     public void MainMenu()
@@ -134,6 +213,7 @@ public class levelmanager : MonoBehaviour
 
     public void Restart()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
         // Restart the current level
         UnityEngine.SceneManagement.Scene currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
         UnityEngine.SceneManagement.SceneManager.LoadScene(currentScene.name);
@@ -144,46 +224,75 @@ public class levelmanager : MonoBehaviour
         }
         Time.timeScale = 1; // Reset time scale to normal when restarting
     }
-    public void level1()
+
+    public void next_Level()
     {
-        // Load Level 1
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        for (int i = 0; i < level.levelScenes.Length; i++)
         {
-            StartCoroutine(LoadLevelWithTransition("TutorialLevel1"));
+            if (SceneManager.GetActiveScene().name == level.levelScenes[i])
+            {
+                if (i + 1 < level.levelScenes.Length)
+                {
+                    StartCoroutine(LoadLevelWithTransition(level.levelScenes[i + 1]));
+                }
+                else
+                {
+                    Debug.Log("No next level available.");
+                }
+            }
         }
     }
 
-    public void level2()
+    public void VLevel1()
     {
-        // Load Level 1
-        //Button level2Button = GameObject.Find("Level2Button").GetComponent<Button>();
-        //if (level2Button != null && level2Button.interactable == true)
-        //{
-        //    level2Button.onClick.AddListener(() => level2());
-        //}
-        {
-            StartCoroutine(LoadLevelWithTransition("TutorialL2"));
-            //level.level2Unlocked = true; // Unlock Level 2 after Level 1 is played
-        }
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("VertLvl1(Level_1)"));
+    }
+    public void VLevel2()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("VertLvl2_(Level_3)"));
+    }
+    public void VLevel3()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("VertLvl3_(Level_6)"));
+    }
+    public void VLevel4()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("VertLvl4_(Level_7)"));
+    }
+    public void VLevel5()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("VertLvl5_(Level10)"));
+    }
+    public void VLevel6()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("VertLvl6(Level_11)"));
+    }
+    public void VLevel7()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("VertLvl7(Level_14)"));
+    }
+    public void VLevel8()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("VertLvl8(Level_15)"));
+    }
+    public void VLevel9()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("VertLvl9_(Level19)"));
+    }
+    public void VLevel10()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("VertLvl10_(Level21)"));
     }
 
-    public void level3()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("TL3"));
-        }
-    }
-
-    public void level4()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("TL4"));
-        }
-    }
-
-    public void level5()
-    {
-        {
-            StartCoroutine(LoadLevelWithTransition("TL5"));
-        }
-    }
 }

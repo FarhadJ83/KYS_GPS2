@@ -10,8 +10,8 @@ public class MergingController : MonoBehaviour
     public BallType ballType;
     public GameObject mergedBall;
     GameObject winScreen; 
-
-
+    public bool isMerged = false;
+    [SerializeField] AudioClip mergeSound;
 
     private void Start()
     {
@@ -36,21 +36,31 @@ public class MergingController : MonoBehaviour
                 if (mergedBall!=null)
                 {
                     Instantiate(mergedBall, yinYangPosition, Quaternion.identity);
+                    isMerged = true;
                 }
-
+                
                 collision.gameObject.SetActive(false);
                 gameObject.SetActive(false);
                 //Destroy(gameObject);
 
-                for (int i = 0; i < GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes.Length; i++)
+                GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(mergeSound);
+
+                // Set SwipeCounter Component to inactive
+                Camera.main.GetComponent<swiipeCounter>().enabled = false;
+                for (int i = 0; i < GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes.Length - 1; i++)
                 {
                     if (SceneManager.GetActiveScene().name == GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes[i])
                     {
-                        GameObject.Find("LevelManager").GetComponent<LevelScript>().levelsUnlocked[i+1] = true;
+                        Debug.Log("Level Completed: " + GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes[i]);
+                        GameObject.Find("LevelManager").GetComponent<LevelScript>().levelsUnlocked[i + 1] = true;
                         GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
-                    }   
+                        break;
+                    }
                 }
                 
+
+
+
             }
         }
 

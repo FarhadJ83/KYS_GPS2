@@ -13,10 +13,11 @@ public class WinCondition : MonoBehaviour
     Image Star1;
     public Sprite star;
     public Sprite noStar;
-    int[] winCondition1 = {10, 10, 10, 10, 10};
-    int[] winCondition2 = { 20, 20, 20, 20, 20 };
-    int[] winCondition3 = { 30, 30, 30, 30, 30 };
-    string[] strings = { "TutorialLevel1", "TutorialL2", "TL3", "TL4", "TL5" };
+    int[] winCondition1 = {3, 4, 7, 7, 8, 10, 10, 7, 8, 9 };
+    int[] winCondition2 = {5, 5, 9, 9, 10, 12, 12, 9, 10, 13 };
+    int[] winCondition3 = {8, 7, 10, 12, 13, 15, 15, 11, 12, 16 };
+    string[] strings = { "VertLvl1(Level_1)", "VertLvl2_(Level_3)", "VertLvl3_(Level_6)", "VertLvl4_(Level_7)", "VertLvl5_(Level10)", "VertLvl6(Level_11)",
+        "VertLvl7(Level_14)", "VertLvl8(Level_15)", "VertLvl9_(Level19)", "VertLvl10_(Level21)"};
     //[SerializeField] Text swipeCounterText;
     void Awake()
     {
@@ -39,55 +40,68 @@ public class WinCondition : MonoBehaviour
             swipecount = whiteBall.swipeCounter;
         }
 
+        GameObject levelManager = GameObject.Find("LevelManager");
 
-        for(int i = 0; i < strings.Length; i++)
+        for (int i = 0; i < strings.Length; i++)
         {
-            if (swipecount < winCondition1[i])
+            if (SceneManager.GetActiveScene().name == strings[i])
             {
-                Star3.sprite = star;
-                Star2.sprite = star;
-                Star1.sprite = star;
+                if (swipecount < winCondition1[i])
+                {
+                    Debug.Log("Swipe count: " + swipecount + " | Win condition 1: " + winCondition1[i] + " | Level: " + strings[i]);
+                    Star3.sprite = star;
+                    Star2.sprite = star;
+                    Star1.sprite = star;
+                    
+                    {
+                        Debug.Log(i);
+                        GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 3;
+                        GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                    }
+                }
 
-                if (SceneManager.GetActiveScene().name == strings[i])
+                else if (swipecount < winCondition2[i])
                 {
-                    GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 3;
-                    GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                    Debug.Log("Swipe count: " + swipecount + " | Win condition 2: " + winCondition2[i] + " | Level: " + strings[i]);
+                    Star3.sprite = noStar;
+                    Star2.sprite = star;
+                    Star1.sprite = star;
+                    if (SceneManager.GetActiveScene().name == strings[i])
+                    {
+                        if (GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] < 3)
+                        {
+                            GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 2;
+                        }
+                        GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                    }
                 }
-            }
-            else if (swipecount < winCondition2[i])
-            {
-                Star3.sprite = noStar;
-                Star2.sprite = star;
-                Star1.sprite = star;
-                if (SceneManager.GetActiveScene().name == strings[i])
+                else if (swipecount < winCondition3[i])
                 {
-                    if (GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] < 3)
-                        GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 2;
-                    GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                    Star3.sprite = noStar;
+                    Star2.sprite = noStar;
+                    Star1.sprite = star;
+                    if (SceneManager.GetActiveScene().name == strings[i])
+                    {
+                        if (GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] < 2)
+                        {
+                            GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 1;
+                        }
+                        GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                    }
                 }
-            }
-            else if (swipecount < winCondition3[i])
-            {
-                Star3.sprite = noStar;
-                Star2.sprite = noStar;
-                Star1.sprite = star;
-                if (SceneManager.GetActiveScene().name == strings[i])
+                else
                 {
-                    if (GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] < 2)
-                        GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 1;
-                    GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
-                }
-            }
-            else
-            {
-                Star3.sprite = noStar;
-                Star2.sprite = noStar;
-                Star1.sprite = noStar;
-                if (SceneManager.GetActiveScene().name == strings[i])
-                {
-                    if (GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] < 1)
-                        GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 0;
-                    GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                    Star3.sprite = noStar;
+                    Star2.sprite = noStar;
+                    Star1.sprite = noStar;
+                    if (SceneManager.GetActiveScene().name == strings[i])
+                    {
+                        if (GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] < 1)
+                        {
+                            GameObject.Find("LevelManager").GetComponent<LevelScript>().levelStars[i] = 0;
+                        }
+                        GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();
+                    }
                 }
             }
         }

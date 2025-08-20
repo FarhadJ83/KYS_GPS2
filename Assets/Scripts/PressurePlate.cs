@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public GameObject whiteGate;
-    public GameObject blackGate;
+    public GameObject activeGate;
+    public GameObject switchedGate;
 
-    private bool isWhiteActive = true;
+    private bool isGateActive = true;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -20,9 +20,9 @@ public class PressurePlate : MonoBehaviour
 
     public void InvertGate()
     {
-        isWhiteActive = !isWhiteActive;
+        isGateActive = !isGateActive;
 
-        whiteGate.SetActive(isWhiteActive);
-        blackGate.SetActive(!isWhiteActive);
+        activeGate.SetActive(isGateActive);
+        switchedGate.SetActive(!isGateActive);
     }
 }

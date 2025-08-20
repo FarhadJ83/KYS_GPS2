@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6921205068691983837}
   - component: {fileID: 6080716284764007182}
   - component: {fileID: 2499204052743536272}
+  - component: {fileID: 5168999622395098507}
   - component: {fileID: 8361064970996854558}
   - component: {fileID: 3157987709154262620}
   - component: {fileID: 7508960417992995724}
@@ -86,6 +87,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &5168999622395098507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638220446391989025}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236e143da9cfaa4899d088f58ab80fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
+  moveSpeed: 2
+  popupPanel: {fileID: 0}
+  cm: {fileID: 8361064970996854558}
 --- !u!114 &8361064970996854558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballType: 1
   mergedBall: {fileID: 0}
+  isMerged: 0
+  mergeSound: {fileID: 8300000, guid: 4d149e0810b000b4da6e1a0d0577cff3, type: 3}
 --- !u!114 &7508960417992995724
 MonoBehaviour:
   m_ObjectHideFlags: 0
