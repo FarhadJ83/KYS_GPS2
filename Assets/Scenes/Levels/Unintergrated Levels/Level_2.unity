@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -459,6 +463,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (7)
@@ -648,6 +656,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (14)
@@ -710,6 +722,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (12)
@@ -827,6 +843,10 @@ PrefabInstance:
     - target: {fileID: 7973213376135982741, guid: 13812516c0eeef141b81ced73fbf502e, type: 3}
       propertyPath: m_Name
       value: rockB (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477594338301693760, guid: 13812516c0eeef141b81ced73fbf502e, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1004,6 +1024,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 5478506585056392081, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6271100604924498500, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
       propertyPath: m_Name
       value: rockA (4)
@@ -1320,6 +1344,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1666,6 +1694,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (9)
@@ -1714,6 +1746,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.526
       objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1740,6 +1776,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (38)
@@ -1787,6 +1827,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.238
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1929,6 +1973,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7973213376135982741, guid: 13812516c0eeef141b81ced73fbf502e, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477594338301693760, guid: 13812516c0eeef141b81ced73fbf502e, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2117,7 +2165,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72808276}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -2235,6 +2283,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2253,6 +2305,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
@@ -2377,6 +2433,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.5
@@ -2594,6 +2654,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1503067450181341717, guid: 2c9a026bf7f262a408507a5916e0d599, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8601197716681304169, guid: 2c9a026bf7f262a408507a5916e0d599, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2611,6 +2675,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -2668,6 +2736,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 5478506585056392081, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6271100604924498500, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
       propertyPath: m_Name
       value: rockA (3)
@@ -2749,6 +2821,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3126248296153795675, guid: d5890164ee08d8141b283a79ce6785d2, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3486443839475248526, guid: d5890164ee08d8141b283a79ce6785d2, type: 3}
       propertyPath: m_Name
       value: Wall Variant A(T) (1)
@@ -2806,6 +2882,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (11)
@@ -2866,6 +2946,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2909,6 +2993,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (5)
@@ -2968,6 +3056,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.843
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3127,6 +3219,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -3522,6 +3618,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (2)
@@ -3569,6 +3669,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3943,6 +4047,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 17.652365
@@ -4294,6 +4402,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (27)
@@ -4353,6 +4465,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4517,6 +4633,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (17)
@@ -4702,6 +4822,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3275179798734378161, guid: ba9b258a935dae4449b29a1448e673e7, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3923544419784373604, guid: ba9b258a935dae4449b29a1448e673e7, type: 3}
       propertyPath: m_Name
       value: Wall Variant A(L) (1)
@@ -5034,6 +5158,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 7390743567348299960, guid: c9438989d15c1104383b60eb35fa00aa, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8564191457585628119, guid: c9438989d15c1104383b60eb35fa00aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.94
@@ -5150,6 +5278,10 @@ PrefabInstance:
     - target: {fileID: 608722076492700599, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5384,6 +5516,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (19)
@@ -5444,6 +5580,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5472,6 +5612,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (5)
@@ -5529,6 +5673,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.5
@@ -5586,6 +5734,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (16)
@@ -5676,7 +5828,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230846373}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -5868,6 +6020,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6092,6 +6248,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6668,6 +6828,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 30.134352
@@ -6948,6 +7112,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7177,6 +7345,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9136493462830689170, guid: d41e35793fe899b40a0c34b49e8d4722, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7252,6 +7424,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7408,6 +7584,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7842,6 +8022,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (22)
@@ -7901,6 +8085,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8052,6 +8240,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8125,6 +8317,10 @@ PrefabInstance:
     - target: {fileID: 5509105503716805675, guid: e7834096b95f2604cbc73b7032a7d4cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647148779565709124, guid: e7834096b95f2604cbc73b7032a7d4cb, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8752,6 +8948,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 2402645730339099074, guid: b095f2bb332ecd644be9f4f2a1a3284c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2987923846773882292, guid: b095f2bb332ecd644be9f4f2a1a3284c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -9739,6 +9939,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9905,6 +10109,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 5478506585056392081, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6271100604924498500, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
       propertyPath: m_Name
       value: rockA (2)
@@ -10167,6 +10375,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3275179798734378161, guid: ba9b258a935dae4449b29a1448e673e7, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3923544419784373604, guid: ba9b258a935dae4449b29a1448e673e7, type: 3}
       propertyPath: m_Name
       value: Wall Variant A(L) (2)
@@ -10524,6 +10736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rockB (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8477594338301693760, guid: 13812516c0eeef141b81ced73fbf502e, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10585,6 +10801,10 @@ PrefabInstance:
     - target: {fileID: 7962492479589863677, guid: d41e35793fe899b40a0c34b49e8d4722, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136493462830689170, guid: d41e35793fe899b40a0c34b49e8d4722, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10738,6 +10958,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10817,6 +11041,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (16)
@@ -10876,6 +11104,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11380,6 +11612,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11523,6 +11759,10 @@ PrefabInstance:
     - target: {fileID: 608722076492700599, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11956,6 +12196,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12171,6 +12415,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12504,6 +12752,10 @@ PrefabInstance:
     - target: {fileID: 608722076492700599, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13046,6 +13298,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (3)
@@ -13093,6 +13349,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.565
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13363,6 +13623,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.5
@@ -13420,6 +13684,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (28)
@@ -13479,6 +13747,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13698,6 +13970,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (35)
@@ -13757,6 +14033,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13845,6 +14125,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13858,6 +14142,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (4)
@@ -13964,6 +14252,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14020,7 +14312,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534688802}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -14552,6 +14844,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14580,6 +14876,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (18)
@@ -14639,6 +14939,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14954,6 +15258,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 17.652365
@@ -15089,6 +15397,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -15327,6 +15639,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15544,6 +15860,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15595,7 +15915,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597935384}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -16145,6 +16465,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (11)
@@ -16961,6 +17285,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17049,6 +17377,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 30.134352
@@ -17634,6 +17966,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5000001
@@ -17745,6 +18081,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5509105503716805675, guid: e7834096b95f2604cbc73b7032a7d4cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647148779565709124, guid: e7834096b95f2604cbc73b7032a7d4cb, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17886,6 +18226,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3275179798734378161, guid: ba9b258a935dae4449b29a1448e673e7, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3923544419784373604, guid: ba9b258a935dae4449b29a1448e673e7, type: 3}
       propertyPath: m_Name
       value: Wall Variant A(L)
@@ -17943,6 +18287,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 30.134352
@@ -18056,13 +18404,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 7390743567348299960, guid: c9438989d15c1104383b60eb35fa00aa, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8564191457585628119, guid: c9438989d15c1104383b60eb35fa00aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.35
       objectReference: {fileID: 0}
     - target: {fileID: 8564191457585628119, guid: c9438989d15c1104383b60eb35fa00aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.17
+      value: -0.621
       objectReference: {fileID: 0}
     - target: {fileID: 8564191457585628119, guid: c9438989d15c1104383b60eb35fa00aa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18319,6 +18671,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18413,6 +18769,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 30.134352
@@ -18703,6 +19063,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (42)
@@ -18762,6 +19126,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.843
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18958,7 +19326,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714996153}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -19269,6 +19637,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19412,6 +19784,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1503067450181341717, guid: 2c9a026bf7f262a408507a5916e0d599, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8601197716681304169, guid: 2c9a026bf7f262a408507a5916e0d599, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -19462,7 +19838,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732445459}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -20742,6 +21118,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (34)
@@ -20801,6 +21181,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21885,6 +22269,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21898,6 +22286,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 30.134352
@@ -22038,6 +22430,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 17.652365
@@ -22239,6 +22635,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -22599,6 +22999,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22896,6 +23300,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (30)
@@ -22955,6 +23363,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23111,6 +23523,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.5
@@ -23173,6 +23589,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (39)
@@ -23232,6 +23652,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.843
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23364,6 +23788,10 @@ PrefabInstance:
     - target: {fileID: 608722076492700599, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23589,6 +24017,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 17.652367
@@ -23905,7 +24337,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889837188}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -24262,6 +24694,10 @@ PrefabInstance:
     - target: {fileID: 7962492479589863677, guid: d41e35793fe899b40a0c34b49e8d4722, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9136493462830689170, guid: d41e35793fe899b40a0c34b49e8d4722, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25052,7 +25488,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914868729}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -25389,6 +25825,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25469,6 +25909,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -25954,6 +26398,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (1)
@@ -26011,6 +26459,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
@@ -26404,6 +26856,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.5
@@ -27379,6 +27835,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.5
@@ -27592,6 +28052,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5000001
@@ -27753,7 +28217,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994147368}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -28539,6 +29003,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28675,6 +29143,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2
@@ -28926,6 +29398,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.5
@@ -29016,7 +29492,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018126139}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -29214,6 +29690,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 2402645730339099074, guid: b095f2bb332ecd644be9f4f2a1a3284c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2987923846773882292, guid: b095f2bb332ecd644be9f4f2a1a3284c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -29366,6 +29846,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 30.134352
@@ -29686,6 +30170,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (8)
@@ -29733,6 +30221,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.526
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29946,6 +30438,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -30168,6 +30664,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -30594,6 +31094,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30701,7 +31205,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094576306}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -30755,6 +31259,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (36)
@@ -30814,6 +31322,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30964,6 +31476,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -31221,6 +31737,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (4)
@@ -31268,6 +31788,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.565
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31424,6 +31948,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5
@@ -31613,6 +32141,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 26.139624
@@ -31686,6 +32218,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.5
@@ -32006,6 +32542,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (6)
@@ -32053,6 +32593,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.238
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32202,6 +32746,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32284,6 +32832,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32297,6 +32849,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3275179798734378161, guid: ba9b258a935dae4449b29a1448e673e7, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3923544419784373604, guid: ba9b258a935dae4449b29a1448e673e7, type: 3}
       propertyPath: m_Name
       value: Wall Variant A(L) (3)
@@ -32679,6 +33235,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -33117,6 +33677,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (18)
@@ -33229,6 +33793,10 @@ PrefabInstance:
     - target: {fileID: 7973213376135982741, guid: 13812516c0eeef141b81ced73fbf502e, type: 3}
       propertyPath: m_Name
       value: rockB (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477594338301693760, guid: 13812516c0eeef141b81ced73fbf502e, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33455,6 +34023,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33516,7 +34088,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213302101}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -33700,6 +34272,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33723,6 +34299,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (12)
@@ -33782,6 +34362,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33865,6 +34449,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33878,6 +34466,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (24)
@@ -33926,6 +34518,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.565
       objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33972,7 +34568,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232943205}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -34026,6 +34622,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (8)
@@ -34202,6 +34802,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -34385,6 +34989,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34467,6 +35075,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34547,6 +35159,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -34843,6 +35459,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -35021,6 +35641,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35034,6 +35658,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (3)
@@ -35896,6 +36524,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35976,6 +36608,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -36559,6 +37195,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36645,6 +37285,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (13)
@@ -36704,6 +37348,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37051,6 +37699,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -37654,7 +38306,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373350128}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -37873,6 +38525,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (29)
@@ -37932,6 +38588,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38017,6 +38677,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (17)
@@ -38076,6 +38740,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38220,6 +38888,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38307,6 +38979,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 17.652365
@@ -38390,6 +39066,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (2)
@@ -39187,6 +39867,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39252,6 +39936,10 @@ PrefabInstance:
     - target: {fileID: 608722076492700599, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -35.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -39906,6 +40594,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40260,6 +40952,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (15)
@@ -40319,6 +41015,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -40404,6 +41104,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3126248296153795675, guid: d5890164ee08d8141b283a79ce6785d2, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3486443839475248526, guid: d5890164ee08d8141b283a79ce6785d2, type: 3}
       propertyPath: m_Name
       value: Wall Variant A(T)
@@ -40481,6 +41185,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (37)
@@ -40540,6 +41248,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41065,6 +41777,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41258,6 +41974,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41410,6 +42130,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -84.604004
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41492,6 +42216,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41510,6 +42238,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (23)
@@ -41569,6 +42301,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41787,6 +42523,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41928,6 +42668,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -42362,7 +43106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 84423345513810439, guid: e5fe56a5aa75b684884602fd68687c06, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1252214316472873320, guid: e5fe56a5aa75b684884602fd68687c06, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42620,6 +43364,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -42893,6 +43641,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -42911,6 +43663,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (14)
@@ -42971,6 +43727,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -42989,6 +43749,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (44)
@@ -43049,6 +43813,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.843
       objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43062,6 +43830,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 30.134352
@@ -43196,6 +43968,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6647148779565709124, guid: e7834096b95f2604cbc73b7032a7d4cb, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43209,6 +43985,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (32)
@@ -43268,6 +44048,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43409,6 +44193,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5000001
@@ -43466,6 +44254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 5478506585056392081, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6271100604924498500, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
       propertyPath: m_Name
       value: rockA (5)
@@ -43533,6 +44325,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (25)
@@ -43593,6 +44389,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43621,6 +44421,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.5
@@ -43754,6 +44558,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (6)
@@ -49133,6 +49941,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -49152,7 +49964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020227796923572998, guid: 7767da19a48ac6844ad196b07ec50f29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03
+      value: -0.66
       objectReference: {fileID: 0}
     - target: {fileID: 7020227796923572998, guid: 7767da19a48ac6844ad196b07ec50f29, type: 3}
       propertyPath: m_LocalPosition.z
@@ -49196,7 +50008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8153757367757707369, guid: 7767da19a48ac6844ad196b07ec50f29, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -49231,6 +50043,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (10)
@@ -49711,6 +50527,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -49783,6 +50603,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -50221,6 +51045,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -51590,6 +52418,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -51668,6 +52500,10 @@ PrefabInstance:
     - target: {fileID: 3275179798734378161, guid: ba9b258a935dae4449b29a1448e673e7, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3275179798734378161, guid: ba9b258a935dae4449b29a1448e673e7, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3923544419784373604, guid: ba9b258a935dae4449b29a1448e673e7, type: 3}
       propertyPath: m_Name
@@ -52215,6 +53051,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52503,6 +53343,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52651,6 +53495,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52669,6 +53517,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (41)
@@ -52728,6 +53580,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.843
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -52803,6 +53659,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (26)
@@ -52862,6 +53722,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53082,6 +53946,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6647148779565709124, guid: e7834096b95f2604cbc73b7032a7d4cb, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53235,6 +54103,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -54196,6 +55068,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54605,6 +55481,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54712,6 +55592,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD)
@@ -54759,6 +55643,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54837,6 +55725,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54981,6 +55873,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55109,7 +56005,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825332070}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -55246,6 +56142,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 5478506585056392081, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6271100604924498500, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
       propertyPath: m_Name
       value: rockA
@@ -55380,6 +56280,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55464,6 +56368,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 222755402991362989, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1395075778546669762, guid: 344f0a7974bf1f743ac61b1a59b4bb0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
@@ -55905,6 +56813,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55975,6 +56887,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 30.134352
@@ -56393,6 +57309,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (9)
@@ -56856,6 +57776,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (15)
@@ -57415,6 +58339,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -58390,6 +59318,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 7390743567348299960, guid: c9438989d15c1104383b60eb35fa00aa, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8564191457585628119, guid: c9438989d15c1104383b60eb35fa00aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.16
@@ -58718,6 +59650,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -58934,6 +59870,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 3300356518822363775, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3949028728434254762, guid: 2667b70eefae9df4588dbafe1f391dc6, type: 3}
       propertyPath: m_Name
       value: Wall Variant A2 (13)
@@ -59201,6 +60141,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (1)
@@ -59248,6 +60192,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.526
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -59401,6 +60349,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -59632,6 +60584,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -59701,6 +60657,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.253
       objectReference: {fileID: 0}
+    - target: {fileID: 1745621340558647512, guid: ae772a22d2cc25945b931eef7e4cf797, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -59749,6 +60709,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 5478506585056392081, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6271100604924498500, guid: 65c368f2971baca4eb8f84deb4a1d68e, type: 3}
       propertyPath: m_Name
       value: rockA (1)
@@ -59897,6 +60861,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -59920,6 +60888,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 134307881659647176, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611813936178817903, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_Name
       value: cherry blossom tree B (UPD) (7)
@@ -59967,6 +60939,10 @@ PrefabInstance:
     - target: {fileID: 4131046669901771221, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713660362288863907, guid: efff9388ba5295e42a2f37c2fafd7e27, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -60325,6 +61301,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682903893}
     m_Modifications:
+    - target: {fileID: 6929010641486421515, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8098570177704944996, guid: 6f6212885f6935b44b1ed468ff67d8d4, type: 3}
       propertyPath: m_LocalScale.x
       value: 17.652365
@@ -60460,6 +61440,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -60822,6 +61806,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -61087,6 +62075,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643853905718822260, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148296852806427809, guid: d611d8969cfa66344a3c945dad103c1c, type: 3}
+      propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
