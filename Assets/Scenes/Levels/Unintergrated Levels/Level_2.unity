@@ -42362,7 +42362,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 84423345513810439, guid: e5fe56a5aa75b684884602fd68687c06, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1252214316472873320, guid: e5fe56a5aa75b684884602fd68687c06, type: 3}
       propertyPath: m_LocalPosition.x
