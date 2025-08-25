@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 2e5afd7fa9850ba469b3a2829f67794e
 ModelImporter:
   serializedVersion: 22200
@@ -9,6 +10,13 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: mossbush
     second: {fileID: 2800000, guid: 2812d3fea4346cc44bff1e618f71bd2d, type: 3}
+=======
+guid: 9494e5f10a40e704aaa70d9183fc3ee5
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+>>>>>>> Stashed changes
   materials:
     materialImportMode: 2
     materialName: 0
