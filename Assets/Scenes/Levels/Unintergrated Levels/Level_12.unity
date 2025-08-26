@@ -11807,13 +11807,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2693921613902045302, guid: 5872866478405b94ab970d7eb752a9fa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693921613902045302, guid: 5872866478405b94ab970d7eb752a9fa, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 2047868412}
     - target: {fileID: 6026223689704289561, guid: 5872866478405b94ab970d7eb752a9fa, type: 3}
       propertyPath: m_Name
       value: White Ball
       objectReference: {fileID: 0}
     - target: {fileID: 7539748557806840765, guid: 5872866478405b94ab970d7eb752a9fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 7539748557806840765, guid: 5872866478405b94ab970d7eb752a9fa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14386,13 +14394,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 5168999622395098507, guid: 0532b22aa831f6f47bc05c3060e789ed, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168999622395098507, guid: 0532b22aa831f6f47bc05c3060e789ed, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1850448954}
     - target: {fileID: 6921205068691983837, guid: 0532b22aa831f6f47bc05c3060e789ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5
+      value: 10.386
       objectReference: {fileID: 0}
     - target: {fileID: 6921205068691983837, guid: 0532b22aa831f6f47bc05c3060e789ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.023423046
+      value: 0.858
       objectReference: {fileID: 0}
     - target: {fileID: 6921205068691983837, guid: 0532b22aa831f6f47bc05c3060e789ed, type: 3}
       propertyPath: m_LocalPosition.z

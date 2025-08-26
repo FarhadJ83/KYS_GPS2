@@ -3055,6 +3055,14 @@ PrefabInstance:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 297573299}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedY
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4549419026872715870, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_Name
       value: WaterRapid2
@@ -10210,6 +10218,14 @@ PrefabInstance:
     - target: {fileID: 3315411677387277862, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: conveyorSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedX
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedY
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4549419026872715870, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_Name
