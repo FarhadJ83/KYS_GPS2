@@ -10,13 +10,16 @@ public class LevelScript : MonoBehaviour
     private static LevelScript instance;
 
     [SerializeField] levelmanager levelManager;
-    public int[] levelStars = new int[10];
+    public int[] levelStars = new int[22];
     public Sprite NoStar;
     public Sprite Star;
-    public string[] levelNames = new string[] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6", "7", "8", "9", "10"};
-    public bool[] levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false};
-    public string[] levelScenes = { "VertLvl1(Level_1)", "VertLvl2_(Level_3)", "VertLvl3_(Level_6)", "VertLvl4_(Level_7)", "VertLvl5_(Level10)", "VertLvl6(Level_11)",
-        "VertLvl7(Level_14)", "VertLvl8(Level_15)", "VertLvl9_(Level19)", "VertLvl10_(Level21)"};
+    public string[] levelNames = new string[] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6", "7", "8",
+        "9", "10", "11", "12", "13", "14", "15", "16"};
+    public bool[] levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false, false, 
+        false, false, false, false, false, false, false, false, false};
+    public string[] levelScenes = { "Level_1", "Level_2", "Level_3", "Level_4", "Level_5", "Level_6", "Level_7",
+        "Level_8", "Level_9", "Level_10", "Level_11", "Level_12", "Level_13", "Level_14", "Level_15", "Level_16",
+        "Level_17", "Level_18", "Level19", "Level_20", "Level_21", "Level_22"};
     public Button[] LevelButtons;
     public Sprite[] levelImage;
     bool nextPage = false;
@@ -40,8 +43,9 @@ public class LevelScript : MonoBehaviour
 
     private void Start()
     {
-        levelScenes = new string[] { "VertLvl1(Level_1)", "VertLvl2_(Level_3)", "VertLvl3_(Level_6)", "VertLvl4_(Level_7)", "VertLvl5_(Level10)", "VertLvl6(Level_11)",
-            "VertLvl7(Level_14)", "VertLvl8(Level_15)", "VertLvl9_(Level19)", "VertLvl10_(Level21)"};
+        levelScenes = new string[] { "Level_1", "Level_2", "Level_3", "Level_4", "Level_5", "Level_6", "Level_7",
+        "Level_8", "Level_9", "Level_10", "Level_11", "Level_12", "Level_13", "Level_14", "Level_15", "Level_16",
+        "Level_17", "Level_18", "Level19", "Level_20", "Level_21", "Level_22"};
     }
 
     private void OnSceneLoaded()
@@ -57,14 +61,6 @@ public class LevelScript : MonoBehaviour
             for (int i = 0; i < LevelButtons.Length; i++)
             {
                 LevelButtons[i] = GameObject.Find(levelNames[i]).GetComponent<Button>();
-                if (i > 8 && !nextPage)
-                {
-                    LevelButtons[i].gameObject.SetActive(false);
-                }
-                else if (i < 2 && nextPage)
-                {
-                    LevelButtons[i].gameObject.SetActive(false);
-                }
             }
     }
 

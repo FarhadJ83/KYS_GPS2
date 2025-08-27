@@ -31,11 +31,13 @@ public class levelmanager : MonoBehaviour
     Button inverse;
     Button back;
     Action[] levels;
-    string[] strings = { "VertLvl1(Level_1)", "VertLvl2_(Level_3)", "VertLvl3_(Level_6)", "VertLvl4_(Level_7)", "VertLvl5_(Level10)", "VertLvl6(Level_11)",
-        "VertLvl7(Level_14)", "VertLvl8(Level_15)", "VertLvl9_(Level19)", "VertLvl10_(Level21)"};
+    string[] strings = { "Level_1", "Level_2", "Level_3", "Level_4", "Level_5", "Level_6", "Level_7",
+        "Level_8", "Level_9", "Level_10", "Level_11", "Level_12", "Level_13", "Level_14", "Level_15", "Level_16",
+        "Level_17", "Level_18", "Level19", "Level_20", "Level_21", "Level_22"};
     public void Start()
     {
-        levels = new Action[] { VLevel2, VLevel3, VLevel4, VLevel5, VLevel6, VLevel7, VLevel8, VLevel9, VLevel10 };
+        levels = new Action[] { Level2, VLevel2, Level4, Level5, VLevel3, VLevel4, Level8, Level9, VLevel5, VLevel6, 
+            Level12, Level13, VLevel7, VLevel8, Level16, Level17, Level18, VLevel9, Level20, VLevel10, Level22 };
         if (SceneManager.GetActiveScene().name != "LevelsScene" && SceneManager.GetActiveScene().name != "MainMenu")
         {
             Resume = GameObject.Find("Resume").GetComponent<Button>();
@@ -247,52 +249,117 @@ public class levelmanager : MonoBehaviour
     public void VLevel1()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("VertLvl1(Level_1)"));
+        StartCoroutine(LoadLevelWithTransition("Level_1"));
     }
+    public void Level2()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_2"));
+    }
+
     public void VLevel2()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("VertLvl2_(Level_3)"));
+        StartCoroutine(LoadLevelWithTransition("Level_3"));
+    }
+
+    public void Level4()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_4"));
+    }
+
+    public void Level5()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_5"));
     }
     public void VLevel3()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("VertLvl3_(Level_6)"));
+        StartCoroutine(LoadLevelWithTransition("Level_6"));
     }
     public void VLevel4()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("VertLvl4_(Level_7)"));
+        StartCoroutine(LoadLevelWithTransition("Level_7"));
+    }
+
+    public void Level8()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_8"));
+    }
+    public void Level9()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_9"));
     }
     public void VLevel5()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("VertLvl5_(Level10)"));
+        StartCoroutine(LoadLevelWithTransition("Level_10"));
     }
     public void VLevel6()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("VertLvl6(Level_11)"));
+        StartCoroutine(LoadLevelWithTransition("Level_11"));
+    }
+    public void Level12()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_12"));
+    }
+    public void Level13()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_13"));
     }
     public void VLevel7()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("VertLvl7(Level_14)"));
+        StartCoroutine(LoadLevelWithTransition("Level_14"));
     }
     public void VLevel8()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("VertLvl8(Level_15)"));
+        StartCoroutine(LoadLevelWithTransition("Level_15"));
+    }
+    public void Level16()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_16"));
+    }
+    public void Level17()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_17"));
+    }
+    public void Level18()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_18"));
     }
     public void VLevel9()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("VertLvl9_(Level19)"));
+        StartCoroutine(LoadLevelWithTransition("Level_19"));
+    }
+    public void Level20()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_20"));
     }
     public void VLevel10()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("VertLvl10_(Level21)"));
+        StartCoroutine(LoadLevelWithTransition("Level_21"));
     }
+    public void Level22()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        StartCoroutine(LoadLevelWithTransition("Level_22"));
+    }
+
 
 }

@@ -52,7 +52,7 @@ public class InverseController : MonoBehaviour
 
         Camera.main.backgroundColor = isWhiteActive ? YangColor : YinColor;
 
-        whiteEnvironment.SetActive(isWhiteActive);
+        whiteEnvironment.SetActive(isWhiteActive);  
 
         blackEnvironment.SetActive(!isWhiteActive);
 
