@@ -66,8 +66,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 47678adeec1a32947b0861f19fb63d58, type: 2}
-  - {fileID: 2100000, guid: be3749979e302e34d9bc7adf772b5e37, type: 2}
+  - {fileID: 2100000, guid: 7dff25cbf7bce2840be0b8c6b20aa8f3, type: 2}
+  - {fileID: 2100000, guid: 4b675d8ea5ab3e64d8371d02ab84c75e, type: 2}
   - {fileID: 2100000, guid: 48b79b52c3ab8b64d9e8f12813f95913, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571032b5a20cb844885f7d8ca77882cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteMaterial: {fileID: 2100000, guid: ce2b9e9ec69b1df45b6102f23b750a7a, type: 2}
-  blackMaterial: {fileID: 2100000, guid: 13c251d78ef968d4d8d63916a604cf93, type: 2}
+  whiteMaterial: {fileID: 2100000, guid: 7dff25cbf7bce2840be0b8c6b20aa8f3, type: 2}
+  blackMaterial: {fileID: 2100000, guid: d3b5cee69f0a4624ea6c983fa105802a, type: 2}
   isBlackGate: 1
   blackBall: {fileID: 0}
   whiteBall: {fileID: 0}
