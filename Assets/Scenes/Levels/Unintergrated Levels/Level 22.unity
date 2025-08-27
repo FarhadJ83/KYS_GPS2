@@ -9664,6 +9664,14 @@ PrefabInstance:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1508346880}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedY
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4549419026872715870, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_Name
       value: WaterRapid (4)
@@ -9913,6 +9921,14 @@ PrefabInstance:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1104565307}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedY
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4549419026872715870, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_Name
       value: WaterRapid (1)
@@ -19819,6 +19835,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 551524312696680377, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1799542527}
+    - target: {fileID: 551524312696680377, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InvertEnvironment
+      objectReference: {fileID: 0}
     - target: {fileID: 564922495578331509, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -21435,6 +21459,14 @@ PrefabInstance:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1202561440}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedY
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4549419026872715870, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_Name
       value: WaterRapid (2)
@@ -23662,6 +23694,10 @@ PrefabInstance:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1104565307}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedY
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4549419026872715870, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_Name
       value: WaterRapid (3)
@@ -23672,7 +23708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8512536770457694140, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 4.99955
       objectReference: {fileID: 0}
     - target: {fileID: 8512536770457694140, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25688,13 +25724,17 @@ PrefabInstance:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1873316633}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedY
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4549419026872715870, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_Name
       value: WaterRapid
       objectReference: {fileID: 0}
     - target: {fileID: 8512536770457694140, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 4.99955
       objectReference: {fileID: 0}
     - target: {fileID: 8512536770457694140, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30071,6 +30111,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ddbf81c58e3f204d8df6fdda954e9f1, type: 3}
+--- !u!114 &1799542527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6822040004347889781, guid: 30995cb6768cac0468f9daf0d16ce9bf, type: 3}
+  m_PrefabInstance: {fileID: 1805803195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf66d79836b46014899fcac7d1d6911a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1805803195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32467,6 +32518,14 @@ PrefabInstance:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1873316633}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664960999614800082, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
+      propertyPath: scrollSpeedY
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4549419026872715870, guid: e439a3e9952a82c47bd345dcb60af740, type: 3}
       propertyPath: m_Name
       value: WaterRapid (5)
