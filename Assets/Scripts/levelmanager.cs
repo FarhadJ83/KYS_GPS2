@@ -33,7 +33,7 @@ public class levelmanager : MonoBehaviour
     Action[] levels;
     string[] strings = { "Level_1", "Level_2", "Level_3", "Level_4", "Level_5", "Level_6", "Level_7",
         "Level_8", "Level_9", "Level_10", "Level_11", "Level_12", "Level_13", "Level_14", "Level_15", "Level_16",
-        "Level_17", "Level_18", "Level19", "Level_20", "Level_21", "Level_22"};
+        "Level_17", "Level_18", "Level_19", "Level 20", "Level_21", "Level 22"};
     public void Start()
     {
         levels = new Action[] { Level2, VLevel2, Level4, Level5, VLevel3, VLevel4, Level8, Level9, VLevel5, VLevel6, 
@@ -236,6 +236,7 @@ public class levelmanager : MonoBehaviour
             {
                 if (i + 1 < level.levelScenes.Length)
                 {
+                    Debug.Log("Loading next level: " + level.levelScenes[i + 1]);
                     StartCoroutine(LoadLevelWithTransition(level.levelScenes[i + 1]));
                 }
                 else
@@ -348,7 +349,7 @@ public class levelmanager : MonoBehaviour
     public void Level20()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("Level_20"));
+        StartCoroutine(LoadLevelWithTransition("Level 20"));
     }
     public void VLevel10()
     {
@@ -358,7 +359,7 @@ public class levelmanager : MonoBehaviour
     public void Level22()
     {
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
-        StartCoroutine(LoadLevelWithTransition("Level_22"));
+        StartCoroutine(LoadLevelWithTransition("Level 22"));
     }
 
 

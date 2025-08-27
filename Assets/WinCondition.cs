@@ -18,7 +18,12 @@ public class WinCondition : MonoBehaviour
     int[] winCondition3 = {8, 7, 10, 12, 13, 15, 15, 11, 12, 16, 3, 4, 7, 7, 8, 10, 10, 7, 8, 9, 0, 0 };
     string[] strings ={ "Level_1", "Level_2", "Level_3", "Level_4", "Level_5", "Level_6", "Level_7",
         "Level_8", "Level_9", "Level_10", "Level_11", "Level_12", "Level_13", "Level_14", "Level_15", "Level_16",
-        "Level_17", "Level_18", "Level19", "Level_20", "Level_21", "Level_22"};
+        "Level_17", "Level_18", "Level_19", "Level 20", "Level_21", "Level 22"};
+    public Sprite[] winconditionImages;
+    int[] conditions = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 };
+    Image Text1;
+    Image Text2;
+    Image Text3;
     //[SerializeField] Text swipeCounterText;
     void Awake()
     {
@@ -28,6 +33,31 @@ public class WinCondition : MonoBehaviour
         Star3 = GameObject.Find("3Star").GetComponent<Image>();
         Star2 = GameObject.Find("2Star").GetComponent<Image>();
         Star1 = GameObject.Find("1Star").GetComponent<Image>();
+        Text3 = Star3.transform.Find("Text").GetComponent<Image>();
+        Text2 = Star2.transform.Find("Text").GetComponent<Image>();
+        Text1 = Star1.transform.Find("Text").GetComponent<Image>();
+
+        for(int i = 0; i < strings.Length; i++)
+        {
+            if (SceneManager.GetActiveScene().name == strings[i])
+            {
+                for(int j = 0; j< conditions.Length; j++)
+                {
+                    if (winCondition3[i] == conditions[j])
+                    {
+                        Text1.sprite = winconditionImages[j];
+                    }
+                    if (winCondition2[i] == conditions[j])
+                    {
+                        Text2.sprite = winconditionImages[j];
+                    }
+                    if (winCondition1[i] == conditions[j])
+                    {
+                        Text3.sprite = winconditionImages[j];
+                    }
+                }
+            }
+        }
     }
 
     private void Update()

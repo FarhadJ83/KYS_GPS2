@@ -49,8 +49,10 @@ public class MergingController : MonoBehaviour
                 Camera.main.GetComponent<swiipeCounter>().enabled = false;
                 for (int i = 0; i < GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes.Length - 1; i++)
                 {
+                    Debug.Log("Level Completed: " + GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes[i]);
                     if (SceneManager.GetActiveScene().name == GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes[i])
                     {
+                        Debug.Log("You Win!");
                         Debug.Log("Level Completed: " + GameObject.Find("LevelManager").GetComponent<LevelScript>().levelScenes[i]);
                         GameObject.Find("LevelManager").GetComponent<LevelScript>().levelsUnlocked[i + 1] = true;
                         GameObject.Find("LevelManager").GetComponent<LevelScript>().SaveLevelProgress();

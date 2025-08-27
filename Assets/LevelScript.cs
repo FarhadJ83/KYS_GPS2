@@ -14,12 +14,12 @@ public class LevelScript : MonoBehaviour
     public Sprite NoStar;
     public Sprite Star;
     public string[] levelNames = new string[] { "1", "Level2Button", "Level3Button", "Level4Button", "Level5Button", "6", "7", "8",
-        "9", "10", "11", "12", "13", "14", "15", "16"};
-    public bool[] levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false, false, 
-        false, false, false, false, false, false, false, false, false};
+        "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"};
+    public bool[] levelsUnlocked = new bool[] { true, false, false, false, false, false, false, false, false, false, false,
+        false, false, false, false, false, false, false, false, false, false, false};
     public string[] levelScenes = { "Level_1", "Level_2", "Level_3", "Level_4", "Level_5", "Level_6", "Level_7",
         "Level_8", "Level_9", "Level_10", "Level_11", "Level_12", "Level_13", "Level_14", "Level_15", "Level_16",
-        "Level_17", "Level_18", "Level19", "Level_20", "Level_21", "Level_22"};
+        "Level_17", "Level_18", "Level_19", "Level 20", "Level_21", "Level 22"};
     public Button[] LevelButtons;
     public Sprite[] levelImage;
     bool nextPage = false;
@@ -45,7 +45,7 @@ public class LevelScript : MonoBehaviour
     {
         levelScenes = new string[] { "Level_1", "Level_2", "Level_3", "Level_4", "Level_5", "Level_6", "Level_7",
         "Level_8", "Level_9", "Level_10", "Level_11", "Level_12", "Level_13", "Level_14", "Level_15", "Level_16",
-        "Level_17", "Level_18", "Level19", "Level_20", "Level_21", "Level_22"};
+        "Level_17", "Level_18", "Level_19", "Level 20", "Level_21", "Level 22"};
     }
 
     private void OnSceneLoaded()
