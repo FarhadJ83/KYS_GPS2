@@ -262,7 +262,7 @@ PrefabInstance:
     - target: {fileID: 1145611653748989081, guid: c9dd16099a3b2814d971d930a67c97e9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: -4963801623029300775, guid: cfeb9709ce36f6546baf3c99f9d3eb02, type: 3}
+      objectReference: {fileID: 2100000, guid: 775ac891c2e5982469825dfb13415ab6, type: 2}
     - target: {fileID: 1265151730917628854, guid: c9dd16099a3b2814d971d930a67c97e9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -5252,7 +5252,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: cfeb9709ce36f6546baf3c99f9d3eb02, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: -4963801623029300775, guid: cfeb9709ce36f6546baf3c99f9d3eb02, type: 3}
+      objectReference: {fileID: 2100000, guid: 775ac891c2e5982469825dfb13415ab6, type: 2}
     - target: {fileID: 919132149155446097, guid: cfeb9709ce36f6546baf3c99f9d3eb02, type: 3}
       propertyPath: m_Name
       value: floor variant 1 (144)
@@ -5612,15 +5612,15 @@ PrefabInstance:
       objectReference: {fileID: 1042156105}
     - target: {fileID: 6738528166800221407, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9
+      value: 8.06
       objectReference: {fileID: 0}
     - target: {fileID: 6738528166800221407, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 6738528166800221407, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.5
+      value: -6.84
       objectReference: {fileID: 0}
     - target: {fileID: 6738528166800221407, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6573,7 +6573,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: cfeb9709ce36f6546baf3c99f9d3eb02, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: -4963801623029300775, guid: cfeb9709ce36f6546baf3c99f9d3eb02, type: 3}
+      objectReference: {fileID: 2100000, guid: 775ac891c2e5982469825dfb13415ab6, type: 2}
     - target: {fileID: 919132149155446097, guid: cfeb9709ce36f6546baf3c99f9d3eb02, type: 3}
       propertyPath: m_Name
       value: floor variant 1 (143)
@@ -7385,7 +7385,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: cfeb9709ce36f6546baf3c99f9d3eb02, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: -4963801623029300775, guid: cfeb9709ce36f6546baf3c99f9d3eb02, type: 3}
+      objectReference: {fileID: 2100000, guid: 775ac891c2e5982469825dfb13415ab6, type: 2}
     - target: {fileID: 919132149155446097, guid: cfeb9709ce36f6546baf3c99f9d3eb02, type: 3}
       propertyPath: m_Name
       value: floor variant 1 (142)
