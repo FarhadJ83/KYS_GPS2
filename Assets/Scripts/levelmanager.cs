@@ -104,7 +104,7 @@ public class levelmanager : MonoBehaviour
             {
                 if (strings[i] == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
                 {
-                    pausePanel.transform.Find("Paused").GetComponent<Image>().sprite = LevelStatus2[i];
+                    pausePanel.transform.Find("Level").GetComponent<Image>().sprite = LevelStatus2[i];
                 }
             }
             pausePanel.SetActive(false);
@@ -139,6 +139,7 @@ public class levelmanager : MonoBehaviour
         mergedBall = GameObject.Find("Yin Yang Ball(Clone)");
         if (mergedBall != null && c == 0)
         {
+            Debug.Log("You Win2!");  
             StartCoroutine(WinScreen());
         }
     }

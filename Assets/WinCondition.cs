@@ -20,7 +20,7 @@ public class WinCondition : MonoBehaviour
         "Level_8", "Level_9", "Level_10", "Level_11", "Level_12", "Level_13", "Level_14", "Level_15", "Level_16",
         "Level_17", "Level_18", "Level_19", "Level 20", "Level_21", "Level 22"};
     public Sprite[] winconditionImages;
-    int[] conditions = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 };
+    int[] conditions = { 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
     Image Text1;
     Image Text2;
     Image Text3;

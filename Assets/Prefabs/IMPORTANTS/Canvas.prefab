@@ -2404,7 +2404,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 03e6111bdc6eff94aaa6af0f1bf38195, type: 3}
     - target: {fileID: 6206640056124443262, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
       propertyPath: winconditionImages.Array.size
-      value: 16
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6206640056124443262, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
       propertyPath: 'winconditionImages.Array.data[0]'
@@ -2470,6 +2470,18 @@ PrefabInstance:
       propertyPath: 'winconditionImages.Array.data[15]'
       value: 
       objectReference: {fileID: 21300000, guid: 091fcf4ecc042f742b6ff7245f89dfa2, type: 3}
+    - target: {fileID: 6206640056124443262, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: 'winconditionImages.Array.data[16]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 57b88e25c701dcb489e5ae04d6642b24, type: 3}
+    - target: {fileID: 6206640056124443262, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: 'winconditionImages.Array.data[17]'
+      value: 
+      objectReference: {fileID: 21300000, guid: c034e7607ab4709489b852dd6b6ef2ab, type: 3}
+    - target: {fileID: 6206640056124443262, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
+      propertyPath: 'winconditionImages.Array.data[18]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 4eff9dabf4b347146bb1f13bcded7657, type: 3}
     - target: {fileID: 6788979931276780857, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
       propertyPath: m_Sprite
       value: 
