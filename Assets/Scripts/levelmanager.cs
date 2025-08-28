@@ -30,10 +30,13 @@ public class levelmanager : MonoBehaviour
     [SerializeField] Button pause;
     Button inverse;
     Button back;
+    Button reset;
     Action[] levels;
     string[] strings = { "Level_1", "Level_2", "Level_3", "Level_4", "Level_5", "Level_6", "Level_7",
         "Level_8", "Level_9", "Level_10", "Level_11", "Level_12", "Level_13", "Level_14", "Level_15", "Level_16",
         "Level_17", "Level_18", "Level_19", "Level 20", "Level_21", "Level 22"};
+    public Sprite[] LevelStatus1;
+    public Sprite[] LevelStatus2;
     public void Start()
     {
         levels = new Action[] { Level2, VLevel2, Level4, Level5, VLevel3, VLevel4, Level8, Level9, VLevel5, VLevel6, 
@@ -97,16 +100,35 @@ public class levelmanager : MonoBehaviour
         pausePanel = GameObject.Find("PausePanel");
         if (pausePanel != null)
         {
+            for (int i = 0; i < strings.Length; i++)
+            {
+                if (strings[i] == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
+                {
+                    pausePanel.transform.Find("Paused").GetComponent<Image>().sprite = LevelStatus2[i];
+                }
+            }
             pausePanel.SetActive(false);
         }
         settingsPanel = GameObject.Find("SettingsPanel");
         if (settingsPanel != null)
         {
+            if (SceneManager.GetActiveScene().name != "LevelsScene" && SceneManager.GetActiveScene().name != "MainMenu")
+            {
+                reset = GameObject.Find("Reset").GetComponent<Button>();
+                reset.onClick.AddListener(ResetProgress);
+            }
             settingsPanel.SetActive(false);
         }
         winScreen = GameObject.Find("WinScreen");
         if (winScreen != null)
         {
+            for(int i = 0;  i < strings.Length ; i++)
+            {
+                if (strings[i] == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
+                {
+                    winScreen.transform.Find("LevelCompleted").GetComponent<Image>().sprite = LevelStatus1[i];
+                }
+            }
             winScreen.SetActive(false);
         }
 
@@ -362,5 +384,10 @@ public class levelmanager : MonoBehaviour
         StartCoroutine(LoadLevelWithTransition("Level 22"));
     }
 
+    public void ResetProgress()
+    {
+        PlayerPrefs.DeleteAll(); // Deletes all keys and values from PlayerPrefs
+        Debug.LogWarning("PLAYER PROGRESS RESET!"); // Use a warning to make it stand out
+    }
 
 }

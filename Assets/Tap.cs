@@ -47,5 +47,10 @@ public class Tap : MonoBehaviour
         return false;
     }
 
+    public void ResetProgress()
+    {
+        PlayerPrefs.DeleteAll(); // Deletes all keys and values from PlayerPrefs
+        Debug.LogWarning("PLAYER PROGRESS RESET!"); // Use a warning to make it stand out
+    }
 
 }

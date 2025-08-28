@@ -6,6 +6,7 @@ public class PressurePlate : MonoBehaviour
     public GameObject switchedGate;
 
     private bool isGateActive = true;
+    public AudioClip activesound;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -24,5 +25,6 @@ public class PressurePlate : MonoBehaviour
 
         activeGate.SetActive(isGateActive);
         switchedGate.SetActive(!isGateActive);
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(activesound);
     }
 }

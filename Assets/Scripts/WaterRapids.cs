@@ -2,6 +2,7 @@
 using UnityEngine;
 public class WaterRapids : MonoBehaviour
 {
+    public AudioClip WaterRapidsSound;
     [Tooltip("Where the ball starts being moved.")]
     public Transform startPoint;
 
@@ -19,6 +20,7 @@ public class WaterRapids : MonoBehaviour
         if (other.CompareTag("WhiteBall") || other.CompareTag("BlackBall"))
         {
             Debug.Log($"[Rapids] Triggered by {other.name}");
+            GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(WaterRapidsSound);
             StartCoroutine(MoveAlongConveyor(other.gameObject, false));
         }
     }

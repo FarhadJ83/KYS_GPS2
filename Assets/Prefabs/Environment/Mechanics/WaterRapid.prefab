@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed587de4afb2fd64ab71ae7b6c950a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaterRapidsSound: {fileID: 8300000, guid: 295d766fbb0b79342bad343b9842862a, type: 3}
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
   conveyorSpeed: 3

@@ -12,6 +12,8 @@ public class Teleporter : MonoBehaviour
     [Tooltip("The Black Ball prefab.")]
     public GameObject blackBallPrefab;
 
+    public AudioClip portalsound;
+
     private void OnCollisionEnter(Collision collision)
     {
         // Only respond to white or black balls
@@ -70,6 +72,8 @@ public class Teleporter : MonoBehaviour
                 {
                     Debug.LogWarning("[Teleport] CharacterMovement missing or moveDir is zero.");
                 }
+                GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(portalsound);
+
             }
         }
     }
