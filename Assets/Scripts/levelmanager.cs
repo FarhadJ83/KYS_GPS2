@@ -61,6 +61,17 @@ public class levelmanager : MonoBehaviour
                 pause.onClick.AddListener(pause_Panel);
             }
             nextLevel = GameObject.Find("NextLevel").GetComponent<Button>();
+            for(int i = 0; i < strings.Length; i++)
+            {
+                if (strings[i] == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
+                {
+                    if (i == 21)
+                    {
+                        nextLevel.gameObject.SetActive(false);  
+                    }
+                    break;
+                }
+            }
             if (nextLevel != null)
             {
                 for (int i = 0; i < levels.Length ; i++)
