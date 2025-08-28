@@ -9,6 +9,7 @@ public class audiosettings : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private UnityEngine.UI.Slider volumeSlider;
     [SerializeField] private UnityEngine.UI.Toggle vibrationToggle;
+    private AudioSource[] audioSources; 
     private void Update()
     {
         volumeSlider = GameObject.Find("Volume")?.GetComponent<UnityEngine.UI.Slider>();
@@ -17,10 +18,18 @@ public class audiosettings : MonoBehaviour
         {
             audioSource = GameObject.Find("AudioManager")?.GetComponent<AudioSource>();
         }
+        if (audioSources == null)
+        {
+            audioSources = GameObject.Find("AudioManager2").GetComponent<ambientsounds>().audioSources;
+        }
         if (volumeSlider != null)
         {
             volumeSlider.onValueChanged.AddListener(SetVolume);
-            volumeSlider.value = audioSource.volume;        
+            volumeSlider.value = audioSource.volume;
+            for (int i = 0; i < audioSources.Length; i++)
+            {
+                volumeSlider.value = audioSources[i].volume;
+            }
         }
         if (vibrationToggle != null)
         {
@@ -34,6 +43,13 @@ public class audiosettings : MonoBehaviour
         if (audioSource != null)
         {
             audioSource.volume = volume;
+        }
+        if (audioSources != null)
+        {
+            for (int i = 0; i < audioSources.Length; i++)
+            {
+                audioSources[i].volume = volume;
+            }
         }
     }
 
