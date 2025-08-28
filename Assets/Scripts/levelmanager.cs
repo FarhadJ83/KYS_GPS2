@@ -11,6 +11,7 @@ public class levelmanager : MonoBehaviour
     [HideInInspector] public GameObject pausePanel;
     public GameObject settingsPanel;
     public GameObject winScreen;
+    GameObject creditsScreen;
     [SerializeField] GameObject mergedBall;
     int c = 0; 
 
@@ -26,6 +27,7 @@ public class levelmanager : MonoBehaviour
     Button HomeW;
     Button HomeP;
     Button nextLevel;
+    Button credits;
     [SerializeField] Button settings;
     [SerializeField] Button pause;
     Button inverse;
@@ -43,6 +45,11 @@ public class levelmanager : MonoBehaviour
             Level12, Level13, VLevel7, VLevel8, Level16, Level17, Level18, VLevel9, Level20, VLevel10, Level22 };
         if (SceneManager.GetActiveScene().name != "LevelsScene" && SceneManager.GetActiveScene().name != "MainMenu")
         {
+            credits = GameObject.Find("Credits").GetComponent<Button>();
+            if (credits != null)
+            {
+                credits.onClick.AddListener(creditPanel);
+            }
             Resume = GameObject.Find("Resume").GetComponent<Button>();
             if (Resume != null)
             {
@@ -56,7 +63,7 @@ public class levelmanager : MonoBehaviour
             nextLevel = GameObject.Find("NextLevel").GetComponent<Button>();
             if (nextLevel != null)
             {
-                for (int i = 0; i < levels.Length - 1; i++)
+                for (int i = 0; i < levels.Length ; i++)
                 {
                     if (strings[i] == UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
                     {
@@ -109,6 +116,12 @@ public class levelmanager : MonoBehaviour
             }
             pausePanel.SetActive(false);
         }
+        creditsScreen = GameObject.Find("Credits");
+        if (creditsScreen != null)
+        {
+            creditsScreen.transform.Find("Back").GetComponent<Button>().onClick.AddListener(creditPanel);
+            creditsScreen.SetActive(false);
+        }
         settingsPanel = GameObject.Find("SettingsPanel");
         if (settingsPanel != null)
         {
@@ -131,6 +144,7 @@ public class levelmanager : MonoBehaviour
             }
             winScreen.SetActive(false);
         }
+        
 
     }
 
@@ -168,6 +182,19 @@ public class levelmanager : MonoBehaviour
         {
             pausePanel.SetActive(false);
             Time.timeScale = 1; // Pause the game
+        }
+    }
+
+    public void creditPanel()
+    { 
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
+        if (creditsScreen.activeSelf == false)
+        {
+            creditsScreen.SetActive(true);
+        }
+        else
+        {
+            creditsScreen.SetActive(false);
         }
     }
 
@@ -255,12 +282,12 @@ public class levelmanager : MonoBehaviour
         GameObject.Find("AudioManager").GetComponent<AudioSource>().PlayOneShot(buttonClick);
         for (int i = 0; i < level.levelScenes.Length; i++)
         {
-            if (SceneManager.GetActiveScene().name == level.levelScenes[i])
+            if (SceneManager.GetActiveScene().name == strings[i])
             {
-                if (i + 1 < level.levelScenes.Length)
+                if (i < strings.Length)
                 {
-                    Debug.Log("Loading next level: " + level.levelScenes[i + 1]);
-                    StartCoroutine(LoadLevelWithTransition(level.levelScenes[i + 1]));
+                    Debug.Log("Loading next level: " + strings[i+1]);
+                    StartCoroutine(LoadLevelWithTransition(strings[i+1]));
                 }
                 else
                 {
@@ -387,8 +414,7 @@ public class levelmanager : MonoBehaviour
 
     public void ResetProgress()
     {
-        PlayerPrefs.DeleteAll(); // Deletes all keys and values from PlayerPrefs
-        Debug.LogWarning("PLAYER PROGRESS RESET!"); // Use a warning to make it stand out
+        level.ResetProgress();
     }
 
 }

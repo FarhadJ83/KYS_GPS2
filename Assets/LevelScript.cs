@@ -85,7 +85,7 @@ public class LevelScript : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "LevelsScene")
         {
             LevelUnlock();
-            //setStars();
+            setStars();
             LoadLevelProgress();
         }
 
@@ -175,7 +175,16 @@ public class LevelScript : MonoBehaviour
 
     public void ResetProgress()
     {
-        PlayerPrefs.DeleteAll(); // Deletes all keys and values from PlayerPrefs
-        Debug.LogWarning("PLAYER PROGRESS RESET!"); // Use a warning to make it stand out
+        PlayerPrefs.DeleteAll();
+        for (int i = 0; i < levelsUnlocked.Length; i++)
+        {
+            levelsUnlocked[i] = false;
+            levelStars[i] = 0;
+        }
+        levelsUnlocked[0] = true; // Unlock the first level
+        SaveLevelProgress();
+        LoadLevelProgress();
+        //LevelUnlock();
+        //setStars();
     }
 }

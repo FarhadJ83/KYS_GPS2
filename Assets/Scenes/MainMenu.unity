@@ -1851,6 +1851,38 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1503878624098695186, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503878624098695186, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503878624098695186, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 379528028}
+    - target: {fileID: 1503878624098695186, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503878624098695186, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: creditPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503878624098695186, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: levelmanager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503878624098695186, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700337808059663121, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3444509280767604377, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1859,10 +1891,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4653866421324235642, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 28e8ed26c9879e1419349a127a272b2f, type: 3}
     - target: {fileID: 4667228310563306041, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
       propertyPath: m_Name
       value: SettingsPanel
@@ -1879,13 +1907,33 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 148595206}
-    - target: {fileID: 7450943423926002059, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 7.2643027
+    - target: {fileID: 7141581792914009485, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7450943423926002059, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -259
+    - target: {fileID: 7141581792914009485, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141581792914009485, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 379528028}
+    - target: {fileID: 7141581792914009485, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141581792914009485, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: creditPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141581792914009485, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: levelmanager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141581792914009485, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8246712658192227107, guid: 1c15a180e8e23a8429305662bbb8a6db, type: 3}
       propertyPath: m_Pivot.x

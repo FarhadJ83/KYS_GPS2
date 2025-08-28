@@ -11,7 +11,7 @@ public class swiipeCounter : MonoBehaviour
     public CharacterMovement whiteBall;
     IEnumerator enumerator;
     [SerializeField] Button showRewardButton;
-    [HideInInspector] public int swipecount;
+    public int swipecount;
     public bool [] adAvailable = {true, true, true};
     bool[] Merged;
 

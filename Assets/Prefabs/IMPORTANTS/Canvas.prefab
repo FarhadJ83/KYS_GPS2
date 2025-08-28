@@ -2124,6 +2124,7 @@ GameObject:
   - component: {fileID: 4122808266723222856}
   - component: {fileID: 6407510167631507349}
   - component: {fileID: 870412193687591208}
+  - component: {fileID: 8592639813206600632}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2214,6 +2215,43 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8592639813206600632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9214531718353346319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64de587059ee4d45b6d958336eb804e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackBall: {fileID: 0}
+  whiteBall: {fileID: 0}
+  swipecount: 0
+  star: {fileID: 21300000, guid: 4800cc592d29496489dcb96953ca570b, type: 3}
+  noStar: {fileID: 21300000, guid: 03e6111bdc6eff94aaa6af0f1bf38195, type: 3}
+  winconditionImages:
+  - {fileID: 21300000, guid: 9dc9a4248e524f345b2f0656fd246f16, type: 3}
+  - {fileID: 21300000, guid: 7347d024956035541bb624a2034c0e77, type: 3}
+  - {fileID: 21300000, guid: bfab973b108becc43ae8cc50ff79d144, type: 3}
+  - {fileID: 21300000, guid: 2413da57041a2c5419dbb2bcbb70fa5e, type: 3}
+  - {fileID: 21300000, guid: d1a1b009f4ced434f9a8603cb709c81b, type: 3}
+  - {fileID: 21300000, guid: 0039d9baa59c2d64cb55585e5b9c58b0, type: 3}
+  - {fileID: 21300000, guid: 9770e000605544340b8f9363ccb0b0cc, type: 3}
+  - {fileID: 21300000, guid: 2e1cad207c8350044aba2e671899f9cf, type: 3}
+  - {fileID: 21300000, guid: 78b7e37953e3e8445b9aa43a8b5f58f5, type: 3}
+  - {fileID: 21300000, guid: d37ff1791d5652b42864213e11c9b3db, type: 3}
+  - {fileID: 21300000, guid: 6ee9b8d88fe2c2942a5eed376bc750ba, type: 3}
+  - {fileID: 21300000, guid: dce9a6947e25d4c4b80d07262cde8b33, type: 3}
+  - {fileID: 21300000, guid: ad454e24a622aab4e9c0a31e66138838, type: 3}
+  - {fileID: 21300000, guid: d180f8c81b8dd2e4b88efd75d13e1d8b, type: 3}
+  - {fileID: 21300000, guid: 00785489b56faed4b84c3e25166076bb, type: 3}
+  - {fileID: 21300000, guid: 091fcf4ecc042f742b6ff7245f89dfa2, type: 3}
+  - {fileID: 21300000, guid: 57b88e25c701dcb489e5ae04d6642b24, type: 3}
+  - {fileID: 21300000, guid: c034e7607ab4709489b852dd6b6ef2ab, type: 3}
+  - {fileID: 21300000, guid: 4eff9dabf4b347146bb1f13bcded7657, type: 3}
 --- !u!1001 &4320861286207892048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2522,7 +2560,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -761
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6206640056124443262, guid: a88cee8c36422bb4083efc219352b6df, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
