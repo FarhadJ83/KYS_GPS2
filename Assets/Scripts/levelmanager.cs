@@ -19,7 +19,7 @@ public class levelmanager : MonoBehaviour
     [SerializeField] private GameObject endTransition;
     [SerializeField] AudioClip buttonClick;
     [SerializeField] AudioClip WinSound;
-    [SerializeField] AudioClip StartSound;
+    public AudioClip StartSound;
 
     Button Resume;
     Button restartW;

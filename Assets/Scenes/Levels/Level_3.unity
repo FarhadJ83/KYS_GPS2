@@ -7880,7 +7880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 645520651}
   m_Layer: 0
-  m_Name: Yin World
+  m_Name: Yang World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20535,7 +20535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1715735907}
   m_Layer: 0
-  m_Name: Yang World
+  m_Name: Yin World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26897,10 +26897,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7559711726564860754, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
-      insertIndex: -1
+      insertIndex: 4
       addedObject: {fileID: 21124485}
     - targetCorrespondingSourceObject: {fileID: 7559711726564860754, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
-      insertIndex: -1
+      insertIndex: 5
       addedObject: {fileID: 1749657024}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
