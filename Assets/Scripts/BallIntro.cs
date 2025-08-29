@@ -31,7 +31,7 @@ public class BallIntro : MonoBehaviour
 
     private IEnumerator StartSequence()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
 
         yield return new WaitUntil(() => popupPanel == null || !popupPanel.activeSelf);
 
