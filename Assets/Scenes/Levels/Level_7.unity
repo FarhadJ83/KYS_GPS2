@@ -6051,7 +6051,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 9770e000605544340b8f9363ccb0b0cc, type: 3}
     - target: {fileID: 4555299991383330930, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.000122
+      value: 6.000244
       objectReference: {fileID: 0}
     - target: {fileID: 6440359577019702060, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6067,7 +6067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6889727515881903118, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.000122
+      value: 6.000244
       objectReference: {fileID: 0}
     - target: {fileID: 8469479688104675452, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_Sprite
@@ -6075,7 +6075,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d1a1b009f4ced434f9a8603cb709c81b, type: 3}
     - target: {fileID: 8844081315706715303, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.000122
+      value: 6.000244
       objectReference: {fileID: 0}
     - target: {fileID: 8954826634348789805, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -19313,7 +19313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -113.00012, y: 17.999725}
+  m_AnchoredPosition: {x: -113.00012, y: 17.999756}
   m_SizeDelta: {x: -569.93555, y: -2539.0806}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1547295972
@@ -21957,6 +21957,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1921577865}
     m_Modifications:
+    - target: {fileID: 4795988482176966291, guid: eb28e65869928e447abf386c30edc1ae, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8510945913850297086, guid: eb28e65869928e447abf386c30edc1ae, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4000002
@@ -25768,6 +25772,10 @@ PrefabInstance:
     - target: {fileID: 5483870984072235298, guid: 40e497dc24be9b94985bba112d7530b2, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326649266007164862, guid: 40e497dc24be9b94985bba112d7530b2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
