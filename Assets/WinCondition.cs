@@ -13,9 +13,9 @@ public class WinCondition : MonoBehaviour
     Image Star1;
     public Sprite star;
     public Sprite noStar;
-    int[] winCondition1 = {03, 04, 04, 05, 06, 07, 07, 15, 06, 08, 10, 10, 12, 10, 07, 09, 11, 13, 08, 14, 09, 10 };
-    int[] winCondition2 = {05, 06, 05, 07, 09, 10, 09, 18, 08, 10, 12, 12, 15, 12, 09, 13, 14, 16, 10, 16, 12, 13 };
-    int[] winCondition3 = {08, 08, 07, 10, 11, 12, 12, 20, 11, 13, 15, 15, 18, 15, 11, 15, 18, 20, 12, 19, 15, 16 };
+    int[] winCondition1 = {03, 04, 04, 05, 06, 07, 07, 15, 06, 08, 10, 10, 12, 10, 07, 09, 11, 13, 08, 13, 09, 10 };
+    int[] winCondition2 = {05, 06, 05, 07, 09, 10, 09, 18, 08, 10, 12, 12, 15, 12, 09, 13, 14, 16, 10, 17, 12, 13 };
+    int[] winCondition3 = {08, 08, 07, 10, 11, 12, 12, 20, 11, 13, 15, 15, 18, 15, 11, 15, 18, 20, 12, 20, 15, 16 };
     string[] strings ={ "Level_1", "Level_2", "Level_3", "Level_4", "Level_5", "Level_6", "Level_7",
         "Level_8", "Level_9", "Level_10", "Level_11", "Level_12", "Level_13", "Level_14", "Level_15", "Level_16",
         "Level_17", "Level_18", "Level_19", "Level 20", "Level_21", "Level 22"};
