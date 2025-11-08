@@ -10,7 +10,7 @@ public class audiosettings : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Slider volumeSlider;
     [SerializeField] private UnityEngine.UI.Toggle vibrationToggle;
     private AudioSource[] audioSources; 
-    private void Update()
+    private void Start() //Used to be Update
     {
         volumeSlider = GameObject.Find("Volume")?.GetComponent<UnityEngine.UI.Slider>();
         vibrationToggle = GameObject.Find("VibrationToggle")?.GetComponent<UnityEngine.UI.Toggle>();
@@ -59,13 +59,16 @@ public class audiosettings : MonoBehaviour
         // Here you can add code to enable or disable vibration in your game
         if (isOn)
         {
-            // Enable vibration
             Debug.Log("Vibration enabled");
-            Handheld.Vibrate(); // Example for mobile platforms
+
+            #if UNITY_ANDROID || UNITY_IOS
+                    Handheld.Vibrate();
+            #else
+                        Debug.Log("Vibration not supported on this platform.");
+            #endif
         }
         else
         {
-            // Disable vibration
             Debug.Log("Vibration disabled");
         }
     }

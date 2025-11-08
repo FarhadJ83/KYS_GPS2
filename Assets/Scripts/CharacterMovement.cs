@@ -6,8 +6,8 @@ using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static UnityEngine.UI.Image;
-using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
-using TouchPhase = UnityEngine.InputSystem.TouchPhase;
+//using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
+//using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 [RequireComponent(typeof(Animator))]
 public class CharacterMovement : MonoBehaviour
@@ -27,21 +27,27 @@ public class CharacterMovement : MonoBehaviour
 
     private Animator animator;
 
+    //Mouse Movement
+    private Vector2 mouseStartPos;
+    private Vector2 mouseEndPos;
+    private bool isDragging = false;
+    private float swipeThreshold = 50f;
+
     public void Start()
     {
         swipeCounter = 0;
         animator = GetComponent<Animator>();
     }
 
-    private void OnEnable()
-    {
-        TouchController.onSwipe += OnSwipeMoveBall;
-    }
+    //private void OnEnable()
+    //{
+    //    TouchController.onSwipe += OnSwipeMoveBall;
+    //}
 
-    private void OnDisable()
-    {
-        TouchController.onSwipe -= OnSwipeMoveBall;
-    }
+    //private void OnDisable()
+    //{
+    //    TouchController.onSwipe -= OnSwipeMoveBall;
+    //}
 
     public void Update()
     {
@@ -49,6 +55,8 @@ public class CharacterMovement : MonoBehaviour
         {
             UpdateInverseButton();
         }
+
+        DetectMouseSwipe();
     }
 
     public void assignSwipe(int sc)
@@ -58,15 +66,20 @@ public class CharacterMovement : MonoBehaviour
 
     private void UpdateInverseButton()
     {
+        //Button InverseButton = GameObject.Find("InverseButton").GetComponent<Button>();
+        //if (isMoving && InverseButton != null)
+        //{
+        //    InverseButton.interactable = false;
+        //}
+        //else if (!isMoving && InverseButton != null)
+        //{
+        //    InverseButton.interactable = true;
+        //}
+
+        //Mouse Movement
         Button InverseButton = GameObject.Find("InverseButton").GetComponent<Button>();
-        if (isMoving && InverseButton != null)
-        {
-            InverseButton.interactable = false;
-        }
-        else if (!isMoving && InverseButton != null)
-        {
-            InverseButton.interactable = true;
-        }
+        if (InverseButton != null)
+            InverseButton.interactable = !isMoving;
     }
 
     private void OnSwipeMoveBall(object sender, TouchGesture e)
@@ -85,6 +98,44 @@ public class CharacterMovement : MonoBehaviour
             Vector3 origin = ball.position;
             Vector3 targetPos = GetTargetPosition(origin, moveDir);
             StartCoroutine(SmoothMoveToWall(ball, targetPos));
+        }
+    }
+
+    private void DetectMouseSwipe()
+    {
+        // On mouse press
+        if (Input.GetMouseButtonDown(0))
+        {
+            mouseStartPos = Input.mousePosition;
+            isDragging = true;
+        }
+
+        // On mouse release
+        if (Input.GetMouseButtonUp(0) && isDragging)
+        {
+            mouseEndPos = Input.mousePosition;
+            isDragging = false;
+
+            Vector2 swipe = mouseEndPos - mouseStartPos;
+
+            if (swipe.magnitude < swipeThreshold)
+                return; // too small, ignore
+
+            Vector2 swipeDir = swipe.normalized;
+            Vector3 moveDir = (Mathf.Abs(swipeDir.x) > Mathf.Abs(swipeDir.y))
+                ? (swipeDir.x > 0 ? Vector3.right : Vector3.left)
+                : (swipeDir.y > 0 ? Vector3.forward : Vector3.back);
+
+            if (!isMoving)
+            {
+                lastMoveDir = moveDir;
+                if (ball != null)
+                {
+                    Vector3 origin = ball.position;
+                    Vector3 targetPos = GetTargetPosition(origin, moveDir);
+                    StartCoroutine(SmoothMoveToWall(ball, targetPos));
+                }
+            }
         }
     }
 

@@ -7,25 +7,62 @@ using UnityEngine.UI;
 public class Tap : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void OnEnable()
+    //private void OnEnable()
+    //{
+    //    // We use the provided TouchController for tap input
+    //    TouchController.onTap += HandleTap;
+    //}
+
+    //private void OnDisable()
+    //{
+    //    TouchController.onTap -= HandleTap;
+    //}
+
+    //private void HandleTap(object sender, TouchGesture e)
+    //{
+    //    // On tap, load the Menu Scene if the tap is not on a button
+
+    //    if (IsTapOverButtonOrPanel(e))
+    //        return;
+
+    //    SceneManager.LoadScene("LevelsScene");
+    //}
+
+    void Update()
     {
-        // We use the provided TouchController for tap input
-        TouchController.onTap += HandleTap;
+        // Detect left mouse click
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 mousePos = Input.mousePosition;
+
+            // Only load if not clicking on a UI button or panel
+            if (!IsPointerOverButtonOrPanel(mousePos))
+            {
+                SceneManager.LoadScene("LevelsScene");
+            }
+        }
     }
 
-    private void OnDisable()
+    private bool IsPointerOverButtonOrPanel(Vector2 screenPos)
     {
-        TouchController.onTap -= HandleTap;
-    }
+        PointerEventData eventData = new PointerEventData(EventSystem.current)
+        {
+            position = screenPos
+        };
 
-    private void HandleTap(object sender, TouchGesture e)
-    {
-        // On tap, load the Menu Scene if the tap is not on a button
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
 
-        if (IsTapOverButtonOrPanel(e))
-            return;
+        foreach (RaycastResult result in results)
+        {
+            if (result.gameObject.GetComponent<Button>() != null ||
+                result.gameObject.CompareTag("Panel"))
+            {
+                return true;
+            }
+        }
 
-        SceneManager.LoadScene("LevelsScene");
+        return false;
     }
 
     private bool IsTapOverButtonOrPanel(TouchGesture e)
