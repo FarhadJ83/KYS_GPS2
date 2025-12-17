@@ -11,7 +11,7 @@ public class levelmanager : MonoBehaviour
     [HideInInspector] public GameObject pausePanel;
     public GameObject settingsPanel;
     public GameObject winScreen;
-    GameObject creditsScreen;
+    public GameObject creditsScreen;
     [SerializeField] GameObject mergedBall;
     int c = 0; 
 
@@ -27,7 +27,7 @@ public class levelmanager : MonoBehaviour
     Button HomeW;
     Button HomeP;
     Button nextLevel;
-    Button credits;
+    [SerializeField] Button credits;
     [SerializeField] Button settings;
     [SerializeField] Button pause;
     Button inverse;
@@ -45,7 +45,7 @@ public class levelmanager : MonoBehaviour
             Level12, Level13, VLevel7, VLevel8, Level16, Level17, Level18, VLevel9, Level20, VLevel10, Level22 };
         if (SceneManager.GetActiveScene().name != "LevelsScene" && SceneManager.GetActiveScene().name != "MainMenu")
         {
-            credits = GameObject.Find("Credits").GetComponent<Button>();
+            credits = GameObject.Find("Credit").GetComponent<Button>();
             if (credits != null)
             {
                 credits.onClick.AddListener(creditPanel);

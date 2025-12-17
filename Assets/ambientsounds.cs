@@ -29,8 +29,6 @@ public class ambientsounds : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "MainMenu" && SceneManager.GetActiveScene().name != "LevelsScene")
         {
-            //The audioclips above need to be played randomly in one of the four audio sources
-            //It can be at the same time or at different times. If the audio is played at the same time
             if(!isPlaying)
             {
                 random = Random.Range(0, 15);

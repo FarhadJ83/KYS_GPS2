@@ -8792,6 +8792,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 126944008}
     m_Modifications:
+    - target: {fileID: 2987923846773882292, guid: b095f2bb332ecd644be9f4f2a1a3284c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3538920369390316205, guid: b095f2bb332ecd644be9f4f2a1a3284c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.895724
@@ -29592,6 +29596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shrine 1 Dark (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8449823923461055330, guid: 484f7fb0f3e082546919cb17b205a996, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46103,7 +46111,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6440359577019702060, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440359577019702060, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6440359577019702060, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8954826634348789805, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8954826634348789805, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
