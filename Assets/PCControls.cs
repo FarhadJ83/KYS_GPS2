@@ -13,7 +13,7 @@ public class PCControls : MonoBehaviour
     Button nobutton;
     Button yesbutton;
 
-    int c;
+    int c, c2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
@@ -65,6 +65,16 @@ public class PCControls : MonoBehaviour
             {
                 UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
             }
+            if (c2 == 0)
+            {
+                GameObject.Find("Scrollbar Horizontal").GetComponent<Scrollbar>().value = 0;
+                c2 = 1;
+            }
+        }
+
+        if(SceneManager.GetActiveScene().name != "LevelsScene")
+        {
+            c2 = 0;
         }
 
         if (SceneManager.GetActiveScene().name == "MainMenu")
