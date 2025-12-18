@@ -130,7 +130,7 @@ public class levelmanager : MonoBehaviour
         creditsScreen = GameObject.Find("Credits");
         if (creditsScreen != null)
         {
-            creditsScreen.transform.Find("Back").GetComponent<Button>().onClick.AddListener(creditPanel);
+            GameObject.Find("BackCredits").GetComponent<Button>().onClick.AddListener(creditPanel);
             creditsScreen.SetActive(false);
         }
         settingsPanel = GameObject.Find("SettingsPanel");
