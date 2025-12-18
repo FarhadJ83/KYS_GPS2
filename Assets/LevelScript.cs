@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class LevelScript : MonoBehaviour
 {
@@ -48,6 +49,25 @@ public class LevelScript : MonoBehaviour
         "Level_17", "Level_18", "Level_19", "Level 20", "Level_21", "Level 22"};
     }
 
+    //private IEnumerator DeactivateActivatedButtons()
+    //{
+    //    for(int i = 0; i < levelScenes.Length; i++)
+    //    {
+    //        if (levelsUnlocked[i] == true)
+    //        {
+    //            LevelButtons[i].interactable = false;
+    //        }
+    //    }
+    //    yield return new WaitForSeconds(2.0f);
+    //    for (int i = 0; i < levelScenes.Length; i++)
+    //    {
+    //        if (levelsUnlocked[i] == true)
+    //        {
+    //            LevelButtons[i].interactable = true;
+    //        }
+    //    }
+    //}
+
     private void OnSceneLoaded()
     {
         if (SceneManager.GetActiveScene().name == "LevelsScene")
@@ -61,6 +81,7 @@ public class LevelScript : MonoBehaviour
             for (int i = 0; i < LevelButtons.Length; i++)
             {
                 LevelButtons[i] = GameObject.Find(levelNames[i]).GetComponent<Button>();
+                //StartCoroutine(DeactivateActivatedButtons());
             }
     }
 

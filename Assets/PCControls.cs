@@ -60,6 +60,8 @@ public class PCControls : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "LevelsScene")
         {
+            // As I click on the screen at the main menu to pass to levelsScene, if the click is on one of the levels
+            // button in the levelsScene then it goes into the level. It shouldn't
             c = 0;
             if (Input.GetKeyDown(KeyCode.Escape))
             {

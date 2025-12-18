@@ -31,7 +31,7 @@ public class Tap : MonoBehaviour
     void Update()
     {
         // Detect left mouse click
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0))
         {
             Vector2 mousePos = Input.mousePosition;
 
