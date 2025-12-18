@@ -7702,11 +7702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6738528166800221407, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.75
+      value: 7.92
       objectReference: {fileID: 0}
     - target: {fileID: 6738528166800221407, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.05
+      value: -7.34
       objectReference: {fileID: 0}
     - target: {fileID: 6738528166800221407, guid: e4228eedebab02d46b13dc229e8b35ae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9095,6 +9095,10 @@ PrefabInstance:
     - target: {fileID: 9214531718353346319, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214531718353346319, guid: 2969449ba25c1c04993f09f7f7ce6d5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21533,6 +21537,10 @@ PrefabInstance:
     - target: {fileID: 2693921613902045302, guid: 5872866478405b94ab970d7eb752a9fa, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693921613902045302, guid: 5872866478405b94ab970d7eb752a9fa, type: 3}
+      propertyPath: moveSpeed
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 2693921613902045302, guid: 5872866478405b94ab970d7eb752a9fa, type: 3}
       propertyPath: popupPanel

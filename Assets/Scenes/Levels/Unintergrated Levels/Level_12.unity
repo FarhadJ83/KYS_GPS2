@@ -22567,6 +22567,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5168999622395098507, guid: 0532b22aa831f6f47bc05c3060e789ed, type: 3}
+      propertyPath: moveSpeed
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168999622395098507, guid: 0532b22aa831f6f47bc05c3060e789ed, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1850448954}
