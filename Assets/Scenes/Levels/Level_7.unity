@@ -26585,14 +26585,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 933746701194115110, guid: c50988387cc9d484b9f627450d36a849, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1272089256251902257, guid: c50988387cc9d484b9f627450d36a849, type: 3}
       propertyPath: blackBall
       value: 
-      objectReference: {fileID: 448704028}
+      objectReference: {fileID: 0}
     - target: {fileID: 1272089256251902257, guid: c50988387cc9d484b9f627450d36a849, type: 3}
       propertyPath: whiteBall
       value: 
-      objectReference: {fileID: 448802392}
+      objectReference: {fileID: 0}
     - target: {fileID: 1272089256251902257, guid: c50988387cc9d484b9f627450d36a849, type: 3}
       propertyPath: blackMaterial
       value: 
@@ -26782,6 +26786,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 736243040742962076, guid: d565498cc552fe741b8d6db8c725eb1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017014834196346080, guid: d565498cc552fe741b8d6db8c725eb1e, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5879963639235195485, guid: d565498cc552fe741b8d6db8c725eb1e, type: 3}
